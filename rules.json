@@ -24,7 +24,36 @@
   "SAN": "San Diego",
   "SEA": "Seattle-Tacoma",
   "SFO": "San Francisco",
-  "SLC": "Salt Lake City"
+  "SLC": "Salt Lake City",
+  "BDL": "Hartford Bradley",
+  "CLE": "Cleveland Hopkins",
+  "CMH": "Columbus John Glenn",
+  "CVG": "Cincinnati/Northern Kentucky",
+  "GSP": "Greenville-Spartanburg",
+  "GUM": "Guam",
+  "HNL": "Honolulu",
+  "MCI": "Kansas City",
+  "MCO": "Orlando",
+  "MSY": "New Orleans",
+  "OAK": "Oakland",
+  "PIT": "Pittsburgh",
+  "PVD": "Providence",
+  "SJU": "San Juan",
+  "SMF": "Sacramento",
+  "STL": "St. Louis",
+  "SYR": "Syracuse",
+  "TUL": "Tulsa",
+  "XNA": "Northwest Arkansas",
+  "AUS": "Austin",
+  "FLL": "Fort Lauderdale",
+  "RDU": "Raleigh-Durham",
+  "BNA": "Nashville",
+  "PBI": "Palm Beach",
+  "SNA": "Orange County (John Wayne)",
+  "TPA": "Tampa",
+  "ANC": "Anchorage",
+  "RNO": "Reno-Tahoe",
+  "SAT": "San Antonio"
  },
  "lounges": [
   {
@@ -488,10 +517,457 @@
    "location": "Concourse A, near Gate A14",
    "network": "sapphire",
    "note": "Etihad Lounge; Sapphire Reserve and Ritz-Carlton cardholders get in"
+  },
+  {
+   "airport": "ATL",
+   "network": "prioritypass",
+   "location": "Concourse F, mezzanine level, next to the chapel",
+   "status": "open",
+   "name": "The Club ATL"
+  },
+  {
+   "airport": "ATL",
+   "network": "prioritypass",
+   "location": "Concourse F, next to The Club",
+   "status": "open",
+   "name": "Poppin"
+  },
+  {
+   "airport": "BDL",
+   "network": "prioritypass",
+   "location": "Terminal A",
+   "status": "open"
+  },
+  {
+   "airport": "BOS",
+   "network": "prioritypass",
+   "location": "Terminal E",
+   "status": "open"
+  },
+  {
+   "airport": "BOS",
+   "network": "prioritypass",
+   "location": "Terminal C",
+   "status": "open"
+  },
+  {
+   "airport": "CLE",
+   "network": "prioritypass",
+   "location": "Concourse B, follow signs after security",
+   "status": "open"
+  },
+  {
+   "airport": "CLT",
+   "network": "prioritypass",
+   "location": "Concourse A",
+   "status": "open"
+  },
+  {
+   "airport": "CMH",
+   "network": "prioritypass",
+   "location": "Concourse B",
+   "status": "open"
+  },
+  {
+   "airport": "CVG",
+   "network": "prioritypass",
+   "location": "Concourse B",
+   "status": "open"
+  },
+  {
+   "airport": "CVG",
+   "network": "prioritypass",
+   "location": "Concourse A",
+   "status": "open"
+  },
+  {
+   "airport": "DFW",
+   "network": "prioritypass",
+   "location": "Terminal E",
+   "status": "open",
+   "name": "Plaza Premium Lounge"
+  },
+  {
+   "airport": "DFW",
+   "network": "prioritypass",
+   "location": "Terminal D",
+   "status": "open",
+   "name": "The Club DFW"
+  },
+  {
+   "airport": "GSP",
+   "network": "prioritypass",
+   "location": "Concourse B, ground level under Gate B1",
+   "status": "open"
+  },
+  {
+   "airport": "GUM",
+   "network": "prioritypass",
+   "location": "Main Terminal",
+   "status": "open"
+  },
+  {
+   "airport": "HNL",
+   "network": "prioritypass",
+   "location": "Terminal 2, Garden Court area near Gates 14–23",
+   "status": "open"
+  },
+  {
+   "airport": "HNL",
+   "network": "prioritypass",
+   "location": "Terminal 1, near Gate A18",
+   "status": "open"
+  },
+  {
+   "airport": "IAD",
+   "network": "prioritypass",
+   "location": "Concourse A",
+   "status": "open",
+   "name": "Virgin Atlantic Clubhouse"
+  },
+  {
+   "airport": "IAD",
+   "network": "prioritypass",
+   "location": "Concourse A",
+   "status": "open",
+   "name": "Air France–KLM Lounge"
+  },
+  {
+   "airport": "IAD",
+   "network": "prioritypass",
+   "location": "Concourse B",
+   "status": "open",
+   "name": "Turkish Airlines Lounge"
+  },
+  {
+   "airport": "IAH",
+   "network": "prioritypass",
+   "location": "Terminal D, opposite Gate D18B",
+   "status": "open"
+  },
+  {
+   "airport": "IAH",
+   "network": "prioritypass",
+   "location": "Terminal D, near Gate D16",
+   "status": "open"
+  },
+  {
+   "airport": "JFK",
+   "network": "prioritypass",
+   "location": "Terminal 4, above Gates A4 and A5",
+   "status": "open",
+   "name": "Virgin Atlantic Clubhouse"
+  },
+  {
+   "airport": "JFK",
+   "network": "prioritypass",
+   "location": "Terminal 4, Level 4",
+   "status": "open",
+   "name": "Air India Lounge"
+  },
+  {
+   "airport": "JFK",
+   "network": "prioritypass",
+   "location": "Terminal 1, across from Gate 3",
+   "status": "open",
+   "name": "Korean Air Lounge"
+  },
+  {
+   "airport": "JFK",
+   "network": "prioritypass",
+   "location": "Terminal 1, between Gates 2 and 3 (international flights only)",
+   "status": "open",
+   "name": "Turkish Airlines Lounge"
+  },
+  {
+   "airport": "JFK",
+   "network": "prioritypass",
+   "location": "Terminal 1, near Gate 1",
+   "status": "open",
+   "name": "Air France Lounge"
+  },
+  {
+   "airport": "JFK",
+   "network": "prioritypass",
+   "location": "Terminal 1, after security",
+   "status": "open",
+   "name": "Lufthansa Business Lounge",
+   "note": "Limited days: check before you go"
+  },
+  {
+   "airport": "JFK",
+   "network": "prioritypass",
+   "location": "Terminal 1, near Gates 8 and 9",
+   "status": "open",
+   "name": "Primeclass Lounge"
+  },
+  {
+   "airport": "JFK",
+   "network": "prioritypass",
+   "location": "Terminal 1, before security behind counters E and F (international flights only)",
+   "status": "open",
+   "name": "VIP ONE Lounge"
+  },
+  {
+   "airport": "LAS",
+   "network": "prioritypass",
+   "location": "Terminal 3, opposite Gate E2",
+   "status": "open"
+  },
+  {
+   "airport": "LAS",
+   "network": "prioritypass",
+   "location": "Terminal 1, Level 2 (train to the D gates)",
+   "status": "open"
+  },
+  {
+   "airport": "LAX",
+   "network": "prioritypass",
+   "location": "Tom Bradley International Terminal, 6th floor (lift near the clock tower)",
+   "status": "open"
+  },
+  {
+   "airport": "MCI",
+   "network": "prioritypass",
+   "location": "Concourse A, near Gate A5",
+   "status": "open",
+   "name": "Escape Lounge"
+  },
+  {
+   "airport": "MCO",
+   "network": "prioritypass",
+   "location": "Terminal C",
+   "status": "open"
+  },
+  {
+   "airport": "MCO",
+   "network": "prioritypass",
+   "location": "Terminal B, Concourse 4",
+   "status": "open"
+  },
+  {
+   "airport": "MCO",
+   "network": "prioritypass",
+   "location": "Terminal A, Concourse 1",
+   "status": "open"
+  },
+  {
+   "airport": "MIA",
+   "network": "prioritypass",
+   "location": "South Terminal (H and J gates), opposite Gate J6",
+   "status": "open"
+  },
+  {
+   "airport": "MIA",
+   "network": "prioritypass",
+   "location": "South Terminal (H and J gates), 3rd floor",
+   "status": "open"
+  },
+  {
+   "airport": "MIA",
+   "network": "prioritypass",
+   "location": "North Terminal (D and E gates), Level 2",
+   "status": "open"
+  },
+  {
+   "airport": "MSP",
+   "network": "prioritypass",
+   "location": "Terminal 1",
+   "status": "open"
+  },
+  {
+   "airport": "MSY",
+   "network": "prioritypass",
+   "location": "Concourse A, 3rd floor",
+   "status": "open"
+  },
+  {
+   "airport": "OAK",
+   "network": "prioritypass",
+   "location": "Terminal 1, between Gates 8 and 8A",
+   "status": "open"
+  },
+  {
+   "airport": "ORD",
+   "network": "prioritypass",
+   "location": "Terminal 5",
+   "status": "open",
+   "name": "Wingtips Lounge"
+  },
+  {
+   "airport": "ORD",
+   "network": "prioritypass",
+   "location": "Terminal 5",
+   "status": "open",
+   "name": "Swissport Lounge"
+  },
+  {
+   "airport": "ORD",
+   "network": "prioritypass",
+   "location": "Terminal 5",
+   "status": "open",
+   "name": "Air France Lounge"
+  },
+  {
+   "airport": "PDX",
+   "network": "prioritypass",
+   "location": "Concourse D",
+   "status": "open"
+  },
+  {
+   "airport": "PHX",
+   "network": "prioritypass",
+   "location": "Terminal 3",
+   "status": "open"
+  },
+  {
+   "airport": "PIT",
+   "network": "prioritypass",
+   "location": "Concourse C",
+   "status": "open"
+  },
+  {
+   "airport": "PVD",
+   "network": "prioritypass",
+   "location": "North Concourse, between Gates 18 and 20",
+   "status": "open"
+  },
+  {
+   "airport": "SAN",
+   "network": "prioritypass",
+   "location": "Terminal 2",
+   "status": "open"
+  },
+  {
+   "airport": "SEA",
+   "network": "prioritypass",
+   "location": "South Satellite, above Gate S9",
+   "status": "open"
+  },
+  {
+   "airport": "SEA",
+   "network": "prioritypass",
+   "location": "Concourse A, opposite Gate A11",
+   "status": "open"
+  },
+  {
+   "airport": "SFO",
+   "network": "prioritypass",
+   "location": "Terminal 1",
+   "status": "open"
+  },
+  {
+   "airport": "SFO",
+   "network": "prioritypass",
+   "location": "International Terminal A",
+   "status": "open"
+  },
+  {
+   "airport": "SJU",
+   "network": "prioritypass",
+   "location": "Terminal C, 3rd floor",
+   "status": "open"
+  },
+  {
+   "airport": "SJU",
+   "network": "prioritypass",
+   "location": "Terminal B, past Duty Free",
+   "status": "open"
+  },
+  {
+   "airport": "SJU",
+   "network": "prioritypass",
+   "location": "Terminal A, past Duty Free",
+   "status": "open"
+  },
+  {
+   "airport": "SMF",
+   "network": "prioritypass",
+   "location": "Terminal B",
+   "status": "open"
+  },
+  {
+   "airport": "SMF",
+   "network": "prioritypass",
+   "location": "Terminal A",
+   "status": "open"
+  },
+  {
+   "airport": "STL",
+   "network": "prioritypass",
+   "location": "Terminal 2, opposite Gate E29",
+   "status": "open"
+  },
+  {
+   "airport": "SYR",
+   "network": "prioritypass",
+   "location": "Terminal A",
+   "status": "open"
+  },
+  {
+   "airport": "TUL",
+   "network": "prioritypass",
+   "location": "After security",
+   "status": "open"
+  },
+  {
+   "airport": "XNA",
+   "network": "prioritypass",
+   "location": "After security",
+   "status": "open"
+  },
+  {
+   "airport": "MCI",
+   "network": "skyclub",
+   "location": "B gates, next to CenterPoint",
+   "status": "open"
+  },
+  {
+   "airport": "MCI",
+   "network": "amexpartner",
+   "location": "Concourse A, near Gate A5",
+   "status": "open",
+   "name": "Escape Lounge"
+  },
+  {
+   "airport": "DFW",
+   "network": "amexpartner",
+   "location": "Terminal D, international departures",
+   "status": "open",
+   "name": "Plaza Premium Lounge"
+  },
+  {
+   "airport": "DFW",
+   "network": "amexpartner",
+   "location": "Terminal E",
+   "status": "open",
+   "name": "Plaza Premium Lounge"
+  },
+  {
+   "airport": "DFW",
+   "network": "united_club",
+   "location": "Terminal E, between Gates E6 and E7",
+   "status": "open"
+  },
+  {
+   "airport": "ATL",
+   "network": "united_club",
+   "location": "North Terminal, between Gates 11 and 12",
+   "status": "open"
+  },
+  {
+   "airport": "ATL",
+   "network": "admirals",
+   "location": "Terminal T, across from Gate T11",
+   "status": "open"
   }
  ],
  "meta": {
   "changelog": [
+   {
+    "date": "2026-10-25",
+    "text": "Added every US Priority Pass lounge (60 venues at 36 airports) so results name them instead of linking out; added Amex partner lounges (Escape, Plaza Premium) and missing lounges at Kansas City, Dallas and Atlanta."
+   },
    {
     "date": "2026-10-25",
     "text": "Checked all networks. Centurion card guests now include family; Polaris partner list adds ITA and Brussels; Star Alliance Gold guests must be on your flight; Delta One Basic fares lose access Jan 19, 2027 (notice); updated guest rules for Admirals, Alaska and Flagship; fixed Sapphire, Delta One and SFO lounge locations, added the IAD Etihad/Sapphire lounge, marked the SFO Alaska Lounge closed."
@@ -775,10 +1251,14 @@
     "venturex": "$35 per guest.",
     "venturex_biz": "2 guests free."
    },
-   "name": "Priority Pass lounges",
+   "name": "Priority Pass lounge",
    "notices": [],
    "operator": "Priority Pass",
    "sources": [
+    {
+     "title": "The Points Party: Priority Pass lounges by airport",
+     "url": "https://thepointsparty.com/loyalty-programs/lounges/priority-pass"
+    },
     {
      "title": "One Mile at a Time: Venture X lounge access changes",
      "url": "https://onemileatatime.com/news/capital-one-venture-x-lounge-access-changes/"
@@ -790,16 +1270,68 @@
     {
      "title": "Chase: Sapphire Lounge network",
      "url": "https://www.chase.com/sapphire-cards/lounges"
-    },
-    {
-     "title": "Priority Pass",
-     "url": "https://www.prioritypass.com"
     }
    ],
    "unverified": [
-    "Amex Priority Pass guest allowance"
+    "Amex Priority Pass guest allowance",
+    "Venue names at some airports"
    ],
-   "verified": "2026-10-25"
+   "verified": "2026-10-25",
+   "scannedAirports": [
+    "DFW",
+    "JFK",
+    "ATL",
+    "ORD",
+    "SFO",
+    "IAH",
+    "PHX",
+    "IAD",
+    "LAX",
+    "SEA",
+    "BOS",
+    "DEN",
+    "LAS",
+    "MCO",
+    "MIA",
+    "MSP",
+    "PHL",
+    "CLT",
+    "DCA",
+    "EWR",
+    "LGA",
+    "HNL",
+    "PDX",
+    "CVG",
+    "SAN",
+    "SJU",
+    "SMF",
+    "AUS",
+    "FLL",
+    "MCI",
+    "MSY",
+    "RDU",
+    "BDL",
+    "BNA",
+    "CLE",
+    "CMH",
+    "GSP",
+    "GUM",
+    "OAK",
+    "PBI",
+    "PIT",
+    "PVD",
+    "SLC",
+    "SNA",
+    "STL",
+    "SYR",
+    "TPA",
+    "TUL",
+    "XNA",
+    "ANC",
+    "RNO",
+    "SAT"
+   ],
+   "venuesChecked": "2026-09-30"
   },
   "sapphire": {
    "arrivals": false,
@@ -895,6 +1427,35 @@
    "starGoldInternationalOnly": true,
    "unverified": [],
    "verified": "2026-10-25"
+  },
+  "amexpartner": {
+   "name": "Amex partner lounge",
+   "operator": "Amex Global Lounge Collection",
+   "cards": [
+    "amex_plat",
+    "amex_bizplat",
+    "amex_centurion"
+   ],
+   "arrivals": false,
+   "bringCard": "Your physical Amex Platinum card",
+   "guests": "Guest rules vary by lounge; check the Amex app.",
+   "noAccessHint": "Part of the Amex Global Lounge Collection (Escape, Plaza Premium and others), included with Amex Platinum.",
+   "extraLimits": [
+    "Usually up to 3 hours before departure.",
+    "Can refuse entry when full."
+   ],
+   "notices": [],
+   "verified": "2026-09-30",
+   "unverified": [
+    "Guest rules",
+    "Time limits"
+   ],
+   "sources": [
+    {
+     "title": "The Points Party: Amex Global Lounge Collection guide",
+     "url": "https://thepointsparty.com/articles/ultimate-guide-to-american-express-lounge-access"
+    }
+   ]
   }
  },
  "schema": 1

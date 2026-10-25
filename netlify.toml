@@ -1,8 +1,15 @@
 [build]
   publish = "."
-  # Rule updates are read straight from GitHub by the app, so a commit that only
-  # changes rules.json skips the Netlify deploy (saves your monthly Netlify credits).
+  # The app reads rule updates straight from GitHub, so a commit that only
+  # changes rules.json skips the Netlify deploy (saves your monthly credits).
   ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- . ':(exclude)rules.json'"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Scripts may only come from this site. This also keeps Netlify's
+    # injected "Powered by Netlify" badge from appearing.
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://raw.githubusercontent.com; manifest-src 'self'; frame-src 'none'; base-uri 'self'; form-action 'self'"
 
 [[headers]]
   for = "/rules.json"
@@ -16,5 +23,10 @@
 
 [[headers]]
   for = "/index.html"
+  [headers.values]
+    Cache-Control = "no-cache"
+
+[[headers]]
+  for = "/app.js"
   [headers.values]
     Cache-Control = "no-cache"

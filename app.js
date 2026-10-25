@@ -27,7 +27,7 @@ const STATUS = [
   ["skyteam","SkyTeam",[["none","None"],["elite","Elite"],["eliteplus","Elite Plus"]],"Elite Plus = Delta Gold Medallion or higher, Flying Blue Gold+, etc."]
 ];
 const SPEND = [
-  ["spend_amex","$75k+ this year on my Amex Platinum","Free guests at Centurion, unlimited Sky Club visits"],
+  ["spend_amex","$75k spent on my Amex Platinum (this year or last)","2 free guests at Centurion Lounges and unlimited Sky Club visits"],
   ["spend_capone","$75k+ on my Venture X account","2 free guests at Capital One Lounges"]
 ];
 const AIRLINES = [

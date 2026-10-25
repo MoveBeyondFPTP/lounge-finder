@@ -966,6 +966,10 @@
   "changelog": [
    {
     "date": "2026-10-25",
+    "text": "United Clubs now show as open to members and United Club cardholders when you're arriving, not just departing."
+   },
+   {
+    "date": "2026-10-25",
     "text": "Added every US Priority Pass lounge (60 venues at 36 airports) so results name them instead of linking out; added Amex partner lounges (Escape, Plaza Premium) and missing lounges at Kansas City, Dallas and Atlanta."
    },
    {
@@ -1422,11 +1426,19 @@
     {
      "title": "The Points Guy: United Club access changes",
      "url": "https://thepointsguy.com/news/united-airlines-club-access-changes"
+    },
+    {
+     "title": "LoungeReview: United Club same-day boarding pass rule (members may use clubs on arrival)",
+     "url": "https://loungereview.com/united-club-updates-upcoming-access-restrictions-for-club-members-and-possible-changes-to-copa-partnership"
     }
    ],
    "starGoldInternationalOnly": true,
-   "unverified": [],
-   "verified": "2026-10-25"
+   "unverified": [
+    "Arrival access for members and cardholders (based on United's 2016 clarification)",
+    "Star Alliance Gold from partner airlines on domestic United flights"
+   ],
+   "verified": "2026-10-25",
+   "arrivalsForMembers": true
   },
   "amexpartner": {
    "name": "Amex partner lounge",

@@ -129,6 +129,24 @@ select{appearance:none;-webkit-appearance:none;width:100%;border:1px solid var(-
 .seg.wrap{flex-wrap:wrap}
 .seg.wrap button{flex:1 1 30%}
 
+/* ---------- Guests ---------- */
+.glist{display:grid;gap:10px}
+.glist:empty{display:none}
+.grow{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:8px;align-items:center}
+.gnum{font-size:13px;font-weight:800;color:var(--muted);white-space:nowrap}
+.grow .seg button{font-size:13px;padding:9px 2px}
+.gdel{width:36px;height:36px;border-radius:10px;border:1px solid var(--line);background:var(--surface);display:grid;place-items:center;color:var(--muted)}
+.addg{justify-self:start;border:1.5px dashed var(--line);background:none;border-radius:12px;padding:11px 14px;font-weight:800;color:var(--brand)}
+.ghint{color:var(--muted);font-size:12px}
+.lc-guest{font-size:13px;font-weight:700;margin-top:6px;display:flex;gap:6px;align-items:center}
+.lc-guest::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor;flex:none}
+.gv-ok{color:var(--ok)}.gv-warn{color:var(--warn)}.gv-no{color:var(--capone)}
+.gbox{border-radius:12px;padding:10px 12px;font-size:14px;display:grid;gap:3px;color:var(--ink)}
+.gbox b{font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+.gbox.gv-ok{background:var(--ok-soft)}.gbox.gv-ok b{color:var(--ok)}
+.gbox.gv-warn{background:var(--warn-soft)}.gbox.gv-warn b{color:var(--warn)}
+.gbox.gv-no{background:color-mix(in srgb,var(--capone) 12%,var(--surface))}.gbox.gv-no b{color:var(--capone)}
+
 /* ---------- Results ---------- */
 .tripbar{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:14px 16px;display:flex;align-items:center;gap:14px}
 .tripbar .code{font-family:var(--f-mono);font-weight:600;font-size:30px;letter-spacing:.05em;line-height:1}
@@ -294,6 +312,12 @@ details.nope[open] summary{margin-bottom:10px}
     <div class="field"><span class="lbl" id="cabinL">Cabin</span><div class="seg wrap" id="cabin" role="group" aria-labelledby="cabinL"></div></div>
     <div class="field"><span class="lbl" id="tripL">Trip</span><div class="seg" id="trip" role="group" aria-labelledby="tripL"></div></div>
     <div class="field"><span class="lbl" id="dirL">At this airport you're…</span><div class="seg" id="dir" role="group" aria-labelledby="dirL"></div></div>
+    <div class="field">
+      <span class="lbl">Who's coming with you?</span>
+      <div id="guestList" class="glist"></div>
+      <button type="button" class="addg" id="addGuest">+ Add a guest</button>
+      <small class="ghint">Ages matter: infants under 2 are free at most lounges, and many cards cover your kids.</small>
+    </div>
     <button class="btn gold" type="submit">Show my lounges</button>
   </form>
 </section>

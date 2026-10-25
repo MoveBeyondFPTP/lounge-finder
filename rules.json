@@ -998,6 +998,10 @@
   "changelog": [
    {
     "date": "2026-10-25",
+    "text": "Guest rules by age added for every lounge network: infants under 2 are free at Centurion, Capital One, Sapphire, Sky Club, United Club and Alaska lounges; enter your guests on the trip form to see costs and limits."
+   },
+   {
+    "date": "2026-10-25",
     "text": "Added Star Alliance partner lounges (Air Canada Maple Leaf at LAX, LGA, SFO and EWR; Star Alliance Lounge at LAX), open to Star Alliance Gold on any Star flight including domestic United, and to United Club All Access members. All Access now shows 2 guests."
    },
    {
@@ -1053,7 +1057,84 @@
    ],
    "statusInternationalOnly": true,
    "unverified": [],
-   "verified": "2026-10-25"
+   "verified": "2026-10-25",
+   "guestPolicies": {
+    "membership": {
+     "free": 2,
+     "max": 2,
+     "fee": null,
+     "childAges": [
+      2,
+      17
+     ],
+     "familyUnder": 18,
+     "familyFree": true,
+     "familyAdults": 1,
+     "sameFlight": false,
+     "infantUnder": 2,
+     "infantSure": false
+    },
+    "citiExec": {
+     "free": 2,
+     "max": 2,
+     "fee": null,
+     "childAges": [
+      2,
+      17
+     ],
+     "familyUnder": 18,
+     "familyFree": true,
+     "familyAdults": 1,
+     "sameFlight": false,
+     "infantUnder": 2,
+     "infantSure": false
+    },
+    "status": {
+     "free": 1,
+     "max": 1,
+     "fee": null,
+     "childAges": [
+      2,
+      17
+     ],
+     "familyUnder": 0,
+     "familyFree": false,
+     "familyAdults": 0,
+     "sameFlight": false,
+     "infantUnder": 2,
+     "infantSure": false
+    },
+    "intlFirst": {
+     "free": 1,
+     "max": 1,
+     "fee": null,
+     "childAges": [
+      2,
+      17
+     ],
+     "familyUnder": 0,
+     "familyFree": false,
+     "familyAdults": 0,
+     "sameFlight": false,
+     "infantUnder": 2,
+     "infantSure": true
+    },
+    "premium": {
+     "free": 0,
+     "max": 0,
+     "fee": null,
+     "childAges": [
+      2,
+      17
+     ],
+     "familyUnder": 0,
+     "familyFree": false,
+     "familyAdults": 0,
+     "sameFlight": false,
+     "infantUnder": 2,
+     "infantSure": false
+    }
+   }
   },
   "alaska": {
    "extraLimits": [
@@ -1073,7 +1154,54 @@
     }
    ],
    "unverified": [],
-   "verified": "2026-10-25"
+   "verified": "2026-10-25",
+   "guestPolicies": {
+    "membership": {
+     "free": 2,
+     "max": 2,
+     "fee": null,
+     "childAges": [
+      2,
+      17
+     ],
+     "familyUnder": 0,
+     "familyFree": false,
+     "familyAdults": 0,
+     "sameFlight": false,
+     "infantUnder": 2,
+     "infantSure": true
+    },
+    "status": {
+     "free": 1,
+     "max": 1,
+     "fee": null,
+     "childAges": [
+      2,
+      17
+     ],
+     "familyUnder": 0,
+     "familyFree": false,
+     "familyAdults": 0,
+     "sameFlight": false,
+     "infantUnder": 2,
+     "infantSure": true
+    },
+    "premium": {
+     "free": 0,
+     "max": 0,
+     "fee": null,
+     "childAges": [
+      2,
+      17
+     ],
+     "familyUnder": 0,
+     "familyFree": false,
+     "familyAdults": 0,
+     "sameFlight": false,
+     "infantUnder": 2,
+     "infantSure": true
+    }
+   }
   },
   "capone": {
    "arrivals": false,
@@ -1103,7 +1231,29 @@
     }
    ],
    "unverified": [],
-   "verified": "2026-10-25"
+   "verified": "2026-10-25",
+   "guestPolicies": {
+    "card": {
+     "free": 0,
+     "max": null,
+     "fee": {
+      "adult": 45,
+      "child": 25
+     },
+     "childAges": [
+      2,
+      17
+     ],
+     "familyUnder": 0,
+     "familyFree": false,
+     "familyAdults": 0,
+     "sameFlight": false,
+     "freeAfterSpend": 2,
+     "spendKey": "spend_capone",
+     "infantUnder": 2,
+     "infantSure": true
+    }
+   }
   },
   "capone_landing": {
    "arrivals": false,
@@ -1135,7 +1285,29 @@
     }
    ],
    "unverified": [],
-   "verified": "2026-10-25"
+   "verified": "2026-10-25",
+   "guestPolicies": {
+    "card": {
+     "free": 0,
+     "max": null,
+     "fee": {
+      "adult": 45,
+      "child": 25
+     },
+     "childAges": [
+      2,
+      17
+     ],
+     "familyUnder": 0,
+     "familyFree": false,
+     "familyAdults": 0,
+     "sameFlight": false,
+     "freeAfterSpend": 1,
+     "spendKey": "spend_capone",
+     "infantUnder": 2,
+     "infantSure": true
+    }
+   }
   },
   "centurion": {
    "arrivals": false,
@@ -1173,7 +1345,65 @@
     }
    ],
    "unverified": [],
-   "verified": "2026-10-25"
+   "verified": "2026-10-25",
+   "guestPolicies": {
+    "plat": {
+     "free": 0,
+     "max": null,
+     "fee": {
+      "adult": 50,
+      "child": 30
+     },
+     "childAges": [
+      2,
+      17
+     ],
+     "familyUnder": 0,
+     "familyFree": false,
+     "familyAdults": 0,
+     "sameFlight": true,
+     "freeAfterSpend": 2,
+     "spendKey": "spend_amex",
+     "infantUnder": 2,
+     "infantSure": true
+    },
+    "centurionCard": {
+     "free": 2,
+     "max": null,
+     "fee": {
+      "adult": 50,
+      "child": 30
+     },
+     "childAges": [
+      2,
+      17
+     ],
+     "familyUnder": 18,
+     "familyFree": true,
+     "familyAdults": 1,
+     "sameFlight": true,
+     "infantUnder": 2,
+     "infantSure": true
+    },
+    "deltaReserve": {
+     "free": 0,
+     "max": 2,
+     "fee": {
+      "adult": 50,
+      "child": 30
+     },
+     "childAges": [
+      2,
+      17
+     ],
+     "familyUnder": 0,
+     "familyFree": false,
+     "familyAdults": 0,
+     "sameFlight": true,
+     "infantUnder": 2,
+     "infantSure": true
+    }
+   }
   },
   "deltaone": {
    "arrivals": true,
@@ -1201,7 +1431,24 @@
     }
    ],
    "unverified": [],
-   "verified": "2026-10-25"
+   "verified": "2026-10-25",
+   "guestPolicies": {
+    "ticket": {
+     "free": 0,
+     "max": 0,
+     "fee": null,
+     "childAges": [
+      2,
+      17
+     ],
+     "familyUnder": 0,
+     "familyFree": false,
+     "familyAdults": 0,
+     "sameFlight": false,
+     "infantUnder": 2,
+     "infantSure": false
+    }
+   }
   },
   "flagship": {
    "arrivals": true,
@@ -1228,7 +1475,54 @@
    "partnerStatusAnyFlight": true,
    "statusArrivals": true,
    "guestsStatus": "1 guest.",
-   "guestsIntlFirst": "1 guest."
+   "guestsIntlFirst": "1 guest.",
+   "guestPolicies": {
+    "status": {
+     "free": 1,
+     "max": 1,
+     "fee": null,
+     "childAges": [
+      2,
+      17
+     ],
+     "familyUnder": 0,
+     "familyFree": false,
+     "familyAdults": 0,
+     "sameFlight": false,
+     "infantUnder": 2,
+     "infantSure": true
+    },
+    "intlFirst": {
+     "free": 1,
+     "max": 1,
+     "fee": null,
+     "childAges": [
+      2,
+      17
+     ],
+     "familyUnder": 0,
+     "familyFree": false,
+     "familyAdults": 0,
+     "sameFlight": false,
+     "infantUnder": 2,
+     "infantSure": true
+    },
+    "premium": {
+     "free": 0,
+     "max": 0,
+     "fee": null,
+     "childAges": [
+      2,
+      17
+     ],
+     "familyUnder": 0,
+     "familyFree": false,
+     "familyAdults": 0,
+     "sameFlight": false,
+     "infantUnder": 2,
+     "infantSure": true
+    }
+   }
   },
   "polaris": {
    "arrivals": true,
@@ -1266,7 +1560,39 @@
    "unverified": [
     "Arrivals access for United Polaris passengers"
    ],
-   "verified": "2026-10-25"
+   "verified": "2026-10-25",
+   "guestPolicies": {
+    "ticket": {
+     "free": 0,
+     "max": 0,
+     "fee": null,
+     "childAges": [
+      2,
+      17
+     ],
+     "familyUnder": 0,
+     "familyFree": false,
+     "familyAdults": 0,
+     "sameFlight": false,
+     "infantUnder": 2,
+     "infantSure": false
+    },
+    "firstPartner": {
+     "free": 1,
+     "max": 1,
+     "fee": null,
+     "childAges": [
+      2,
+      17
+     ],
+     "familyUnder": 0,
+     "familyFree": false,
+     "familyAdults": 0,
+     "sameFlight": false,
+     "infantUnder": 2,
+     "infantSure": false
+    }
+   }
   },
   "prioritypass": {
    "cards": [
@@ -1375,7 +1701,151 @@
     "RNO",
     "SAT"
    ],
-   "venuesChecked": "2026-09-30"
+   "venuesChecked": "2026-09-30",
+   "guestPolicies": {
+    "csr": {
+     "free": 2,
+     "max": null,
+     "fee": {
+      "adult": 27,
+      "child": 27
+     },
+     "childAges": [
+      2,
+      17
+     ],
+     "familyUnder": 0,
+     "familyFree": false,
+     "familyAdults": 0,
+     "sameFlight": false,
+     "infantUnder": 2,
+     "infantSure": false
+    },
+    "ritz": {
+     "free": 2,
+     "max": null,
+     "fee": {
+      "adult": 27,
+      "child": 27
+     },
+     "childAges": [
+      2,
+      17
+     ],
+     "familyUnder": 0,
+     "familyFree": false,
+     "familyAdults": 0,
+     "sameFlight": false,
+     "infantUnder": 2,
+     "infantSure": false
+    },
+    "venturex": {
+     "free": 0,
+     "max": null,
+     "fee": {
+      "adult": 35,
+      "child": 35
+     },
+     "childAges": [
+      2,
+      17
+     ],
+     "familyUnder": 0,
+     "familyFree": false,
+     "familyAdults": 0,
+     "sameFlight": false,
+     "infantUnder": 2,
+     "infantSure": false
+    },
+    "venturex_biz": {
+     "free": 2,
+     "max": null,
+     "fee": {
+      "adult": 35,
+      "child": 35
+     },
+     "childAges": [
+      2,
+      17
+     ],
+     "familyUnder": 0,
+     "familyFree": false,
+     "familyAdults": 0,
+     "sameFlight": false,
+     "infantUnder": 2,
+     "infantSure": false
+    },
+    "amex_plat": {
+     "free": 2,
+     "max": null,
+     "fee": {
+      "adult": 35,
+      "child": 35
+     },
+     "childAges": [
+      2,
+      17
+     ],
+     "familyUnder": 0,
+     "familyFree": false,
+     "familyAdults": 0,
+     "sameFlight": false,
+     "infantUnder": 2,
+     "infantSure": false
+    },
+    "amex_bizplat": {
+     "free": 2,
+     "max": null,
+     "fee": {
+      "adult": 35,
+      "child": 35
+     },
+     "childAges": [
+      2,
+      17
+     ],
+     "familyUnder": 0,
+     "familyFree": false,
+     "familyAdults": 0,
+     "sameFlight": false,
+     "infantUnder": 2,
+     "infantSure": false
+    },
+    "amex_centurion": {
+     "free": 2,
+     "max": null,
+     "fee": {
+      "adult": 35,
+      "child": 35
+     },
+     "childAges": [
+      2,
+      17
+     ],
+     "familyUnder": 0,
+     "familyFree": false,
+     "familyAdults": 0,
+     "sameFlight": false,
+     "infantUnder": 2,
+     "infantSure": false
+    },
+    "pp": {
+     "free": 0,
+     "max": null,
+     "fee": null,
+     "childAges": [
+      2,
+      17
+     ],
+     "familyUnder": 0,
+     "familyFree": false,
+     "familyAdults": 0,
+     "sameFlight": false,
+     "note": "Depends on your Priority Pass plan.",
+     "infantUnder": 2,
+     "infantSure": false
+    }
+   }
   },
   "sapphire": {
    "arrivals": false,
@@ -1408,7 +1878,27 @@
     }
    ],
    "unverified": [],
-   "verified": "2026-10-25"
+   "verified": "2026-10-25",
+   "guestPolicies": {
+    "card": {
+     "free": 2,
+     "max": null,
+     "fee": {
+      "adult": 27,
+      "child": 27
+     },
+     "childAges": [
+      2,
+      17
+     ],
+     "familyUnder": 0,
+     "familyFree": false,
+     "familyAdults": 0,
+     "sameFlight": false,
+     "infantUnder": 2,
+     "infantSure": true
+    }
+   }
   },
   "skyclub": {
    "arrivals": true,
@@ -1446,7 +1936,110 @@
    "visitsPlatinum": 10,
    "visitsReserve": 15,
    "arrivalNote": "Arriving: open after a Delta flight with a membership or Amex card. With an Amex card it uses one of your yearly visits.",
-   "guestsMedallion": "1 guest free if they're also in Premium Select or Delta One."
+   "guestsMedallion": "1 guest free if they're also in Premium Select or Delta One.",
+   "guestPolicies": {
+    "amexCard": {
+     "free": 0,
+     "max": 2,
+     "fee": {
+      "adult": 50,
+      "child": 50
+     },
+     "childAges": [
+      2,
+      17
+     ],
+     "familyUnder": 21,
+     "familyFree": false,
+     "familyAdults": 1,
+     "sameFlight": false,
+     "infantUnder": 2,
+     "infantSure": true
+    },
+    "reserveCard": {
+     "free": 0,
+     "max": 2,
+     "fee": {
+      "adult": 50,
+      "child": 50
+     },
+     "childAges": [
+      2,
+      17
+     ],
+     "familyUnder": 21,
+     "familyFree": false,
+     "familyAdults": 1,
+     "sameFlight": false,
+     "passes": "Your card includes 4 free guest passes a year (up to 2 per visit).",
+     "infantUnder": 2,
+     "infantSure": true
+    },
+    "member": {
+     "free": 0,
+     "max": 2,
+     "fee": {
+      "adult": 50,
+      "child": 50
+     },
+     "childAges": [
+      2,
+      17
+     ],
+     "familyUnder": 21,
+     "familyFree": false,
+     "familyAdults": 1,
+     "sameFlight": false,
+     "infantUnder": 2,
+     "infantSure": true
+    },
+    "ticket": {
+     "free": 0,
+     "max": 0,
+     "fee": null,
+     "childAges": [
+      2,
+      17
+     ],
+     "familyUnder": 0,
+     "familyFree": false,
+     "familyAdults": 0,
+     "sameFlight": false,
+     "infantUnder": 2,
+     "infantSure": true
+    },
+    "eliteplus": {
+     "free": 1,
+     "max": 1,
+     "fee": null,
+     "childAges": [
+      2,
+      17
+     ],
+     "familyUnder": 0,
+     "familyFree": false,
+     "familyAdults": 0,
+     "sameFlight": true,
+     "infantUnder": 2,
+     "infantSure": true
+    },
+    "medallion": {
+     "free": 1,
+     "max": 1,
+     "fee": null,
+     "childAges": [
+      2,
+      17
+     ],
+     "familyUnder": 0,
+     "familyFree": false,
+     "familyAdults": 0,
+     "sameFlight": true,
+     "note": "Your guest must also be in Premium Select or Delta One.",
+     "infantUnder": 2,
+     "infantSure": true
+    }
+   }
   },
   "united_club": {
    "arrivalsPremiumInternational": true,
@@ -1487,7 +2080,88 @@
    ],
    "verified": "2026-10-25",
    "arrivalsForMembers": true,
-   "guestsAllAccess": "Up to 2 adult guests, or 1 adult plus your children under 18 (All Access)."
+   "guestsAllAccess": "Up to 2 adult guests, or 1 adult plus your children under 18 (All Access).",
+   "guestPolicies": {
+    "card": {
+     "free": 1,
+     "max": 1,
+     "fee": null,
+     "childAges": [
+      2,
+      17
+     ],
+     "familyUnder": 18,
+     "familyFree": true,
+     "familyAdults": 1,
+     "sameFlight": false,
+     "infantUnder": 2,
+     "infantSure": true
+    },
+    "allAccess": {
+     "free": 2,
+     "max": 2,
+     "fee": null,
+     "childAges": [
+      2,
+      17
+     ],
+     "familyUnder": 18,
+     "familyFree": true,
+     "familyAdults": 1,
+     "sameFlight": false,
+     "infantUnder": 2,
+     "infantSure": true
+    },
+    "membership": {
+     "free": 0,
+     "max": null,
+     "fee": {
+      "adult": 59,
+      "child": 59
+     },
+     "childAges": [
+      2,
+      17
+     ],
+     "familyUnder": 0,
+     "familyFree": false,
+     "familyAdults": 0,
+     "sameFlight": false,
+     "note": "Individual memberships include no free guests; one-time passes are $59.",
+     "infantUnder": 2,
+     "infantSure": true
+    },
+    "starGold": {
+     "free": 1,
+     "max": 1,
+     "fee": null,
+     "childAges": [
+      2,
+      17
+     ],
+     "familyUnder": 0,
+     "familyFree": false,
+     "familyAdults": 0,
+     "sameFlight": true,
+     "infantUnder": 2,
+     "infantSure": true
+    },
+    "premium": {
+     "free": 0,
+     "max": 0,
+     "fee": null,
+     "childAges": [
+      2,
+      17
+     ],
+     "familyUnder": 0,
+     "familyFree": false,
+     "familyAdults": 0,
+     "sameFlight": false,
+     "infantUnder": 2,
+     "infantSure": true
+    }
+   }
   },
   "amexpartner": {
    "name": "Amex partner lounge",
@@ -1516,7 +2190,25 @@
      "title": "The Points Party: Amex Global Lounge Collection guide",
      "url": "https://thepointsparty.com/articles/ultimate-guide-to-american-express-lounge-access"
     }
-   ]
+   ],
+   "guestPolicies": {
+    "card": {
+     "free": 2,
+     "max": 2,
+     "fee": null,
+     "childAges": [
+      2,
+      17
+     ],
+     "familyUnder": 0,
+     "familyFree": false,
+     "familyAdults": 0,
+     "sameFlight": false,
+     "note": "Extra guests need a day pass; price varies by lounge.",
+     "infantUnder": 2,
+     "infantSure": false
+    }
+   }
   },
   "starpartner": {
    "name": "Star Alliance partner lounge",
@@ -1552,8 +2244,84 @@
      "title": "LoyaltyLobby: United Club Individual vs All Access",
      "url": "https://loyaltylobby.com/2025/03/24/united-club-membership-pricing-entry-rule-changes/"
     }
-   ]
+   ],
+   "guestPolicies": {
+    "starGold": {
+     "free": 1,
+     "max": null,
+     "fee": {
+      "adult": 59,
+      "child": 59
+     },
+     "childAges": [
+      2,
+      17
+     ],
+     "familyUnder": 0,
+     "familyFree": false,
+     "familyAdults": 0,
+     "sameFlight": true,
+     "infantUnder": 2,
+     "infantSure": false
+    },
+    "allAccess": {
+     "free": 2,
+     "max": 2,
+     "fee": null,
+     "childAges": [
+      2,
+      17
+     ],
+     "familyUnder": 18,
+     "familyFree": true,
+     "familyAdults": 1,
+     "sameFlight": false,
+     "infantUnder": 2,
+     "infantSure": false
+    },
+    "premium": {
+     "free": 0,
+     "max": 0,
+     "fee": null,
+     "childAges": [
+      2,
+      17
+     ],
+     "familyUnder": 0,
+     "familyFree": false,
+     "familyAdults": 0,
+     "sameFlight": false,
+     "infantUnder": 2,
+     "infantSure": false
+    }
+   }
   }
  },
- "schema": 1
+ "schema": 1,
+ "guestSources": [
+  {
+   "title": "American Express: Centurion access and guest fees",
+   "url": "https://www.thecenturionlounge.com/info/access/"
+  },
+  {
+   "title": "The Points Guy: Lounge guest policies by card",
+   "url": "https://thepointsguy.com/guide/credit-card-guest-policies-for-airport-lounges/"
+  },
+  {
+   "title": "Roaming Cactus: Sapphire Reserve guest policy 2026",
+   "url": "https://roamingcactus.com/credit-cards/csr-lounge-guest-policy-2026"
+  },
+  {
+   "title": "Delta: Sky Club access",
+   "url": "https://www.delta.com/us/en/delta-sky-club/access"
+  },
+  {
+   "title": "Chase: Guide to United Club lounges",
+   "url": "https://www.chase.com/personal/credit-cards/education/rewards-benefits/guide-to-united-lounges"
+  },
+  {
+   "title": "American Airlines: Admirals Club access",
+   "url": "https://www.aa.com/i18n/travel-info/clubs/admirals-club-access.html"
+  }
+ ]
 }

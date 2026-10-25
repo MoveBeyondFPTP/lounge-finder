@@ -1,0 +1,733 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Lounge Finder">
+<meta name="theme-color" content="#EDF0F5" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0A111E" media="(prefers-color-scheme: dark)">
+<meta name="description" content="Which airport lounges can you get into? Based on your cards, memberships and status.">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+<title>Lounge Finder</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Manrope:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+/* Layout: single-column phone app, boarding-pass search card on top, results as stacked lounge tickets, fixed bottom tab bar */
+:root{
+  --bg:#EDF0F5; --surface:#FFFFFF; --surface-2:#F5F7FA; --ink:#0F1B2D; --muted:#5B6778; --line:#D9DFE8;
+  --accent:#94702F; --accent-ink:#FFFFFF; --accent-soft:#F3EBDC;
+  --ok:#17804F; --ok-soft:#E3F3EA; --warn:#9C6511; --warn-soft:#FBF0DC; --no:#9B3838; --no-soft:#F7E6E6;
+  --shadow:0 1px 2px rgba(15,27,45,.06),0 8px 24px rgba(15,27,45,.06);
+  --f-display:"Sora",ui-sans-serif,system-ui,sans-serif;
+  --f-body:"Manrope",ui-sans-serif,system-ui,-apple-system,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0A111E; --surface:#121B2C; --surface-2:#182337; --ink:#E8ECF3; --muted:#8C98AB; --line:#24304A;
+  --accent:#D6B472; --accent-ink:#1A1408; --accent-soft:#2A2416;
+  --ok:#4FC48C; --ok-soft:#12291F; --warn:#E6B453; --warn-soft:#2B2312; --no:#E17A7A; --no-soft:#2C1618;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0A111E; --surface:#121B2C; --surface-2:#182337; --ink:#E8ECF3; --muted:#8C98AB; --line:#24304A;
+  --accent:#D6B472; --accent-ink:#1A1408; --accent-soft:#2A2416;
+  --ok:#4FC48C; --ok-soft:#12291F; --warn:#E6B453; --warn-soft:#2B2312; --no:#E17A7A; --no-soft:#2C1618;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.45;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.wrap{max-width:560px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:20px calc(96px + env(safe-area-inset-bottom,0px))}
+h1,h2,h3{font-family:var(--f-display);margin:0;text-wrap:balance;letter-spacing:-.01em}
+button,input,select{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.brand{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px}
+.brand h1{font-size:24px;font-weight:700;display:flex;align-items:center;gap:10px}
+.mark{width:32px;height:32px;border-radius:9px;background:var(--ink);display:grid;place-items:center;flex:none}
+.mark svg{width:18px;height:18px}
+.sub{color:var(--muted);font-size:13px}
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+/* Boarding pass */
+.pass{background:var(--surface);border-radius:20px;box-shadow:var(--shadow);overflow:hidden;border:1px solid var(--line)}
+.pass-top{padding:18px 18px 16px;display:grid;gap:14px}
+.route{display:flex;align-items:flex-end;gap:14px}
+.code-field{flex:none}
+.code-field input{width:150px;border:0;background:transparent;font-family:var(--f-mono);font-weight:600;font-size:44px;letter-spacing:.04em;line-height:1;text-transform:uppercase;padding:0;color:var(--ink)}
+.code-field input::placeholder{color:var(--line)}
+.code-field input:focus{outline:none}
+.code-field:focus-within .ul{background:var(--accent)}
+.ul{height:2px;background:var(--line);border-radius:2px;margin-top:6px;width:150px}
+.apname{font-size:13px;color:var(--muted);min-height:18px;padding-bottom:8px;min-width:0}
+.field{display:grid;gap:6px}
+.field label,.lbl{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+select{appearance:none;-webkit-appearance:none;width:100%;border:1px solid var(--line);background:var(--surface-2) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%238C98AB' stroke-width='1.6'/%3E%3C/svg%3E") no-repeat right 14px center;border-radius:12px;padding:12px 38px 12px 14px;font-weight:600}
+.seg{display:flex;background:var(--surface-2);border:1px solid var(--line);border-radius:12px;padding:3px;gap:3px}
+.seg button{flex:1;border:0;background:transparent;padding:9px 4px;border-radius:9px;font-size:13px;font-weight:600;color:var(--muted);cursor:pointer;white-space:nowrap}
+.seg button[aria-pressed="true"]{background:var(--surface);color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.12)}
+.perf{position:relative;height:0;border-top:2px dashed var(--line);margin:0 18px}
+.perf::before,.perf::after{content:"";position:absolute;top:-12px;width:22px;height:22px;border-radius:50%;background:var(--bg);border:1px solid var(--line)}
+.perf::before{left:-30px}.perf::after{right:-30px}
+.pass-bot{padding:14px 18px 18px;display:grid;gap:12px}
+.btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;border:0;border-radius:14px;background:var(--ink);color:var(--bg);padding:15px;font-weight:700;font-size:16px;cursor:pointer;font-family:var(--f-display)}
+.btn:active{transform:scale(.99)}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+/* Banner */
+.banner{margin-top:16px;padding:14px 16px;border-radius:14px;background:var(--accent-soft);display:flex;gap:12px;align-items:center;justify-content:space-between;font-size:14px}
+.banner button{flex:none;border:0;background:var(--accent);color:var(--accent-ink);font-weight:700;padding:9px 14px;border-radius:10px;cursor:pointer}
+/* Results */
+.res-head{margin:26px 2px 12px;display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.res-head h2{font-size:19px}
+.tally{display:flex;gap:6px;flex-wrap:wrap}
+.pill{font-size:12px;font-weight:700;padding:4px 10px;border-radius:99px;white-space:nowrap}
+.pill.ok{background:var(--ok-soft);color:var(--ok)}.pill.warn{background:var(--warn-soft);color:var(--warn)}.pill.no{background:var(--no-soft);color:var(--no)}
+.list{display:grid;gap:12px}
+.lounge{background:var(--surface);border:1px solid var(--line);border-radius:18px;overflow:hidden;position:relative}
+.lounge::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--line)}
+.lounge.ok::before{background:var(--ok)}.lounge.warn::before{background:var(--warn)}
+.lh{padding:16px 16px 12px 20px;display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+.lh h3{font-size:17px;font-weight:600}
+.net{font-size:12px;color:var(--muted);margin-top:2px}
+.loc{font-size:13px;color:var(--muted);margin-top:6px;display:flex;gap:6px;align-items:flex-start}
+.loc svg{flex:none;margin-top:2px}
+.lb{padding:0 16px 16px 20px;display:grid;gap:14px}
+.why{font-size:14px;font-weight:600}
+.why.okc{color:var(--ok)}.why.warnc{color:var(--warn)}.why.noc{color:var(--no)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;padding:7px 10px;border-radius:10px;background:var(--surface-2);border:1px solid var(--line)}
+.chip.key{background:var(--accent-soft);border-color:transparent;color:var(--ink)}
+.chip svg{flex:none}
+ul.limits{margin:0;padding:0;list-style:none;display:grid;gap:7px}
+ul.limits li{font-size:14px;padding-left:18px;position:relative;color:var(--ink)}
+ul.limits li::before{content:"";position:absolute;left:2px;top:.55em;width:7px;height:7px;border-radius:2px;background:var(--warn);transform:rotate(45deg)}
+.guests{font-size:13px;color:var(--muted)}
+.guests b{color:var(--ink)}
+.minor{font-size:13px;color:var(--muted)}
+details.nope{margin-top:18px}
+details.nope summary{cursor:pointer;list-style:none;padding:14px 16px;border-radius:14px;border:1px dashed var(--line);font-weight:700;color:var(--muted);display:flex;justify-content:space-between}
+details.nope summary::-webkit-details-marker{display:none}
+details.nope[open] summary{margin-bottom:12px}
+.lounge.no .lh h3{color:var(--muted)}
+.closed{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--warn);background:var(--warn-soft);padding:3px 8px;border-radius:6px;white-space:nowrap}
+.empty{padding:28px 18px;text-align:center;color:var(--muted);background:var(--surface);border-radius:18px;border:1px solid var(--line)}
+a{color:var(--accent);font-weight:600}
+/* Profile */
+.sec{margin-top:22px}
+.sec h2{font-size:15px;margin:0 2px 4px}
+.sec p.hint{margin:0 2px 10px;font-size:13px;color:var(--muted)}
+.group{background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.tog{display:flex;align-items:center;gap:12px;padding:13px 14px;border-top:1px solid var(--line);cursor:pointer}
+.tog:first-child{border-top:0}
+.tog .t{flex:1;min-width:0}
+.tog .t b{display:block;font-weight:600;font-size:15px}
+.tog .t span{display:block;font-size:12px;color:var(--muted)}
+.sw{position:relative;flex:none;width:46px;height:28px}
+.sw input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.sw i{position:absolute;inset:0;border-radius:99px;background:var(--line);transition:background .2s}
+.sw i::after{content:"";position:absolute;top:3px;left:3px;width:22px;height:22px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.25);transition:transform .2s}
+.sw input:checked+i{background:var(--ok)}
+.sw input:checked+i::after{transform:translateX(18px)}
+.sw input:focus-visible+i{outline:2px solid var(--accent);outline-offset:2px}
+.selrow{padding:12px 14px;border-top:1px solid var(--line);display:grid;gap:6px}
+.selrow:first-child{border-top:0}
+.selrow label{font-weight:600}
+.selrow small{color:var(--muted);font-size:12px}
+.savestate{font-size:12px;color:var(--muted);text-align:right}
+.foot{margin-top:28px;font-size:12px;color:var(--muted);display:grid;gap:6px}
+/* Tab bar */
+.tabs{position:fixed;left:0;right:0;bottom:0;z-index:20;background:color-mix(in srgb,var(--surface) 88%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--line);padding:8px max(16px,env(safe-area-inset-right,0px)) calc(8px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.tabs-in{max-width:560px;margin:0 auto;display:flex;gap:8px}
+.tabs button{flex:1;border:0;background:transparent;display:grid;justify-items:center;gap:2px;padding:6px;font-size:11px;font-weight:700;color:var(--muted);cursor:pointer;border-radius:12px}
+.tabs button[aria-selected="true"]{color:var(--ink)}
+.tabs button[aria-selected="true"] svg{color:var(--accent)}
+.toast{position:fixed;left:50%;bottom:calc(84px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:12px;font-weight:700;font-size:13px;z-index:30;opacity:0;transition:opacity .2s;pointer-events:none}
+.toast.show{opacity:1}
+.notice{background:var(--warn-soft);border-radius:12px;padding:10px 12px;font-size:13px;display:grid;gap:4px}
+.notice b{color:var(--warn);font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+.prov{font-size:12px;color:var(--muted);border-top:1px solid var(--line);padding-top:10px}
+.prov a{font-weight:600}
+.fresh{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:14px 16px;display:grid;gap:8px;font-size:13px;color:var(--muted)}
+.fresh-row{display:flex;align-items:center;gap:8px;color:var(--ink);font-size:14px}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--line);flex:none}
+.dot.live{background:var(--ok)}.dot.busy{background:var(--warn);animation:pulse 1.2s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.35}}
+.alert{background:var(--warn-soft);color:var(--ink);border-radius:10px;padding:8px 10px}
+.btn.small{padding:10px;font-size:14px;font-family:var(--f-body)}
+#changes summary{cursor:pointer;font-weight:600;color:var(--ink)}
+#changeList{margin:8px 0 0;padding-left:18px;display:grid;gap:4px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+@media (max-width:380px){.code-field input{font-size:38px;width:112px}.ul{width:112px}.seg button{font-size:12px}}
+</style>
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="brand">
+    <h1><span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="var(--bg)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18v-6a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v6"/><path d="M2 14h20v4H2z"/><path d="M7 9V6a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v3"/></svg></span>Lounge Finder</h1>
+    <span class="sub" id="whoami"></span>
+  </header>
+
+  <!-- SEARCH VIEW -->
+  <section id="view-search">
+    <form class="pass" id="searchForm" autocomplete="off">
+      <div class="pass-top">
+        <div class="eyebrow">Airport</div>
+        <div class="route">
+          <div class="code-field">
+            <input id="airport" maxlength="3" placeholder="DEN" list="airportList" aria-label="Airport code" inputmode="text" autocapitalize="characters" spellcheck="false">
+            <div class="ul"></div>
+          </div>
+          <div class="apname" id="apname"></div>
+        </div>
+        <datalist id="airportList"></datalist>
+        <div class="field">
+          <label for="airline">Airline you're flying</label>
+          <select id="airline"></select>
+        </div>
+        <div class="field">
+          <span class="lbl" id="cabinL">Cabin</span>
+          <div class="seg" id="cabin" role="group" aria-labelledby="cabinL"></div>
+        </div>
+      </div>
+      <div class="perf" aria-hidden="true"></div>
+      <div class="pass-bot">
+        <div class="row2">
+          <div class="field">
+            <span class="lbl" id="tripL">Trip</span>
+            <div class="seg" id="trip" role="group" aria-labelledby="tripL"></div>
+          </div>
+          <div class="field">
+            <span class="lbl" id="dirL">At this airport</span>
+            <div class="seg" id="dir" role="group" aria-labelledby="dirL"></div>
+          </div>
+        </div>
+        <button class="btn" type="submit">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+          Find my lounges
+        </button>
+      </div>
+    </form>
+
+    <div class="banner" id="setupBanner" hidden>
+      <span>Add your cards and status so results match you.</span>
+      <button type="button" data-go="profile">Set up profile</button>
+    </div>
+
+    <div id="results"></div>
+  </section>
+
+  <!-- PROFILE VIEW -->
+  <section id="view-profile" hidden>
+    <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px">
+      <h2 style="font-size:20px">Your travel profile</h2>
+      <span class="savestate" id="saveState"></span>
+    </div>
+    <p class="sub" style="margin:6px 2px 0">Turn on everything you have. Changes save automatically.</p>
+
+    <div class="sec"><h2>Credit cards</h2><p class="hint">Primary cardholder. Authorized users often have fewer lounge rights.</p><div class="group" id="g-cards"></div></div>
+    <div class="sec"><h2>Lounge memberships</h2><p class="hint">Paid memberships, or ones that came with your status.</p><div class="group" id="g-mems"></div></div>
+    <div class="sec"><h2>Airline status</h2><p class="hint">Pick the alliance tier your status gives you.</p><div class="group" id="g-status"></div></div>
+    <div class="sec"><h2>Spending milestones</h2><p class="hint">Hitting $75,000 a year on some cards unlocks free guests or unlimited visits.</p><div class="group" id="g-spend"></div></div>
+    <div class="sec">
+      <button class="btn" type="button" data-go="search">Done — search lounges</button>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <div class="fresh" id="fresh">
+      <div class="fresh-row"><span class="dot" id="freshDot"></span><b id="freshTitle">Rules</b></div>
+      <div id="freshDetail"></div>
+      <div id="freshAlert" class="alert" hidden></div>
+      <button type="button" class="btn ghost small" id="checkNow" hidden>Check for rule changes now</button>
+      <details id="changes"><summary>What's changed</summary><ul id="changeList"></ul></details>
+    </div>
+    <div>Lounges can close at capacity. Priority Pass venues aren't listed one by one; check <a href="https://www.prioritypass.com" target="_blank" rel="noopener">prioritypass.com</a> for the airport.</div>
+  </footer>
+</div>
+
+<nav class="tabs" aria-label="Sections">
+  <div class="tabs-in" role="tablist">
+    <button role="tab" id="tab-search" aria-selected="true" data-go="search">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>Search</button>
+    <button role="tab" id="tab-profile" aria-selected="false" data-go="profile">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3 10h18M7 15h4"/></svg>My cards &amp; status</button>
+  </div>
+</nav>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+(function(){
+"use strict";
+
+/* ---------------- Reference data ---------------- */
+const CARDS = [
+  ["amex_plat","American Express Platinum","Centurion Lounges, Sky Club (limited), Priority Pass"],
+  ["amex_bizplat","Amex Business Platinum","Same lounge benefits as Platinum"],
+  ["amex_centurion","Amex Centurion (black card)","Centurion Lounges, Sky Club, Priority Pass"],
+  ["delta_reserve","Delta SkyMiles Reserve (Amex)","Sky Club and Centurion when flying Delta"],
+  ["venturex","Capital One Venture X","Capital One Lounges, Priority Pass"],
+  ["venturex_biz","Capital One Venture X Business","Capital One Lounges, Priority Pass"],
+  ["csr","Chase Sapphire Reserve","Sapphire Lounges, Priority Pass"],
+  ["ritz","Ritz-Carlton Card (Chase)","Sapphire Lounges, Priority Pass"],
+  ["united_club_card","United Club Card (Chase)","United Club when flying United or Star Alliance"],
+  ["citi_exec","Citi AAdvantage Executive","Admirals Club when flying American or oneworld"]
+];
+const MEMS = [
+  ["pp","Priority Pass (from another source)","Bought directly, or from a card not listed above"],
+  ["united_club_mem","United Club membership","Paid or with status"],
+  ["admirals_mem","Admirals Club membership","Paid or lifetime"],
+  ["skyclub_mem","Delta Sky Club membership","Paid, or a Medallion Choice Benefit"],
+  ["alaska_mem","Alaska Lounge membership","Paid membership"]
+];
+const STATUS = [
+  ["star","Star Alliance",[["none","None"],["silver","Silver"],["gold","Gold"]],"Gold = United Premier Gold or higher, Air Canada 50K+, Lufthansa Senator, etc."],
+  ["oneworld","oneworld",[["none","None"],["ruby","Ruby"],["sapphire","Sapphire"],["emerald","Emerald"]],"Sapphire = AA Platinum / Platinum Pro, Alaska Atmos Gold. Emerald = AA Executive Platinum, Atmos Titanium."],
+  ["skyteam","SkyTeam",[["none","None"],["elite","Elite"],["eliteplus","Elite Plus"]],"Elite Plus = Delta Gold Medallion or higher, Flying Blue Gold+, etc."]
+];
+const SPEND = [
+  ["spend_amex","$75k+ this year on my Amex Platinum","Free guests at Centurion, unlimited Sky Club visits"],
+  ["spend_capone","$75k+ on my Venture X account","2 free guests at Capital One Lounges"]
+];
+const AIRLINES = [
+  ["UA","United","star"],["AA","American","oneworld"],["DL","Delta","skyteam"],["AS","Alaska","oneworld"],
+  ["WN","Southwest",""],["B6","JetBlue",""],["F9","Frontier",""],["NK","Spirit",""],
+  ["AC","Air Canada","star"],["LH","Lufthansa","star"],["LX","Swiss","star"],["OS","Austrian","star"],["NH","ANA","star"],["SQ","Singapore Airlines","star"],["TK","Turkish Airlines","star"],["NZ","Air New Zealand","star"],
+  ["BA","British Airways","oneworld"],["IB","Iberia","oneworld"],["QF","Qantas","oneworld"],["CX","Cathay Pacific","oneworld"],["JL","Japan Airlines","oneworld"],["QR","Qatar Airways","oneworld"],
+  ["AF","Air France","skyteam"],["KL","KLM","skyteam"],["VS","Virgin Atlantic","skyteam"],["KE","Korean Air","skyteam"],["AM","Aeroméxico","skyteam"],
+  ["EK","Emirates",""],["EY","Etihad",""],["XX","Other airline",""]
+];
+const ALLIANCE_NAME = {star:"Star Alliance",oneworld:"oneworld",skyteam:"SkyTeam"};
+/* Live rules: built-in copy (used offline or before the live store answers), replaced by the store's rules/current */
+const BUILTIN_RULES = {"airports": {"ATL": "Atlanta Hartsfield-Jackson", "BOS": "Boston Logan", "CLT": "Charlotte Douglas", "DCA": "Washington Reagan National", "DEN": "Denver International", "DFW": "Dallas Fort Worth", "DTW": "Detroit Metro", "EWR": "Newark Liberty", "IAD": "Washington Dulles", "IAH": "Houston Bush Intercontinental", "JFK": "New York JFK", "LAS": "Las Vegas Harry Reid", "LAX": "Los Angeles", "LGA": "New York LaGuardia", "LHR": "London Heathrow", "MIA": "Miami", "MSP": "Minneapolis–St. Paul", "ORD": "Chicago O'Hare", "PDX": "Portland", "PHL": "Philadelphia", "PHX": "Phoenix Sky Harbor", "SAN": "San Diego", "SEA": "Seattle-Tacoma", "SFO": "San Francisco", "SLC": "Salt Lake City"}, "lounges": [{"airport": "ATL", "location": "Every concourse (T, A, B, C, D, E, F)", "network": "skyclub"}, {"airport": "ATL", "location": "", "network": "centurion"}, {"airport": "BOS", "location": "Terminal B, near Gate B40", "network": "sapphire"}, {"airport": "BOS", "location": "Terminal A", "network": "skyclub"}, {"airport": "BOS", "location": "Terminal E, inside the Sky Club", "network": "deltaone"}, {"airport": "BOS", "location": "Terminal B", "network": "admirals"}, {"airport": "BOS", "location": "Terminal B", "network": "united_club"}, {"airport": "CLT", "location": "", "network": "centurion"}, {"airport": "CLT", "location": "Several concourses", "network": "admirals"}, {"airport": "DCA", "location": "", "network": "centurion"}, {"airport": "DCA", "location": "Terminal 2, National Hall, near Concourse D", "network": "capone_landing"}, {"airport": "DCA", "location": "Terminal 2", "network": "admirals"}, {"airport": "DCA", "location": "", "network": "skyclub"}, {"airport": "DCA", "location": "", "network": "united_club"}, {"airport": "DEN", "location": "Concourse C", "network": "centurion"}, {"airport": "DEN", "location": "Concourse A, near Gate 34 (mezzanine)", "network": "capone"}, {"airport": "DEN", "location": "Concourses A and B (several)", "network": "united_club"}, {"airport": "DEN", "location": "", "network": "skyclub"}, {"airport": "DFW", "location": "Terminal D", "network": "centurion"}, {"airport": "DFW", "location": "Terminal D, near Gate 22", "network": "capone"}, {"airport": "DFW", "location": "Terminal D, near Gate D25", "network": "sapphire"}, {"airport": "DFW", "location": "Every terminal", "network": "admirals"}, {"airport": "DFW", "location": "Terminal D", "network": "flagship"}, {"airport": "DFW", "location": "Terminal E", "network": "skyclub"}, {"airport": "DTW", "location": "McNamara Terminal (several)", "network": "skyclub"}, {"airport": "EWR", "location": "Terminals A and C", "network": "united_club"}, {"airport": "EWR", "location": "Terminal C", "network": "polaris"}, {"airport": "IAD", "location": "Main terminal past security (reach from the Z gates)", "network": "capone"}, {"airport": "IAD", "location": "Concourses C and D", "network": "united_club"}, {"airport": "IAD", "location": "Concourse C", "network": "polaris"}, {"airport": "IAH", "location": "Terminal D", "network": "centurion"}, {"airport": "IAH", "location": "Terminals C and E", "network": "united_club"}, {"airport": "IAH", "location": "Terminal E", "network": "polaris"}, {"airport": "JFK", "location": "Terminal 4", "network": "centurion"}, {"airport": "JFK", "location": "Terminal 4, Level 3 Retail Hall, near B gates", "network": "capone"}, {"airport": "JFK", "location": "Terminal 4, near Gate A2", "network": "sapphire", "note": "Temporarily closed", "status": "closed"}, {"airport": "JFK", "location": "Terminal 4", "network": "skyclub"}, {"airport": "JFK", "location": "Terminal 4", "network": "deltaone"}, {"airport": "JFK", "location": "Terminal 8", "network": "admirals"}, {"airport": "JFK", "location": "Terminal 8", "network": "flagship", "note": "Now called the Greenwich Lounge"}, {"airport": "LAS", "location": "Concourse D", "network": "centurion"}, {"airport": "LAS", "location": "Concourse D Atrium, near Gate D50", "network": "capone"}, {"airport": "LAS", "location": "Terminal 1, near Gate C23", "network": "sapphire"}, {"airport": "LAX", "location": "Tom Bradley International Terminal", "network": "centurion"}, {"airport": "LAX", "location": "Terminals 2 and 3", "network": "skyclub"}, {"airport": "LAX", "location": "Terminal 3", "network": "deltaone"}, {"airport": "LAX", "location": "Terminal 7", "network": "united_club"}, {"airport": "LAX", "location": "Terminal 7", "network": "polaris"}, {"airport": "LAX", "location": "Terminal 4", "network": "admirals"}, {"airport": "LAX", "location": "Terminal 4", "network": "flagship"}, {"airport": "LAX", "location": "Terminal 6", "network": "alaska"}, {"airport": "LGA", "location": "Terminal B", "network": "centurion"}, {"airport": "LGA", "location": "Terminal B, on the bridge before Gates 40–59", "network": "sapphire"}, {"airport": "LGA", "location": "Terminal B, on the bridge to Gates 11–31", "network": "capone_landing"}, {"airport": "LGA", "location": "Terminal C", "network": "skyclub"}, {"airport": "LGA", "location": "Terminal B", "network": "united_club"}, {"airport": "LGA", "location": "Terminal B", "network": "admirals"}, {"airport": "LHR", "location": "Terminal 2", "network": "united_club"}, {"airport": "LHR", "location": "Terminal 3", "network": "flagship"}, {"airport": "MIA", "location": "Concourse D", "network": "centurion"}, {"airport": "MIA", "location": "Concourse D", "network": "admirals"}, {"airport": "MIA", "location": "Concourse D", "network": "flagship"}, {"airport": "MSP", "location": "Concourses C, F and G", "network": "skyclub"}, {"airport": "ORD", "location": "Terminals 1 and 2", "network": "united_club"}, {"airport": "ORD", "location": "Terminal 1, Concourse C", "network": "polaris"}, {"airport": "ORD", "location": "Terminal 3", "network": "admirals"}, {"airport": "ORD", "location": "Terminal 3", "network": "flagship"}, {"airport": "ORD", "location": "", "network": "skyclub"}, {"airport": "PDX", "location": "", "network": "alaska"}, {"airport": "PHL", "location": "Terminal A-West", "network": "centurion"}, {"airport": "PHL", "location": "Terminal D/E connector", "network": "sapphire"}, {"airport": "PHL", "location": "Several terminals", "network": "admirals"}, {"airport": "PHL", "location": "Terminal A-West", "network": "flagship"}, {"airport": "PHX", "location": "Terminal 4", "network": "centurion"}, {"airport": "PHX", "location": "Terminal 4, near Gate D11", "network": "sapphire"}, {"airport": "PHX", "location": "Terminal 4", "network": "admirals"}, {"airport": "PHX", "location": "", "network": "skyclub"}, {"airport": "SAN", "location": "Terminal 2, near Gates 46–47", "network": "sapphire"}, {"airport": "SEA", "location": "", "network": "centurion"}, {"airport": "SEA", "location": "", "network": "skyclub"}, {"airport": "SEA", "location": "Concourse A, near Gate A11 (level 4)", "network": "deltaone"}, {"airport": "SEA", "location": "Concourses C, D and North Satellite", "network": "alaska"}, {"airport": "SFO", "location": "Terminal 2, near Gate D12 (temporary space)", "network": "centurion", "note": "Main Terminal 3 lounge closed for renovation until 2027"}, {"airport": "SFO", "location": "Terminal 3", "network": "united_club"}, {"airport": "SFO", "location": "International Terminal G", "network": "polaris"}, {"airport": "SFO", "location": "Terminal 2", "network": "alaska", "note": "Closed; its Terminal 2 space now holds the temporary Centurion Lounge", "status": "closed"}, {"airport": "SFO", "location": "", "network": "admirals"}, {"airport": "SFO", "location": "", "network": "skyclub"}, {"airport": "SLC", "location": "", "network": "centurion"}, {"airport": "SLC", "location": "Concourses A and B", "network": "skyclub"}, {"airport": "IAD", "location": "Concourse A, near Gate A14", "network": "sapphire", "note": "Etihad Lounge; Sapphire Reserve and Ritz-Carlton cardholders get in"}], "meta": {"changelog": [{"date": "2026-10-25", "text": "Checked all networks. Centurion card guests now include family; Polaris partner list adds ITA and Brussels; Star Alliance Gold guests must be on your flight; Delta One Basic fares lose access Jan 19, 2027 (notice); updated guest rules for Admirals, Alaska and Flagship; fixed Sapphire, Delta One and SFO lounge locations, added the IAD Etihad/Sapphire lounge, marked the SFO Alaska Lounge closed."}, {"date": "2026-10-25", "text": "Rules moved to a live data store. Items marked unverified will be checked on the first refresh."}], "needsAppUpdate": ["Delta One: from Jan 19, 2027, Delta One Basic fares lose lounge access; the app has no field to exclude a fare type for this network."], "nextCheck": "Every Monday morning", "updatedAt": "2026-10-25", "updatedBy": "Automatic refresh"}, "networks": {"admirals": {"dayPass": "Day passes ($79) can be bought in the American app, space permitting.", "extraLimits": ["No time limit before departure.", "Arriving passengers allowed when the arriving flight qualifies.", "Citi card holders must show the physical card.", "Status from a non-American, non-Alaska oneworld program works on any oneworld flight, not just international."], "guestsCitiExec": "Up to 2 guests, or your immediate family.", "guestsMembership": "Your immediate family or up to 2 guests.", "guestsStatus": "1 guest flying oneworld with you.", "name": "Admirals Club", "notices": [], "operator": "American Airlines", "sources": [{"title": "American Airlines: Admirals Club access", "url": "https://www.aa.com/web/i18n/travel-info/clubs/admirals-club-access.html"}], "statusInternationalOnly": true, "unverified": [], "verified": "2026-10-25"}, "alaska": {"extraLimits": ["Atmos and oneworld status only gets you in on international trips (outside the U.S., Canada and Mexico).", "Some lounges limit access during busy periods."], "guestsMembership": "Your partner and children under 21, or up to 2 friends.", "guestsStatus": "1 guest flying oneworld with you.", "name": "Alaska Lounge", "noAccessHint": "Single-entry passes ($35) are sold at the door when space allows.", "notices": [], "operator": "Alaska Airlines", "sources": [{"title": "Alaska Airlines: Lounge policies and rules", "url": "https://www.alaskaair.com/content/airport-lounge/policies-and-rules"}], "unverified": [], "verified": "2026-10-25"}, "capone": {"arrivals": false, "authorizedUsers": "Authorized users need the $125/year lounge add-on.", "bringCard": "Your physical Venture X card", "cards": ["venturex", "venturex_biz"], "connectAnyTime": true, "entryHoursBefore": 3, "extraLimits": [], "guests": "$45 per adult guest, $25 ages 2–17, under 2 free.", "guestsAfterSpend": "2 guests free (you've hit $75k spend).", "name": "Capital One Lounge", "noAccessHint": "Non-cardholders can pay $90 per visit.", "notices": [], "operator": "Capital One", "sources": [{"title": "One Mile at a Time: Venture X lounge access changes", "url": "https://onemileatatime.com/news/capital-one-venture-x-lounge-access-changes/"}, {"title": "AwardWallet: Capital One lounges", "url": "https://awardwallet.com/credit-cards/capital-one-rewards/capital-one-airport-lounges/"}], "unverified": [], "verified": "2026-10-25"}, "capone_landing": {"arrivals": false, "authorizedUsers": "Authorized users need the $125/year lounge add-on.", "bringCard": "Your physical Venture X card", "cards": ["venturex", "venturex_biz"], "connectAnyTime": true, "entryHoursBefore": 3, "extraLimits": ["Landings are smaller, food-focused spaces."], "guests": "$45 per adult guest, $25 ages 2–17, under 2 free.", "guestsAfterSpend": "1 guest free (you've hit $75k spend).", "name": "Capital One Landing", "noAccessHint": "Non-cardholders can pay $90 per visit.", "notices": [], "operator": "Capital One", "sources": [{"title": "One Mile at a Time: Capital One Landing guide", "url": "https://onemileatatime.com/guides/capital-one-landing/"}, {"title": "AwardWallet: Capital One lounges", "url": "https://awardwallet.com/credit-cards/capital-one-rewards/capital-one-airport-lounges/"}], "unverified": [], "verified": "2026-10-25"}, "centurion": {"arrivals": false, "bringCard": "Your physical Amex card", "cards": ["amex_plat", "amex_bizplat", "amex_centurion"], "connectHoursBefore": 5, "deltaReserveWhenFlyingDelta": true, "entryHoursBefore": 3, "extraLimits": ["May pause new entries when full."], "guests": "$50 per adult, $30 ages 2–17. Free for 2 guests after $75,000 annual spend. Guests must be on your same flight.", "guestsAfterSpend": "2 guests free (you've hit $75k spend). Guests must be on your flight.", "guestsCenturionCard": "Your immediate family plus 2 guests free.", "name": "The Centurion Lounge", "noAccessHint": "Day passes aren't sold. Delta Reserve cardholders get in when flying Delta.", "notices": [], "operator": "American Express", "sources": [{"title": "American Express: Centurion Lounge access policy", "url": "https://www.thecenturionlounge.com/info/access/"}, {"title": "One Mile at a Time: Centurion Lounges add new restrictions", "url": "https://onemileatatime.com/news/amex-centurion-lounges-new-access-restrictions/"}, {"title": "Upgraded Points: New Centurion entry rules start July 8", "url": "https://upgradedpoints.com/news/amex-centurion-lounge-new-entry-rules-2026/"}], "unverified": [], "verified": "2026-10-25"}, "deltaone": {"arrivals": true, "extraLimits": ["Sky Club memberships and Amex cards don't work here.", "Only Delta 360° members can bring guests ($100 each)."], "name": "Delta One Lounge", "notices": ["From January 19, 2027: Delta One Basic (cheapest business) fares no longer include Delta One Lounge access."], "operator": "Delta", "sources": [{"title": "The Points Party: Delta One Lounge access", "url": "https://thepointsparty.com/articles/delta-one-lounge-access-guide"}, {"title": "Upgraded Points: Delta One Lounge locations", "url": "https://upgradedpoints.com/travel/airports/delta-one-lounges/"}, {"title": "The Points Guy: Delta Basic premium fares", "url": "https://thepointsguy.com/airline/delta-air-lines-basic-tickets-premium-seats-what-to-know/"}], "unverified": [], "verified": "2026-10-25"}, "flagship": {"arrivals": false, "emeraldAccess": true, "extraLimits": ["Departing and connecting travelers only.", "At New York JFK the Flagship Lounge is now called the Greenwich Lounge (Terminal 8)."], "guestsEmerald": "1 guest flying oneworld with you.", "guestsPremium": "First class: 1 guest. Business class: no guests.", "name": "Flagship Lounge", "notices": [], "operator": "American Airlines", "sources": [{"title": "One Mile at a Time: Flagship Lounge guide", "url": "https://onemileatatime.com/guides/american-flagship-lounges/"}, {"title": "One Mile at a Time: New JFK Terminal 8 lounges", "url": "https://onemileatatime.com/news/jfk-terminal-8-new-lounges/"}, {"title": "American Airlines: Flagship lounge terms", "url": "https://www.aa.com/i18n/travel-info/clubs/flagship-lounge-terms-and-conditions.html"}], "unverified": [], "verified": "2026-10-25"}, "polaris": {"arrivals": true, "extraLimits": ["United Polaris Base fares are excluded.", "Partner-airline passengers get in only when departing, not on arrival."], "firstClassGuestAirlines": ["LH", "LX", "NH"], "name": "United Polaris Lounge", "notices": [], "operator": "United", "partnerBusinessAirlines": ["LH", "LX", "OS", "SN", "NH", "NZ", "AZ"], "sources": [{"title": "Prince of Travel: United restricts Polaris access for partners", "url": "https://princeoftravel.com/news/united-restricts-polaris-lounge-access-star-alliance/"}, {"title": "Air Traveler Club: Polaris limited to five partners", "url": "https://www.airtraveler.club/news/united-restricts-polaris-lounge-access/"}], "unverified": ["Arrivals access for United Polaris passengers"], "verified": "2026-10-25"}, "prioritypass": {"cards": ["csr", "ritz", "venturex", "venturex_biz", "amex_plat", "amex_bizplat", "amex_centurion", "pp"], "extraLimits": ["Your credit card alone won't work. Activate the Priority Pass membership on your card's website first.", "Most lounges admit you up to 3 hours before departure and can refuse entry when full.", "Airport restaurants in Priority Pass aren't included with Sapphire Reserve, Ritz-Carlton, Venture X or Amex cards.", "Chase Sapphire Lounges are no longer open to Priority Pass members from other cards."], "guestsByCard": {"amex_bizplat": "2 guests free.", "amex_centurion": "2 guests free.", "amex_plat": "2 guests free.", "csr": "2 guests free.", "pp": "Depends on your plan.", "ritz": "2 guests free.", "venturex": "$35 per guest.", "venturex_biz": "2 guests free."}, "name": "Priority Pass lounges", "notices": [], "operator": "Priority Pass", "sources": [{"title": "One Mile at a Time: Venture X lounge access changes", "url": "https://onemileatatime.com/news/capital-one-venture-x-lounge-access-changes/"}, {"title": "Upgraded Points: Venture X Business loses Priority Pass restaurants", "url": "https://upgradedpoints.com/news/capital-one-venture-x-business-loses-priority-pass-restaurants/"}, {"title": "Chase: Sapphire Lounge network", "url": "https://www.chase.com/sapphire-cards/lounges"}, {"title": "Priority Pass", "url": "https://www.prioritypass.com"}], "unverified": ["Amex Priority Pass guest allowance"], "verified": "2026-10-25"}, "sapphire": {"arrivals": false, "bringCard": "Your physical Sapphire Reserve card, or the Chase-issued Priority Pass in the Chase app", "cards": ["csr", "ritz"], "connectHoursBefore": 5, "entryHoursBefore": 3, "extraLimits": ["Bring the plastic card, or show the Chase-issued Priority Pass from the Chase app (it can be added to your phone's wallet).", "You also need a boarding pass for a departing flight."], "guests": "2 guests free, then $27 per extra guest.", "name": "Chase Sapphire Lounge", "noAccessHint": "Other Priority Pass members lost access on August 15, 2026.", "notices": [], "operator": "Chase", "otherPriorityPassExcluded": true, "otherPriorityPassNote": "Since August 15, 2026, Priority Pass from other cards or bought directly no longer gets in.", "sources": [{"title": "Chase: Sapphire Lounge network", "url": "https://www.chase.com/sapphire-cards/lounges"}, {"title": "One Mile at a Time: Sapphire Lounges cut Priority Pass access", "url": "https://onemileatatime.com/news/chase-sapphire-lounges-cut-priority-pass-access/"}], "unverified": [], "verified": "2026-10-25"}, "skyclub": {"arrivals": false, "basicEconomyExcluded": true, "entryHoursBefore": 3, "extraLimits": ["No 3-hour limit while you're on a layover.", "One visit covers every club you enter within 24 hours."], "guests": "$50 per guest.", "guestsEliteplus": "1 guest flying SkyTeam with you.", "guestsReserve": "$50 per guest; the card includes 4 guest passes a year (up to 2 per visit).", "name": "Delta Sky Club", "notices": [], "operator": "Delta", "sources": [{"title": "Delta: Sky Club access", "url": "https://www.delta.com/us/en/delta-sky-club/access"}, {"title": "The Points Guy: Sky Club restrictions in effect", "url": "https://thepointsguy.com/news/delta-air-lines-sky-club-restrictions-in-effect"}], "unlimitedAfterSpend": "$75k", "unverified": [], "verified": "2026-10-25", "visitsPlatinum": 10, "visitsReserve": 15}, "united_club": {"arrivalsPremiumInternational": true, "extraLimits": ["No time limit before departure for members and cardholders.", "Can close to new entries when crowded."], "guestsCard": "1 adult guest plus your children under 18.", "guestsMembership": "No guests on an Individual membership (All Access allows 2).", "guestsPremium": "No guests.", "guestsStarGold": "1 guest, who must be on your same flight.", "name": "United Club", "noAccessHint": "One-time passes ($59) are sold in the United app when space allows (use within 3 hours of departure).", "notices": [], "operator": "United", "sources": [{"title": "PointsYeah: United Club access and guest rules", "url": "https://www.pointsyeah.com/insider/airlines/united-club-lounges"}, {"title": "The Points Guy: Star Alliance Gold guest rule change", "url": "https://thepointsguy.com/news/star-alliance-gold-lounge-access-cut"}, {"title": "The Points Guy: United Club access changes", "url": "https://thepointsguy.com/news/united-airlines-club-access-changes"}], "starGoldInternationalOnly": true, "unverified": [], "verified": "2026-10-25"}}, "schema": 1};
+const REFRESH_TASK_ID = "";
+let R = clone(BUILTIN_RULES);
+let rulesSource = "built-in";
+function applyRemoteRules(d){
+  if(!d||d.schema!==1||!d.networks||typeof d.networks!=="object") return false;
+  const next=clone(BUILTIN_RULES);
+  for(const k in d.networks){ if(d.networks[k]&&typeof d.networks[k]==="object") next.networks[k]=Object.assign({},next.networks[k]||{},d.networks[k]); }
+  if(Array.isArray(d.lounges)&&d.lounges.length) next.lounges=d.lounges.filter(l=>l&&typeof l.airport==="string"&&RULES[l.network]);
+  if(d.airports&&typeof d.airports==="object") next.airports=Object.assign({},next.airports,d.airports);
+  if(d.meta&&typeof d.meta==="object") next.meta=Object.assign({},next.meta,d.meta);
+  R=next; rulesSource="live"; return true;
+}
+const NET = k => R.networks[k]||{};
+const safeUrl = u => (typeof u==="string"&&/^https:\/\//.test(u))?u:null;
+const arr = v => Array.isArray(v)?v.filter(x=>typeof x==="string"):[];
+
+/* ---------------- State & persistence ---------------- */
+const LS_KEY = "loungeFinder.v1";
+const EMPTY = {cards:{},mems:{},status:{star:"none",oneworld:"none",skyteam:"none"},spend:{},last:{airport:"DEN",airline:"UA",cabin:"economy",trip:"dom",dir:"depart"},updatedAt:0};
+let profile = clone(EMPTY);
+function clone(o){return JSON.parse(JSON.stringify(o))}
+function merge(p){const m=clone(EMPTY);if(!p||typeof p!=="object")return m;
+  ["cards","mems","spend"].forEach(k=>{if(p[k]&&typeof p[k]==="object")m[k]=Object.assign({},p[k])});
+  if(p.status)Object.assign(m.status,p.status); if(p.last)Object.assign(m.last,p.last);
+  m.updatedAt=+p.updatedAt||0; return m;}
+try{const raw=localStorage.getItem(LS_KEY); if(raw) profile=merge(JSON.parse(raw));}catch(e){}
+
+let saveTimer=null;
+function writeLocal(){try{localStorage.setItem(LS_KEY,JSON.stringify(profile))}catch(e){}}
+function queueSave(silent){
+  profile.updatedAt=Date.now(); writeLocal();
+  if(!silent){ setSaveState("Saved on this iPhone"); }
+}
+function setSaveState(t){const el=$("#saveState"); if(el) el.textContent=t;}
+
+/* ---------------- Helpers ---------------- */
+function $(s,r){return (r||document).querySelector(s)}
+function h(tag,attrs,...kids){const el=document.createElement(tag);
+  if(attrs) for(const k in attrs){ if(k==="class") el.className=attrs[k]; else if(k==="html") el.innerHTML=attrs[k]; else if(k.startsWith("on")) el.addEventListener(k.slice(2),attrs[k]); else el.setAttribute(k,attrs[k]); }
+  kids.flat().forEach(c=>{ if(c==null||c===false) return; el.appendChild(typeof c==="string"?document.createTextNode(c):c); }); return el;}
+const has = id => !!(profile.cards[id]||profile.mems[id]);
+const anyOf = ids => ids.filter(has);
+const cardName = id => (CARDS.concat(MEMS).find(c=>c[0]===id)||[,id])[1];
+const allianceOf = code => (AIRLINES.find(a=>a[0]===code)||[])[2]||"";
+const airlineName = code => (AIRLINES.find(a=>a[0]===code)||[,code])[1];
+
+const ICON = {
+  card:'<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M2.5 10h19"/></svg>',
+  qr:'<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3M21 14v7h-4M14 21v-3"/></svg>',
+  pass:'<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v3a2 2 0 0 0 0 4v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-3a2 2 0 0 0 0-4z"/><path d="M14 5v14" stroke-dasharray="2 2"/></svg>',
+  id:'<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="11" r="2.5"/><path d="M5.5 17c.8-1.8 2-2.5 3.5-2.5s2.7.7 3.5 2.5M15 10h3M15 14h3"/></svg>',
+  app:'<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M11 18h2"/></svg>',
+  pin:'<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>'
+};
+const B = {
+  pass:t=>({i:"pass",t:t||"Same-day boarding pass"}),
+  id:()=>({i:"id",t:"Photo ID"}),
+  card:t=>({i:"card",t,key:true}),
+  qr:t=>({i:"qr",t,key:true}),
+  app:t=>({i:"app",t})
+};
+
+/* ---------------- Rules engine (logic in code, every number and sentence from R) ---------------- */
+// f = {airport, airline, alliance, cabin, intl, dir}
+function premium(f){return f.cabin==="business"||f.cabin==="first"}
+function noArrive(f,n){ if(f.dir==="arrive"&&!n.arrivals){ return {status:"no",why:"Not open to arriving passengers",fix:(n.name||"This lounge")+" only admits departing or connecting travelers. Switch to Connect if you have an onward flight today."}; } return null; }
+function windowLimit(f,n){
+  if(f.dir==="connect"){
+    if(n.connectHoursBefore) return "On a connection: enter up to "+n.connectHoursBefore+" hours before your next flight.";
+    if(n.connectAnyTime) return "Same-day connection: no time limit.";
+    return null;
+  }
+  return n.entryHoursBefore ? "Entry no earlier than "+n.entryHoursBefore+" hours before departure." : null;
+}
+function done(n,o){ o.limits=(o.limits||[]).filter(Boolean).concat(arr(n.extraLimits)); return o; }
+function ow(){return profile.status.oneworld}
+function cap(s){return s[0].toUpperCase()+s.slice(1)}
+
+const RULES = {
+  centurion(f){
+    const n=NET("centurion"); const via=[]; let plat=false;
+    arr(n.cards).forEach(c=>{if(has(c)){via.push(cardName(c)); if(c!=="amex_centurion") plat=true;}});
+    if(n.deltaReserveWhenFlyingDelta&&has("delta_reserve")&&f.airline==="DL") via.push("Delta Reserve card + flying Delta today");
+    if(!via.length) return {status:"no",why:"Needs an Amex Platinum, Business Platinum or Centurion card",fix:has("delta_reserve")?"Your Delta Reserve card works here only when you're flying Delta that day.":n.noAccessHint};
+    const a=noArrive(f,n); if(a) return a;
+    const guests = has("amex_centurion")&&!plat ? n.guestsCenturionCard : profile.spend.spend_amex ? n.guestsAfterSpend : n.guests;
+    return done(n,{status:"yes",why:"You're in with your "+via[0],
+      bring:[B.card(n.bringCard||"Your Amex card"),B.pass("Boarding pass, any airline"),B.id()],
+      limits:[windowLimit(f,n), n.arrivals?null:"Departing and connecting travelers only. No arrivals access."],guests});
+  },
+  capone(f,key){
+    const n=NET(key||"capone"); const via=anyOf(arr(n.cards));
+    if(!via.length) return {status:"no",why:"Needs a Capital One Venture X card",fix:n.noAccessHint};
+    const a=noArrive(f,n); if(a) return a;
+    return done(n,{status:"yes",why:"You're in with your "+cardName(via[0]),
+      bring:[B.card(n.bringCard||"Your Venture X card"),B.pass("Boarding pass for a departing flight"),B.id()],
+      limits:[windowLimit(f,n), n.arrivals?null:"Departing flights only. No arrivals access.", n.authorizedUsers],
+      guests: profile.spend.spend_capone ? n.guestsAfterSpend : n.guests});
+  },
+  capone_landing(f){return RULES.capone(f,"capone_landing")},
+  sapphire(f){
+    const n=NET("sapphire"); const via=anyOf(arr(n.cards));
+    if(!via.length){
+      const hasOtherPP=has("pp")||anyOf(["amex_plat","amex_bizplat","venturex","venturex_biz"]).length;
+      if(!n.otherPriorityPassExcluded&&hasOtherPP) return {status:"warn",why:"Your Priority Pass membership may get you in",bring:[B.qr("Priority Pass QR code (Priority Pass app)"),B.pass(),B.id()],limits:arr(n.extraLimits),guests:n.guests};
+      return {status:"no",why:"Needs a Chase Sapphire Reserve or Ritz-Carlton card",fix:hasOtherPP?n.otherPriorityPassNote:n.noAccessHint};
+    }
+    const a=noArrive(f,n); if(a) return a;
+    return done(n,{status:"yes",why:"You're in with your "+cardName(via[0]),
+      bring:[B.qr(n.bringCard||"Your Sapphire Reserve card or Priority Pass QR code"),B.pass(),B.id()],
+      limits:[windowLimit(f,n), n.arrivals?null:"Departing and connecting travelers only."],guests:n.guests});
+  },
+  united_club(f){
+    const n=NET("united_club"); const okAir = f.airline==="UA"||f.alliance==="star"; const via=[];
+    if(has("united_club_mem")) via.push(["United Club membership",n.guestsMembership]);
+    if(has("united_club_card")) via.push(["United Club Card",n.guestsCard]);
+    if((f.intl||!n.starGoldInternationalOnly)&&profile.status.star==="gold") via.push(["Star Alliance Gold"+(n.starGoldInternationalOnly?" on an international trip":""),n.guestsStarGold]);
+    if(f.intl&&premium(f)) via.push(["international "+f.cabin+" class ticket",n.guestsPremium]);
+    if(!okAir) return {status:"no",why:"You need a United or Star Alliance flight today",fix:"United Clubs require a same-day United or Star Alliance boarding pass."};
+    if(!via.length) return {status:"no",why:"No membership, United Club Card, or qualifying status/ticket",fix:n.noAccessHint};
+    if(f.dir==="arrive"&&!(n.arrivalsPremiumInternational&&f.intl&&premium(f))) return {status:"no",why:"Arrival access is only for international premium-cabin travelers",fix:"Members and cardholders need a departing or connecting flight."};
+    const bring=[B.pass("Same-day United or Star Alliance boarding pass"),B.id()];
+    if(via[0][0]==="United Club Card") bring.unshift(B.card("Your United Club Card (linked to MileagePlus)"));
+    if(via[0][0]==="United Club membership") bring.unshift(B.app("Membership shows in the United app"));
+    return done(n,{status:"yes",why:"You're in with your "+via[0][0],bring,limits:[],guests:via[0][1]});
+  },
+  polaris(f){
+    const n=NET("polaris"); const partnerBiz=arr(n.partnerBusinessAirlines);
+    const ok = f.intl && ((f.airline==="UA"&&premium(f)) || (f.alliance==="star"&&f.cabin==="first") || (partnerBiz.includes(f.airline)&&f.cabin==="business"));
+    if(!ok) return {status:"no",why:"Only for long-haul international business or first",
+      fix:(has("united_club_mem")||has("united_club_card")||profile.status.star==="gold")?"United Club memberships, the Club card and Star Gold status don't get you into Polaris lounges.":"Book United Polaris business on a long-haul international flight."};
+    if(f.dir==="arrive"&&!n.arrivals) return {status:"no",why:"Not open to arriving passengers",fix:""};
+    const firstGuest = f.cabin==="first"&&arr(n.firstClassGuestAirlines).includes(f.airline);
+    return done(n,{status:"yes",why:"You're in with your international "+f.cabin+" ticket",
+      bring:[B.pass("Same-day long-haul international boarding pass"),B.id()],
+      limits:[n.arrivals?"Open to departing, connecting and arriving Polaris travelers on the same itinerary.":null],
+      guests: firstGuest ? "1 guest allowed." : "No guests."});
+  },
+  admirals(f){
+    const n=NET("admirals"); const okAir = f.airline==="AA"||f.alliance==="oneworld";
+    if(!okAir) return {status:"no",why:"You need an American or oneworld flight today",fix:"Admirals Club access requires a same-day boarding pass on American or a oneworld partner."};
+    const via=[]; let cond=false; const s=ow();
+    if(has("admirals_mem")) via.push(["Admirals Club membership",n.guestsMembership]);
+    if(has("citi_exec")) via.push(["Citi AAdvantage Executive card",n.guestsCitiExec]);
+    if((f.intl||!n.statusInternationalOnly)&&(s==="sapphire"||s==="emerald")) via.push(["oneworld "+cap(s)+(n.statusInternationalOnly?" on an international flight":""),n.guestsStatus]);
+    if(premium(f)&&f.intl) via.push(["international "+f.cabin+" class ticket","No guests."]);
+    if(!via.length&&premium(f)){ via.push(["premium cabin, if it's a transcontinental route","No guests."]); cond=true; }
+    if(!via.length) return {status:"no",why:"No membership, Citi Executive card, or qualifying ticket",
+      fix:(s==="sapphire"||s==="emerald")?"Status only gets you in on international oneworld flights.":n.dayPass};
+    const bring=[B.pass("Same-day American or oneworld boarding pass"),B.id()];
+    if(via[0][0].startsWith("Citi")) bring.unshift(B.card("Your Citi AAdvantage Executive card"));
+    return done(n,{status:cond?"warn":"yes",why:cond?"Maybe: premium cabin counts only on transcon flights (e.g., JFK–LAX/SFO)":"You're in with your "+via[0][0],bring,
+      limits:["Members must fly American or a oneworld partner that day."],guests:via[0][1]});
+  },
+  flagship(f){
+    const n=NET("flagship"); const okAir = f.airline==="AA"||f.alliance==="oneworld"; const s=ow();
+    let via=null, cond=false;
+    if(okAir&&f.intl&&premium(f)) via="international "+f.cabin+" class ticket";
+    else if(okAir&&f.intl&&s==="emerald"&&n.emeraldAccess) via="oneworld Emerald on an international flight";
+    else if(okAir&&premium(f)&&f.airline==="AA"){ via="premium cabin, if it's a transcontinental flight"; cond=true; }
+    if(!via) return {status:"no",why:"For international premium cabins and oneworld Emerald",
+      fix:s==="sapphire"?"Sapphire gets the Admirals Club, not Flagship.":(has("admirals_mem")||has("citi_exec"))?"Admirals Club memberships and the Citi card don't include Flagship Lounges.":"Fly international business/first on American or oneworld, or hold oneworld Emerald."};
+    const a=noArrive(f,n); if(a) return a;
+    return done(n,{status:cond?"warn":"yes",why:cond?"Maybe: only on qualifying transcontinental routes":"You're in with your "+via,
+      bring:[B.pass("Same-day qualifying boarding pass"),B.id()],limits:[],
+      guests: via.includes("Emerald") ? n.guestsEmerald : n.guestsPremium});
+  },
+  skyclub(f){
+    const n=NET("skyclub"); const deltaish = f.airline==="DL"||f.alliance==="skyteam";
+    if(!deltaish) return {status:"no",why:"You need a Delta flight today",fix:"Sky Club entry requires a same-day Delta (or Delta-marketed) boarding pass."};
+    if(f.cabin==="basic"&&n.basicEconomyExcluded) return {status:"no",why:"Basic Economy isn't eligible",fix:"Basic Economy fares lose Sky Club access, whatever card or status you hold."};
+    const a=noArrive(f,n); if(a) return a;
+    let via=null, guests=n.guests, visits=null;
+    const bring=[B.pass("Delta boarding pass for today"+(n.basicEconomyExcluded?" (not Basic Economy)":"")),B.id()];
+    const amex=anyOf(["amex_plat","amex_bizplat","amex_centurion"]);
+    if(has("skyclub_mem")){ via="Sky Club membership"; bring.unshift(B.app("Membership shows in the Fly Delta app")); }
+    else if(f.intl&&premium(f)){ via="Delta One / international premium ticket"; guests="No guests."; }
+    else if(f.intl&&profile.status.skyteam==="eliteplus"){ via="SkyTeam Elite Plus on an international flight"; guests=n.guestsEliteplus; }
+    else if(f.airline==="DL"&&has("delta_reserve")){ via="Delta Reserve card"; visits=n.visitsReserve; guests=n.guestsReserve; bring.unshift(B.card("Your physical Delta Reserve card")); }
+    else if(f.airline==="DL"&&amex.length){ via=cardName(amex[0]); visits=n.visitsPlatinum; bring.unshift(B.card("Your physical Amex card")); }
+    if(!via) return {status:"no",why:"No Sky Club membership, eligible Amex card, or qualifying status",
+      fix:f.airline!=="DL"&&anyOf(["amex_plat","amex_bizplat","delta_reserve"]).length?"Amex cards only work when you're on a Delta-marketed flight.":"Amex Platinum and Delta Reserve cardholders get in when flying Delta."};
+    const limits=[ f.dir==="connect" ? "Connecting: stay for your whole layover." : (n.entryHoursBefore?"Entry no earlier than "+n.entryHoursBefore+" hours before departure.":null), n.arrivals?null:"No access on arrival."];
+    if(visits) limits.unshift(profile.spend.spend_amex ? "Unlimited visits (you've hit the spend threshold)." : "Uses 1 of your "+visits+" visits per year. Each visit covers 24 hours. Unlimited after "+(n.unlimitedAfterSpend||"$75k")+" annual spend.");
+    return done(n,{status:visits&&!profile.spend.spend_amex?"warn":"yes",why:"You're in with your "+via,bring,limits,guests});
+  },
+  deltaone(f){
+    const n=NET("deltaone"); const ok = f.intl && premium(f) && (f.airline==="DL"||f.alliance==="skyteam");
+    if(!ok) return {status:"no",why:"Only for Delta One (and partner long-haul business) passengers",
+      fix:(has("skyclub_mem")||anyOf(["amex_plat","delta_reserve"]).length)?"Sky Club memberships and Amex cards don't work at Delta One Lounges.":"Book Delta One on a long-haul flight."};
+    const a=noArrive(f,n); if(a) return a;
+    return done(n,{status:"yes",why:"You're in with your "+f.cabin+" ticket",bring:[B.pass("Same-day Delta One boarding pass"),B.id()],
+      limits:[n.arrivals?"Open to departing, connecting and arriving Delta One travelers.":null],guests:"No guests."});
+  },
+  alaska(f){
+    const n=NET("alaska"); const okAir = f.airline==="AS"||f.alliance==="oneworld";
+    if(!okAir) return {status:"no",why:"You need an Alaska or oneworld flight today",fix:"Alaska Lounges require a same-day Alaska or oneworld boarding pass."};
+    const s=ow(); let via=null, guests=n.guestsMembership;
+    if(has("alaska_mem")) via="Alaska Lounge membership";
+    else if(f.intl&&(s==="sapphire"||s==="emerald")){ via="oneworld "+cap(s)+" on an international flight"; guests=n.guestsStatus; }
+    else if(f.intl&&premium(f)){ via="international "+f.cabin+" class ticket"; guests="No guests."; }
+    if(!via) return {status:"no",why:"No membership or qualifying oneworld status/ticket",fix:n.noAccessHint};
+    return done(n,{status:"yes",why:"You're in with your "+via,
+      bring:[B.pass("Same-day Alaska or oneworld boarding pass"),B.id()].concat(via.includes("membership")?[B.app("Membership shows in the Alaska app")]:[]),limits:[],guests});
+  }
+};
+
+function priorityPass(f){
+  const n=NET("prioritypass"); const sources=anyOf(arr(n.cards));
+  if(!sources.length) return null;
+  const g=(n.guestsByCard||{})[sources[0]];
+  return done(n,{key:"prioritypass",network:"Priority Pass",name:n.name||"Priority Pass lounges",loc:"Check the Priority Pass app for venues at "+f.airport,
+    status:"warn",why:"Covered through your "+cardName(sources[0])+(sources.length>1?" (and "+(sources.length-1)+" more)":""),
+    bring:[B.qr("Priority Pass QR code in the Priority Pass app (or Apple Wallet)"),B.pass(),B.id()],
+    limits:[],guests:g?"With your "+cardName(sources[0])+": "+g:"",link:"https://www.prioritypass.com"});
+}
+function allianceLounge(f){
+  if(!f.intl||!f.alliance) return null;
+  const st=profile.status; let via=null, statusVia=false;
+  if(f.alliance==="star"&&st.star==="gold"){via="Star Alliance Gold";statusVia=true;}
+  if(f.alliance==="oneworld"&&(st.oneworld==="sapphire"||st.oneworld==="emerald")){via="oneworld "+cap(st.oneworld);statusVia=true;}
+  if(f.alliance==="skyteam"&&st.skyteam==="eliteplus"){via="SkyTeam Elite Plus";statusVia=true;}
+  if(!via&&premium(f)) via=cap(f.cabin)+" class on "+airlineName(f.airline);
+  if(!via) return null;
+  return {key:null,network:ALLIANCE_NAME[f.alliance],name:airlineName(f.airline)+" or partner lounge",loc:"Your airline's app shows which lounge to use at "+f.airport,
+    status:"warn",why:"You qualify with "+via+" on an international flight",
+    bring:[B.pass("Same-day international "+ALLIANCE_NAME[f.alliance]+" boarding pass"),B.id()],
+    limits:["Applies at your departure airport; arrival lounges vary by airline.","Domestic-only trips usually don't qualify with status."],
+    guests: statusVia ? "Usually 1 guest flying the same alliance." : "Usually no guests."};
+}
+
+function evaluate(f){
+  const out=[];
+  R.lounges.filter(l=>l.airport===f.airport&&RULES[l.network]).forEach(l=>{
+    const n=NET(l.network); const res=RULES[l.network](f);
+    out.push(Object.assign({key:l.network,network:n.operator||"",name:n.name||l.network,loc:l.location||"",loungeStatus:l.status||"open",loungeNote:l.note||""},res));
+  });
+  const pp=priorityPass(f); if(pp) out.push(pp);
+  const al=allianceLounge(f); if(al) out.push(al);
+  out.forEach(o=>{
+    if((o.loungeStatus==="closed"||o.loungeStatus==="opening")&&o.status!=="no"){
+      o.status="warn"; o.limits=[o.loungeNote||(o.loungeStatus==="closed"?"Temporarily closed. Check before you go.":"Not open yet.")].concat(o.limits||[]);
+    }
+  });
+  return out;
+}
+
+/* ---------------- Rendering: Search ---------------- */
+const CABINS=[["basic","Basic"],["economy","Economy"],["premium","Prem. Econ"],["business","Business"],["first","First"]];
+const TRIPS=[["dom","Domestic"],["intl","Int'l"]];
+const DIRS=[["depart","Depart"],["connect","Connect"],["arrive","Arrive"]];
+
+function seg(el,opts,key){
+  el.innerHTML="";
+  opts.forEach(([v,l])=>{
+    const b=h("button",{type:"button","aria-pressed":String(profile.last[key]===v),onclick:()=>{profile.last[key]=v; seg(el,opts,key); queueSave(true); runSearch();}},l);
+    el.appendChild(b);
+  });
+}
+function hydrate(){
+  $("#airport").value=profile.last.airport||"";
+  $("#airline").value=profile.last.airline||"UA";
+  seg($("#cabin"),CABINS,"cabin"); seg($("#trip"),TRIPS,"trip"); seg($("#dir"),DIRS,"dir");
+  showApName(); buildProfile(); updateBanner(); runSearch();
+}
+function showApName(){const c=($("#airport").value||"").toUpperCase(); $("#apname").textContent=R.airports[c]||(c.length===3?"Lounges below cover cards and status that work anywhere":"");}
+function profileEmpty(){return !Object.values(profile.cards).some(Boolean)&&!Object.values(profile.mems).some(Boolean)&&Object.values(profile.status).every(v=>v==="none");}
+function updateBanner(){$("#setupBanner").hidden=!profileEmpty();}
+
+function chip(b){const c=h("span",{class:"chip"+(b.key?" key":"")}); c.innerHTML=ICON[b.i]; c.appendChild(document.createTextNode(b.t)); return c;}
+function card(o){
+  const cls=o.status==="yes"?"ok":o.status==="warn"?"warn":"no";
+  const head=h("div",{class:"lh"},
+    h("div",{style:"min-width:0"},
+      h("h3",null,o.name),
+      h("div",{class:"net"},o.network),
+      (o.loc||o.status!=="no") ? (()=>{const d=h("div",{class:"loc"}); d.innerHTML=ICON.pin; d.appendChild(document.createTextNode(o.loc||"Location: see the "+o.network+" app")); return d;})() : null
+    ),
+    o.loungeStatus==="closed" ? h("span",{class:"closed"},"Temp. closed") : o.loungeStatus==="opening" ? h("span",{class:"closed"},"Opening soon") : null
+  );
+  const n=o.key?NET(o.key):null;
+  const body=h("div",{class:"lb"});
+  body.appendChild(h("div",{class:"why "+(cls==="ok"?"okc":cls==="warn"?"warnc":"noc")},o.why));
+  if(o.status==="no"){
+    if(o.fix) body.appendChild(h("div",{class:"minor"},o.fix));
+  } else {
+    if(o.bring&&o.bring.length){ body.appendChild(h("div",{class:"lbl"},"What to bring")); body.appendChild(h("div",{class:"chips"},o.bring.map(chip))); }
+    if(o.limits&&o.limits.length){ body.appendChild(h("div",{class:"lbl"},"Limits")); body.appendChild(h("ul",{class:"limits"},o.limits.map(l=>h("li",null,l)))); }
+    if(o.guests){ const g=h("div",{class:"guests"}); g.appendChild(h("b",null,"Guests: ")); g.appendChild(document.createTextNode(o.guests)); body.appendChild(g); }
+    if(o.link){ body.appendChild(h("a",{href:o.link,target:"_blank",rel:"noopener"},"Find Priority Pass venues ↗")); }
+  }
+  if(n){
+    const notes=arr(n.notices);
+    if(notes.length&&o.status!=="no") body.insertBefore(h("div",{class:"notice"},h("b",null,"Rule change"),notes.map(t=>h("div",null,t))),body.children[1]||null);
+    const src=(Array.isArray(n.sources)?n.sources:[]).filter(s=>s&&safeUrl(s.url));
+    const meta=h("div",{class:"prov"});
+    meta.appendChild(document.createTextNode((n.verified?"Rules checked "+fmtDate(n.verified):"Not yet checked")+(arr(n.unverified).length?" · some details unconfirmed":"")));
+    src.slice(0,4).forEach((s,i)=>{ meta.appendChild(document.createTextNode(i?" · ":" · Sources: ")); meta.appendChild(h("a",{href:safeUrl(s.url),target:"_blank",rel:"noopener"},String(s.title||"Source").split(":")[0])); });
+    body.appendChild(meta);
+  }
+  return h("article",{class:"lounge "+cls},head,body);
+}
+function runSearch(){
+  const code=($("#airport").value||"").toUpperCase().trim();
+  const airline=$("#airline").value;
+  profile.last.airport=code; profile.last.airline=airline;
+  const box=$("#results"); box.innerHTML="";
+  if(code.length!==3){ box.appendChild(h("div",{class:"res-head"},h("h2",null,"Enter a 3-letter airport code"))); return; }
+  const f={airport:code,airline,alliance:allianceOf(airline),cabin:profile.last.cabin,intl:profile.last.trip==="intl",dir:profile.last.dir};
+  const res=evaluate(f);
+  const yes=res.filter(r=>r.status==="yes"), warn=res.filter(r=>r.status==="warn"), no=res.filter(r=>r.status==="no");
+  const tally=h("div",{class:"tally"},
+    yes.length?h("span",{class:"pill ok"},yes.length+" you can use"):null,
+    warn.length?h("span",{class:"pill warn"},warn.length+" with conditions"):null,
+    no.length?h("span",{class:"pill no"},no.length+" not eligible"):null);
+  box.appendChild(h("div",{class:"res-head"},h("h2",null,code+" · "+airlineName(airline)),tally));
+  const usable=yes.concat(warn);
+  if(!usable.length){
+    box.appendChild(h("div",{class:"empty"},
+      h("div",{style:"font-weight:700;color:var(--ink);margin-bottom:4px"},R.airports[code]||!res.length?"No lounges match your profile for this flight":"No lounge data for "+code+" yet"),
+      h("div",null,profileEmpty()?"Add your cards and status in My cards & status.":!R.airports[code]?"Card and status lounges still appear here when they apply. Check your airline app too.":"See below for what would get you in.")));
+  } else {
+    box.appendChild(h("div",{class:"list"},usable.map(card)));
+  }
+  if(no.length){
+    const d=h("details",{class:"nope"},h("summary",null,h("span",null,"Lounges you can't use ("+no.length+")"),h("span",{"aria-hidden":"true"},"▾")),h("div",{class:"list"},no.map(card)));
+    box.appendChild(d);
+  }
+}
+
+/* ---------------- Rendering: Profile ---------------- */
+function toggleRow(id,title,desc,bucket){
+  const inp=h("input",{type:"checkbox",id:"t-"+id});
+  inp.checked=!!profile[bucket][id];
+  inp.addEventListener("change",()=>{profile[bucket][id]=inp.checked; queueSave(); updateBanner(); runSearch(); toast(inp.checked?"Added":"Removed");});
+  const sw=h("span",{class:"sw"},inp,h("i"));
+  return h("label",{class:"tog",for:"t-"+id},h("span",{class:"t"},h("b",null,title),h("span",null,desc)),sw);
+}
+function buildProfile(){
+  const gc=$("#g-cards"); gc.innerHTML=""; CARDS.forEach(c=>gc.appendChild(toggleRow(c[0],c[1],c[2],"cards")));
+  const gm=$("#g-mems"); gm.innerHTML=""; MEMS.forEach(c=>gm.appendChild(toggleRow(c[0],c[1],c[2],"mems")));
+  const gsp=$("#g-spend"); gsp.innerHTML=""; SPEND.forEach(c=>gsp.appendChild(toggleRow(c[0],c[1],c[2],"spend")));
+  const gs=$("#g-status"); gs.innerHTML="";
+  STATUS.forEach(([k,label,opts,hint])=>{
+    const sel=h("select",{id:"s-"+k},opts.map(([v,l])=>h("option",{value:v},l)));
+    sel.value=profile.status[k]||"none";
+    sel.addEventListener("change",()=>{profile.status[k]=sel.value; queueSave(); updateBanner(); runSearch(); toast("Saved");});
+    gs.appendChild(h("div",{class:"selrow"},h("label",{for:"s-"+k},label),sel,h("small",null,hint)));
+  });
+}
+
+/* ---------------- Navigation & init ---------------- */
+function go(view){
+  $("#view-search").hidden=view!=="search"; $("#view-profile").hidden=view!=="profile";
+  $("#tab-search").setAttribute("aria-selected",String(view==="search"));
+  $("#tab-profile").setAttribute("aria-selected",String(view==="profile"));
+  try{localStorage.setItem(LS_KEY+".view",view)}catch(e){}
+  window.scrollTo(0,0);
+}
+let tt=null; function toast(t){const el=$("#toast"); el.textContent=t; el.classList.add("show"); clearTimeout(tt); tt=setTimeout(()=>el.classList.remove("show"),1100);}
+
+document.addEventListener("click",e=>{const g=e.target.closest("[data-go]"); if(g){go(g.getAttribute("data-go")); if(g.getAttribute("data-go")==="search") runSearch();}});
+function buildAirportList(){const dl=$("#airportList"); dl.innerHTML=""; Object.keys(R.airports).sort().forEach(c=>dl.appendChild(h("option",{value:c},R.airports[c])));}
+buildAirportList();
+const asel=$("#airline"); AIRLINES.forEach(([c,n,al])=>asel.appendChild(h("option",{value:c},n+(al?"  ·  "+ALLIANCE_NAME[al]:""))));
+$("#airport").addEventListener("input",e=>{e.target.value=e.target.value.toUpperCase().replace(/[^A-Z]/g,""); showApName(); if(e.target.value.length===3){runSearch(); queueSave(true);}});
+$("#airline").addEventListener("change",()=>{runSearch(); queueSave(true);});
+$("#searchForm").addEventListener("submit",e=>{e.preventDefault(); $("#airport").blur(); runSearch(); queueSave(true); const r=$("#results"); if(r.firstChild) r.scrollIntoView({behavior:"smooth",block:"start"});});
+
+hydrate();
+setSaveState(profile.updatedAt?"Saved on this iPhone":"");
+try{ if(localStorage.getItem(LS_KEY+".view")==="profile") go("profile"); }catch(e){}
+
+/* ---------------- Live rules: rules.json on this site, fetched each time the app opens ---------------- */
+function fmtDate(s){ const d=new Date(String(s).length===10?s+"T12:00:00":s); return isNaN(d)?String(s):d.toLocaleDateString(undefined,{month:"short",day:"numeric",year:"numeric"}); }
+let fetching=false, fetchNote="";
+const RULES_CACHE=LS_KEY+".rules";
+function renderFresh(){
+  const m=R.meta||{};
+  $("#freshDot").className="dot "+(fetching?"busy":rulesSource==="live"?"live":"");
+  $("#freshTitle").textContent = fetching ? "Getting the latest rules…" : "Rules updated "+fmtDate(m.updatedAt||"");
+  let d = rulesSource==="live" ? "Latest rules loaded" : rulesSource==="saved" ? "Using the rules saved on this iPhone" : "Using the rules built into the app";
+  d += (m.updatedBy?" · "+m.updatedBy:"")+". New rules load every time you open the app.";
+  if(fetchNote) d+=" "+fetchNote;
+  $("#freshDetail").textContent=d;
+  const needs=arr(m.needsAppUpdate);
+  const al=$("#freshAlert"); al.hidden=!needs.length; al.textContent=needs.length?"Some new rules need an app update to show fully: "+needs.join(" "):"";
+  const ul=$("#changeList"); ul.innerHTML="";
+  (Array.isArray(m.changelog)?m.changelog:[]).slice(0,30).forEach(c=>{ if(c&&c.text) ul.appendChild(h("li",null,(c.date?fmtDate(c.date)+": ":"")+c.text)); });
+}
+function newer(d){ const cur=(R.meta&&R.meta.updatedAt)||""; return d&&d.meta&&String(d.meta.updatedAt||"")>=String(cur); }
+function useRules(d,source){ if(applyRemoteRules(d)){ rulesSource=source; buildAirportList(); showApName(); runSearch(); return true; } return false; }
+async function loadRules(manual){
+  if(fetching) return;
+  fetching=true; renderFresh();
+  try{
+    // Rules live in the public GitHub repo (updated by the monthly research); the copy on this site is a backup.
+    let d=null;
+    for(const u of ["https://raw.githubusercontent.com/MoveBeyondFPTP/lounge-finder/main/rules.json?t="+Date.now(),"rules.json?t="+Date.now()]){
+      try{ const r=await fetch(u,{cache:"no-store"}); if(r.ok){ const j=await r.json(); if(!d||String(j.meta&&j.meta.updatedAt||"")>String(d.meta&&d.meta.updatedAt||"")) d=j; break; } }catch(e){}
+    }
+    if(!d) throw new Error("offline");
+    const before=(R.meta&&R.meta.updatedAt)||"";
+    if(useRules(d,"live")){
+      try{localStorage.setItem(RULES_CACHE,JSON.stringify(d))}catch(e){}
+      fetchNote="";
+      if(manual||(before&&String(d.meta.updatedAt)>before)) toast(String(d.meta.updatedAt)>before?"Rules updated":"Rules are up to date");
+    }
+  }catch(e){ fetchNote="Couldn't reach the internet, so the last saved rules are shown."; }
+  fetching=false; renderFresh();
+}
+function connectRules(){
+  try{ const c=JSON.parse(localStorage.getItem(RULES_CACHE)||"null"); if(c&&newer(c)) useRules(c,"saved"); }catch(e){}
+  $("#checkNow").hidden=false; $("#checkNow").textContent="Reload latest rules"; $("#checkNow").onclick=()=>loadRules(true);
+  loadRules(false);
+  // Home-screen apps resume instead of reopening, so also refresh when the app comes back to the foreground.
+  let hiddenAt=0;
+  document.addEventListener("visibilitychange",()=>{ if(document.hidden) hiddenAt=Date.now(); else if(Date.now()-hiddenAt>60*1000) loadRules(false); });
+}
+renderFresh();
+connectRules();
+if("serviceWorker" in navigator){ window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{})); }
+})();
+</script>
+
+</body>
+</html>

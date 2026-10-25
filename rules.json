@@ -1,0 +1,901 @@
+{
+ "airports": {
+  "ATL": "Atlanta Hartsfield-Jackson",
+  "BOS": "Boston Logan",
+  "CLT": "Charlotte Douglas",
+  "DCA": "Washington Reagan National",
+  "DEN": "Denver International",
+  "DFW": "Dallas Fort Worth",
+  "DTW": "Detroit Metro",
+  "EWR": "Newark Liberty",
+  "IAD": "Washington Dulles",
+  "IAH": "Houston Bush Intercontinental",
+  "JFK": "New York JFK",
+  "LAS": "Las Vegas Harry Reid",
+  "LAX": "Los Angeles",
+  "LGA": "New York LaGuardia",
+  "LHR": "London Heathrow",
+  "MIA": "Miami",
+  "MSP": "Minneapolis–St. Paul",
+  "ORD": "Chicago O'Hare",
+  "PDX": "Portland",
+  "PHL": "Philadelphia",
+  "PHX": "Phoenix Sky Harbor",
+  "SAN": "San Diego",
+  "SEA": "Seattle-Tacoma",
+  "SFO": "San Francisco",
+  "SLC": "Salt Lake City"
+ },
+ "lounges": [
+  {
+   "airport": "ATL",
+   "location": "Every concourse (T, A, B, C, D, E, F)",
+   "network": "skyclub"
+  },
+  {
+   "airport": "ATL",
+   "location": "",
+   "network": "centurion"
+  },
+  {
+   "airport": "BOS",
+   "location": "Terminal B, near Gate B40",
+   "network": "sapphire"
+  },
+  {
+   "airport": "BOS",
+   "location": "Terminal A",
+   "network": "skyclub"
+  },
+  {
+   "airport": "BOS",
+   "location": "Terminal E, inside the Sky Club",
+   "network": "deltaone"
+  },
+  {
+   "airport": "BOS",
+   "location": "Terminal B",
+   "network": "admirals"
+  },
+  {
+   "airport": "BOS",
+   "location": "Terminal B",
+   "network": "united_club"
+  },
+  {
+   "airport": "CLT",
+   "location": "",
+   "network": "centurion"
+  },
+  {
+   "airport": "CLT",
+   "location": "Several concourses",
+   "network": "admirals"
+  },
+  {
+   "airport": "DCA",
+   "location": "",
+   "network": "centurion"
+  },
+  {
+   "airport": "DCA",
+   "location": "Terminal 2, National Hall, near Concourse D",
+   "network": "capone_landing"
+  },
+  {
+   "airport": "DCA",
+   "location": "Terminal 2",
+   "network": "admirals"
+  },
+  {
+   "airport": "DCA",
+   "location": "",
+   "network": "skyclub"
+  },
+  {
+   "airport": "DCA",
+   "location": "",
+   "network": "united_club"
+  },
+  {
+   "airport": "DEN",
+   "location": "Concourse C",
+   "network": "centurion"
+  },
+  {
+   "airport": "DEN",
+   "location": "Concourse A, near Gate 34 (mezzanine)",
+   "network": "capone"
+  },
+  {
+   "airport": "DEN",
+   "location": "Concourses A and B (several)",
+   "network": "united_club"
+  },
+  {
+   "airport": "DEN",
+   "location": "",
+   "network": "skyclub"
+  },
+  {
+   "airport": "DFW",
+   "location": "Terminal D",
+   "network": "centurion"
+  },
+  {
+   "airport": "DFW",
+   "location": "Terminal D, near Gate 22",
+   "network": "capone"
+  },
+  {
+   "airport": "DFW",
+   "location": "Terminal D, near Gate D25",
+   "network": "sapphire"
+  },
+  {
+   "airport": "DFW",
+   "location": "Every terminal",
+   "network": "admirals"
+  },
+  {
+   "airport": "DFW",
+   "location": "Terminal D",
+   "network": "flagship"
+  },
+  {
+   "airport": "DFW",
+   "location": "Terminal E",
+   "network": "skyclub"
+  },
+  {
+   "airport": "DTW",
+   "location": "McNamara Terminal (several)",
+   "network": "skyclub"
+  },
+  {
+   "airport": "EWR",
+   "location": "Terminals A and C",
+   "network": "united_club"
+  },
+  {
+   "airport": "EWR",
+   "location": "Terminal C",
+   "network": "polaris"
+  },
+  {
+   "airport": "IAD",
+   "location": "Main terminal past security (reach from the Z gates)",
+   "network": "capone"
+  },
+  {
+   "airport": "IAD",
+   "location": "Concourses C and D",
+   "network": "united_club"
+  },
+  {
+   "airport": "IAD",
+   "location": "Concourse C",
+   "network": "polaris"
+  },
+  {
+   "airport": "IAH",
+   "location": "Terminal D",
+   "network": "centurion"
+  },
+  {
+   "airport": "IAH",
+   "location": "Terminals C and E",
+   "network": "united_club"
+  },
+  {
+   "airport": "IAH",
+   "location": "Terminal E",
+   "network": "polaris"
+  },
+  {
+   "airport": "JFK",
+   "location": "Terminal 4",
+   "network": "centurion"
+  },
+  {
+   "airport": "JFK",
+   "location": "Terminal 4, Level 3 Retail Hall, near B gates",
+   "network": "capone"
+  },
+  {
+   "airport": "JFK",
+   "location": "Terminal 4, near Gate A2",
+   "network": "sapphire",
+   "note": "Temporarily closed",
+   "status": "closed"
+  },
+  {
+   "airport": "JFK",
+   "location": "Terminal 4",
+   "network": "skyclub"
+  },
+  {
+   "airport": "JFK",
+   "location": "Terminal 4",
+   "network": "deltaone"
+  },
+  {
+   "airport": "JFK",
+   "location": "Terminal 8",
+   "network": "admirals"
+  },
+  {
+   "airport": "JFK",
+   "location": "Terminal 8",
+   "network": "flagship",
+   "note": "Now called the Greenwich Lounge"
+  },
+  {
+   "airport": "LAS",
+   "location": "Concourse D",
+   "network": "centurion"
+  },
+  {
+   "airport": "LAS",
+   "location": "Concourse D Atrium, near Gate D50",
+   "network": "capone"
+  },
+  {
+   "airport": "LAS",
+   "location": "Terminal 1, near Gate C23",
+   "network": "sapphire"
+  },
+  {
+   "airport": "LAX",
+   "location": "Tom Bradley International Terminal",
+   "network": "centurion"
+  },
+  {
+   "airport": "LAX",
+   "location": "Terminals 2 and 3",
+   "network": "skyclub"
+  },
+  {
+   "airport": "LAX",
+   "location": "Terminal 3",
+   "network": "deltaone"
+  },
+  {
+   "airport": "LAX",
+   "location": "Terminal 7",
+   "network": "united_club"
+  },
+  {
+   "airport": "LAX",
+   "location": "Terminal 7",
+   "network": "polaris"
+  },
+  {
+   "airport": "LAX",
+   "location": "Terminal 4",
+   "network": "admirals"
+  },
+  {
+   "airport": "LAX",
+   "location": "Terminal 4",
+   "network": "flagship"
+  },
+  {
+   "airport": "LAX",
+   "location": "Terminal 6",
+   "network": "alaska"
+  },
+  {
+   "airport": "LGA",
+   "location": "Terminal B",
+   "network": "centurion"
+  },
+  {
+   "airport": "LGA",
+   "location": "Terminal B, on the bridge before Gates 40–59",
+   "network": "sapphire"
+  },
+  {
+   "airport": "LGA",
+   "location": "Terminal B, on the bridge to Gates 11–31",
+   "network": "capone_landing"
+  },
+  {
+   "airport": "LGA",
+   "location": "Terminal C",
+   "network": "skyclub"
+  },
+  {
+   "airport": "LGA",
+   "location": "Terminal B",
+   "network": "united_club"
+  },
+  {
+   "airport": "LGA",
+   "location": "Terminal B",
+   "network": "admirals"
+  },
+  {
+   "airport": "LHR",
+   "location": "Terminal 2",
+   "network": "united_club"
+  },
+  {
+   "airport": "LHR",
+   "location": "Terminal 3",
+   "network": "flagship"
+  },
+  {
+   "airport": "MIA",
+   "location": "Concourse D",
+   "network": "centurion"
+  },
+  {
+   "airport": "MIA",
+   "location": "Concourse D",
+   "network": "admirals"
+  },
+  {
+   "airport": "MIA",
+   "location": "Concourse D",
+   "network": "flagship"
+  },
+  {
+   "airport": "MSP",
+   "location": "Concourses C, F and G",
+   "network": "skyclub"
+  },
+  {
+   "airport": "ORD",
+   "location": "Terminals 1 and 2",
+   "network": "united_club"
+  },
+  {
+   "airport": "ORD",
+   "location": "Terminal 1, Concourse C",
+   "network": "polaris"
+  },
+  {
+   "airport": "ORD",
+   "location": "Terminal 3",
+   "network": "admirals"
+  },
+  {
+   "airport": "ORD",
+   "location": "Terminal 3",
+   "network": "flagship"
+  },
+  {
+   "airport": "ORD",
+   "location": "",
+   "network": "skyclub"
+  },
+  {
+   "airport": "PDX",
+   "location": "",
+   "network": "alaska"
+  },
+  {
+   "airport": "PHL",
+   "location": "Terminal A-West",
+   "network": "centurion"
+  },
+  {
+   "airport": "PHL",
+   "location": "Terminal D/E connector",
+   "network": "sapphire"
+  },
+  {
+   "airport": "PHL",
+   "location": "Several terminals",
+   "network": "admirals"
+  },
+  {
+   "airport": "PHL",
+   "location": "Terminal A-West",
+   "network": "flagship"
+  },
+  {
+   "airport": "PHX",
+   "location": "Terminal 4",
+   "network": "centurion"
+  },
+  {
+   "airport": "PHX",
+   "location": "Terminal 4, near Gate D11",
+   "network": "sapphire"
+  },
+  {
+   "airport": "PHX",
+   "location": "Terminal 4",
+   "network": "admirals"
+  },
+  {
+   "airport": "PHX",
+   "location": "",
+   "network": "skyclub"
+  },
+  {
+   "airport": "SAN",
+   "location": "Terminal 2, near Gates 46–47",
+   "network": "sapphire"
+  },
+  {
+   "airport": "SEA",
+   "location": "",
+   "network": "centurion"
+  },
+  {
+   "airport": "SEA",
+   "location": "",
+   "network": "skyclub"
+  },
+  {
+   "airport": "SEA",
+   "location": "Concourse A, near Gate A11 (level 4)",
+   "network": "deltaone"
+  },
+  {
+   "airport": "SEA",
+   "location": "Concourses C, D and North Satellite",
+   "network": "alaska"
+  },
+  {
+   "airport": "SFO",
+   "location": "Terminal 2, near Gate D12 (temporary space)",
+   "network": "centurion",
+   "note": "Main Terminal 3 lounge closed for renovation until 2027"
+  },
+  {
+   "airport": "SFO",
+   "location": "Terminal 3",
+   "network": "united_club"
+  },
+  {
+   "airport": "SFO",
+   "location": "International Terminal G",
+   "network": "polaris"
+  },
+  {
+   "airport": "SFO",
+   "location": "Terminal 2",
+   "network": "alaska",
+   "note": "Closed; its Terminal 2 space now holds the temporary Centurion Lounge",
+   "status": "closed"
+  },
+  {
+   "airport": "SFO",
+   "location": "",
+   "network": "admirals"
+  },
+  {
+   "airport": "SFO",
+   "location": "",
+   "network": "skyclub"
+  },
+  {
+   "airport": "SLC",
+   "location": "",
+   "network": "centurion"
+  },
+  {
+   "airport": "SLC",
+   "location": "Concourses A and B",
+   "network": "skyclub"
+  },
+  {
+   "airport": "IAD",
+   "location": "Concourse A, near Gate A14",
+   "network": "sapphire",
+   "note": "Etihad Lounge; Sapphire Reserve and Ritz-Carlton cardholders get in"
+  }
+ ],
+ "meta": {
+  "changelog": [
+   {
+    "date": "2026-10-25",
+    "text": "Checked all networks. Centurion card guests now include family; Polaris partner list adds ITA and Brussels; Star Alliance Gold guests must be on your flight; Delta One Basic fares lose access Jan 19, 2027 (notice); updated guest rules for Admirals, Alaska and Flagship; fixed Sapphire, Delta One and SFO lounge locations, added the IAD Etihad/Sapphire lounge, marked the SFO Alaska Lounge closed."
+   },
+   {
+    "date": "2026-10-25",
+    "text": "Rules moved to a live data store. Items marked unverified will be checked on the first refresh."
+   }
+  ],
+  "needsAppUpdate": [
+   "Delta One: from Jan 19, 2027, Delta One Basic fares lose lounge access; the app has no field to exclude a fare type for this network."
+  ],
+  "nextCheck": "Every Monday morning",
+  "updatedAt": "2026-10-25",
+  "updatedBy": "Automatic refresh"
+ },
+ "networks": {
+  "admirals": {
+   "dayPass": "Day passes ($79) can be bought in the American app, space permitting.",
+   "extraLimits": [
+    "No time limit before departure.",
+    "Arriving passengers allowed when the arriving flight qualifies.",
+    "Citi card holders must show the physical card.",
+    "Status from a non-American, non-Alaska oneworld program works on any oneworld flight, not just international."
+   ],
+   "guestsCitiExec": "Up to 2 guests, or your immediate family.",
+   "guestsMembership": "Your immediate family or up to 2 guests.",
+   "guestsStatus": "1 guest flying oneworld with you.",
+   "name": "Admirals Club",
+   "notices": [],
+   "operator": "American Airlines",
+   "sources": [
+    {
+     "title": "American Airlines: Admirals Club access",
+     "url": "https://www.aa.com/web/i18n/travel-info/clubs/admirals-club-access.html"
+    }
+   ],
+   "statusInternationalOnly": true,
+   "unverified": [],
+   "verified": "2026-10-25"
+  },
+  "alaska": {
+   "extraLimits": [
+    "Atmos and oneworld status only gets you in on international trips (outside the U.S., Canada and Mexico).",
+    "Some lounges limit access during busy periods."
+   ],
+   "guestsMembership": "Your partner and children under 21, or up to 2 friends.",
+   "guestsStatus": "1 guest flying oneworld with you.",
+   "name": "Alaska Lounge",
+   "noAccessHint": "Single-entry passes ($35) are sold at the door when space allows.",
+   "notices": [],
+   "operator": "Alaska Airlines",
+   "sources": [
+    {
+     "title": "Alaska Airlines: Lounge policies and rules",
+     "url": "https://www.alaskaair.com/content/airport-lounge/policies-and-rules"
+    }
+   ],
+   "unverified": [],
+   "verified": "2026-10-25"
+  },
+  "capone": {
+   "arrivals": false,
+   "authorizedUsers": "Authorized users need the $125/year lounge add-on.",
+   "bringCard": "Your physical Venture X card",
+   "cards": [
+    "venturex",
+    "venturex_biz"
+   ],
+   "connectAnyTime": true,
+   "entryHoursBefore": 3,
+   "extraLimits": [],
+   "guests": "$45 per adult guest, $25 ages 2–17, under 2 free.",
+   "guestsAfterSpend": "2 guests free (you've hit $75k spend).",
+   "name": "Capital One Lounge",
+   "noAccessHint": "Non-cardholders can pay $90 per visit.",
+   "notices": [],
+   "operator": "Capital One",
+   "sources": [
+    {
+     "title": "One Mile at a Time: Venture X lounge access changes",
+     "url": "https://onemileatatime.com/news/capital-one-venture-x-lounge-access-changes/"
+    },
+    {
+     "title": "AwardWallet: Capital One lounges",
+     "url": "https://awardwallet.com/credit-cards/capital-one-rewards/capital-one-airport-lounges/"
+    }
+   ],
+   "unverified": [],
+   "verified": "2026-10-25"
+  },
+  "capone_landing": {
+   "arrivals": false,
+   "authorizedUsers": "Authorized users need the $125/year lounge add-on.",
+   "bringCard": "Your physical Venture X card",
+   "cards": [
+    "venturex",
+    "venturex_biz"
+   ],
+   "connectAnyTime": true,
+   "entryHoursBefore": 3,
+   "extraLimits": [
+    "Landings are smaller, food-focused spaces."
+   ],
+   "guests": "$45 per adult guest, $25 ages 2–17, under 2 free.",
+   "guestsAfterSpend": "1 guest free (you've hit $75k spend).",
+   "name": "Capital One Landing",
+   "noAccessHint": "Non-cardholders can pay $90 per visit.",
+   "notices": [],
+   "operator": "Capital One",
+   "sources": [
+    {
+     "title": "One Mile at a Time: Capital One Landing guide",
+     "url": "https://onemileatatime.com/guides/capital-one-landing/"
+    },
+    {
+     "title": "AwardWallet: Capital One lounges",
+     "url": "https://awardwallet.com/credit-cards/capital-one-rewards/capital-one-airport-lounges/"
+    }
+   ],
+   "unverified": [],
+   "verified": "2026-10-25"
+  },
+  "centurion": {
+   "arrivals": false,
+   "bringCard": "Your physical Amex card",
+   "cards": [
+    "amex_plat",
+    "amex_bizplat",
+    "amex_centurion"
+   ],
+   "connectHoursBefore": 5,
+   "deltaReserveWhenFlyingDelta": true,
+   "entryHoursBefore": 3,
+   "extraLimits": [
+    "May pause new entries when full."
+   ],
+   "guests": "$50 per adult, $30 ages 2–17. Free for 2 guests after $75,000 annual spend. Guests must be on your same flight.",
+   "guestsAfterSpend": "2 guests free (you've hit $75k spend). Guests must be on your flight.",
+   "guestsCenturionCard": "Your immediate family plus 2 guests free.",
+   "name": "The Centurion Lounge",
+   "noAccessHint": "Day passes aren't sold. Delta Reserve cardholders get in when flying Delta.",
+   "notices": [],
+   "operator": "American Express",
+   "sources": [
+    {
+     "title": "American Express: Centurion Lounge access policy",
+     "url": "https://www.thecenturionlounge.com/info/access/"
+    },
+    {
+     "title": "One Mile at a Time: Centurion Lounges add new restrictions",
+     "url": "https://onemileatatime.com/news/amex-centurion-lounges-new-access-restrictions/"
+    },
+    {
+     "title": "Upgraded Points: New Centurion entry rules start July 8",
+     "url": "https://upgradedpoints.com/news/amex-centurion-lounge-new-entry-rules-2026/"
+    }
+   ],
+   "unverified": [],
+   "verified": "2026-10-25"
+  },
+  "deltaone": {
+   "arrivals": true,
+   "extraLimits": [
+    "Sky Club memberships and Amex cards don't work here.",
+    "Only Delta 360° members can bring guests ($100 each)."
+   ],
+   "name": "Delta One Lounge",
+   "notices": [
+    "From January 19, 2027: Delta One Basic (cheapest business) fares no longer include Delta One Lounge access."
+   ],
+   "operator": "Delta",
+   "sources": [
+    {
+     "title": "The Points Party: Delta One Lounge access",
+     "url": "https://thepointsparty.com/articles/delta-one-lounge-access-guide"
+    },
+    {
+     "title": "Upgraded Points: Delta One Lounge locations",
+     "url": "https://upgradedpoints.com/travel/airports/delta-one-lounges/"
+    },
+    {
+     "title": "The Points Guy: Delta Basic premium fares",
+     "url": "https://thepointsguy.com/airline/delta-air-lines-basic-tickets-premium-seats-what-to-know/"
+    }
+   ],
+   "unverified": [],
+   "verified": "2026-10-25"
+  },
+  "flagship": {
+   "arrivals": false,
+   "emeraldAccess": true,
+   "extraLimits": [
+    "Departing and connecting travelers only.",
+    "At New York JFK the Flagship Lounge is now called the Greenwich Lounge (Terminal 8)."
+   ],
+   "guestsEmerald": "1 guest flying oneworld with you.",
+   "guestsPremium": "First class: 1 guest. Business class: no guests.",
+   "name": "Flagship Lounge",
+   "notices": [],
+   "operator": "American Airlines",
+   "sources": [
+    {
+     "title": "One Mile at a Time: Flagship Lounge guide",
+     "url": "https://onemileatatime.com/guides/american-flagship-lounges/"
+    },
+    {
+     "title": "One Mile at a Time: New JFK Terminal 8 lounges",
+     "url": "https://onemileatatime.com/news/jfk-terminal-8-new-lounges/"
+    },
+    {
+     "title": "American Airlines: Flagship lounge terms",
+     "url": "https://www.aa.com/i18n/travel-info/clubs/flagship-lounge-terms-and-conditions.html"
+    }
+   ],
+   "unverified": [],
+   "verified": "2026-10-25"
+  },
+  "polaris": {
+   "arrivals": true,
+   "extraLimits": [
+    "United Polaris Base fares are excluded.",
+    "Partner-airline passengers get in only when departing, not on arrival."
+   ],
+   "firstClassGuestAirlines": [
+    "LH",
+    "LX",
+    "NH"
+   ],
+   "name": "United Polaris Lounge",
+   "notices": [],
+   "operator": "United",
+   "partnerBusinessAirlines": [
+    "LH",
+    "LX",
+    "OS",
+    "SN",
+    "NH",
+    "NZ",
+    "AZ"
+   ],
+   "sources": [
+    {
+     "title": "Prince of Travel: United restricts Polaris access for partners",
+     "url": "https://princeoftravel.com/news/united-restricts-polaris-lounge-access-star-alliance/"
+    },
+    {
+     "title": "Air Traveler Club: Polaris limited to five partners",
+     "url": "https://www.airtraveler.club/news/united-restricts-polaris-lounge-access/"
+    }
+   ],
+   "unverified": [
+    "Arrivals access for United Polaris passengers"
+   ],
+   "verified": "2026-10-25"
+  },
+  "prioritypass": {
+   "cards": [
+    "csr",
+    "ritz",
+    "venturex",
+    "venturex_biz",
+    "amex_plat",
+    "amex_bizplat",
+    "amex_centurion",
+    "pp"
+   ],
+   "extraLimits": [
+    "Your credit card alone won't work. Activate the Priority Pass membership on your card's website first.",
+    "Most lounges admit you up to 3 hours before departure and can refuse entry when full.",
+    "Airport restaurants in Priority Pass aren't included with Sapphire Reserve, Ritz-Carlton, Venture X or Amex cards.",
+    "Chase Sapphire Lounges are no longer open to Priority Pass members from other cards."
+   ],
+   "guestsByCard": {
+    "amex_bizplat": "2 guests free.",
+    "amex_centurion": "2 guests free.",
+    "amex_plat": "2 guests free.",
+    "csr": "2 guests free.",
+    "pp": "Depends on your plan.",
+    "ritz": "2 guests free.",
+    "venturex": "$35 per guest.",
+    "venturex_biz": "2 guests free."
+   },
+   "name": "Priority Pass lounges",
+   "notices": [],
+   "operator": "Priority Pass",
+   "sources": [
+    {
+     "title": "One Mile at a Time: Venture X lounge access changes",
+     "url": "https://onemileatatime.com/news/capital-one-venture-x-lounge-access-changes/"
+    },
+    {
+     "title": "Upgraded Points: Venture X Business loses Priority Pass restaurants",
+     "url": "https://upgradedpoints.com/news/capital-one-venture-x-business-loses-priority-pass-restaurants/"
+    },
+    {
+     "title": "Chase: Sapphire Lounge network",
+     "url": "https://www.chase.com/sapphire-cards/lounges"
+    },
+    {
+     "title": "Priority Pass",
+     "url": "https://www.prioritypass.com"
+    }
+   ],
+   "unverified": [
+    "Amex Priority Pass guest allowance"
+   ],
+   "verified": "2026-10-25"
+  },
+  "sapphire": {
+   "arrivals": false,
+   "bringCard": "Your physical Sapphire Reserve card, or the Chase-issued Priority Pass in the Chase app",
+   "cards": [
+    "csr",
+    "ritz"
+   ],
+   "connectHoursBefore": 5,
+   "entryHoursBefore": 3,
+   "extraLimits": [
+    "Bring the plastic card, or show the Chase-issued Priority Pass from the Chase app (it can be added to your phone's wallet).",
+    "You also need a boarding pass for a departing flight."
+   ],
+   "guests": "2 guests free, then $27 per extra guest.",
+   "name": "Chase Sapphire Lounge",
+   "noAccessHint": "Other Priority Pass members lost access on August 15, 2026.",
+   "notices": [],
+   "operator": "Chase",
+   "otherPriorityPassExcluded": true,
+   "otherPriorityPassNote": "Since August 15, 2026, Priority Pass from other cards or bought directly no longer gets in.",
+   "sources": [
+    {
+     "title": "Chase: Sapphire Lounge network",
+     "url": "https://www.chase.com/sapphire-cards/lounges"
+    },
+    {
+     "title": "One Mile at a Time: Sapphire Lounges cut Priority Pass access",
+     "url": "https://onemileatatime.com/news/chase-sapphire-lounges-cut-priority-pass-access/"
+    }
+   ],
+   "unverified": [],
+   "verified": "2026-10-25"
+  },
+  "skyclub": {
+   "arrivals": false,
+   "basicEconomyExcluded": true,
+   "entryHoursBefore": 3,
+   "extraLimits": [
+    "No 3-hour limit while you're on a layover.",
+    "One visit covers every club you enter within 24 hours."
+   ],
+   "guests": "$50 per guest.",
+   "guestsEliteplus": "1 guest flying SkyTeam with you.",
+   "guestsReserve": "$50 per guest; the card includes 4 guest passes a year (up to 2 per visit).",
+   "name": "Delta Sky Club",
+   "notices": [],
+   "operator": "Delta",
+   "sources": [
+    {
+     "title": "Delta: Sky Club access",
+     "url": "https://www.delta.com/us/en/delta-sky-club/access"
+    },
+    {
+     "title": "The Points Guy: Sky Club restrictions in effect",
+     "url": "https://thepointsguy.com/news/delta-air-lines-sky-club-restrictions-in-effect"
+    }
+   ],
+   "unlimitedAfterSpend": "$75k",
+   "unverified": [],
+   "verified": "2026-10-25",
+   "visitsPlatinum": 10,
+   "visitsReserve": 15
+  },
+  "united_club": {
+   "arrivalsPremiumInternational": true,
+   "extraLimits": [
+    "No time limit before departure for members and cardholders.",
+    "Can close to new entries when crowded."
+   ],
+   "guestsCard": "1 adult guest plus your children under 18.",
+   "guestsMembership": "No guests on an Individual membership (All Access allows 2).",
+   "guestsPremium": "No guests.",
+   "guestsStarGold": "1 guest, who must be on your same flight.",
+   "name": "United Club",
+   "noAccessHint": "One-time passes ($59) are sold in the United app when space allows (use within 3 hours of departure).",
+   "notices": [],
+   "operator": "United",
+   "sources": [
+    {
+     "title": "PointsYeah: United Club access and guest rules",
+     "url": "https://www.pointsyeah.com/insider/airlines/united-club-lounges"
+    },
+    {
+     "title": "The Points Guy: Star Alliance Gold guest rule change",
+     "url": "https://thepointsguy.com/news/star-alliance-gold-lounge-access-cut"
+    },
+    {
+     "title": "The Points Guy: United Club access changes",
+     "url": "https://thepointsguy.com/news/united-airlines-club-access-changes"
+    }
+   ],
+   "starGoldInternationalOnly": true,
+   "unverified": [],
+   "verified": "2026-10-25"
+  }
+ },
+ "schema": 1
+}

@@ -5,10 +5,10 @@ An iPhone home-screen web app that shows which airport lounges you can get into,
 ## How it's put together
 
 - `index.html`: the whole app. Your profile is saved only on your iPhone.
-- `rules.json`: lounge rules and locations. The app reads this file from this GitHub repo each time it opens, so rule updates show up without republishing the site.
+- `rules.json`: lounge rules and locations. The app reads this file from this GitHub repo each time it opens, so rule updates show up right away.
 - `sw.js`: lets the app open without signal, using the last rules it loaded.
 - `manifest.webmanifest` and `icons/`: the home-screen name and icon.
-- `netlify.toml`: Netlify settings. A commit that only changes `rules.json` skips the Netlify deploy.
+- `netlify.toml`: settings for Netlify, if you ever host it there. The app is hosted on GitHub Pages: https://movebeyondfptp.github.io/lounge-finder/
 
 ## How rules stay current
 

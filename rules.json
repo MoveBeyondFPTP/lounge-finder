@@ -954,10 +954,52 @@
    "network": "admirals",
    "location": "Terminal T, across from Gate T11",
    "status": "open"
+  },
+  {
+   "airport": "LAX",
+   "network": "starpartner",
+   "name": "Air Canada Maple Leaf Lounge",
+   "location": "Terminal 6",
+   "status": "open"
+  },
+  {
+   "airport": "LAX",
+   "network": "starpartner",
+   "name": "Star Alliance Lounge",
+   "location": "Tom Bradley International Terminal, reachable airside from Terminals 4–8",
+   "status": "open",
+   "note": "A walk from United's gates, but no second security check."
+  },
+  {
+   "airport": "LGA",
+   "network": "starpartner",
+   "name": "Air Canada Maple Leaf Lounge",
+   "location": "Terminal B, Eastern Concourse",
+   "status": "open"
+  },
+  {
+   "airport": "SFO",
+   "network": "starpartner",
+   "name": "Air Canada Maple Leaf Lounge",
+   "location": "Terminal 2",
+   "status": "open",
+   "note": "United's domestic gates are in Terminal 3; check you can walk there airside."
+  },
+  {
+   "airport": "EWR",
+   "network": "starpartner",
+   "name": "Air Canada Maple Leaf Lounge",
+   "location": "Terminal A (check the Air Canada app)",
+   "status": "open",
+   "note": "May require clearing security again if your United flight leaves from Terminal C."
   }
  ],
  "meta": {
   "changelog": [
+   {
+    "date": "2026-10-25",
+    "text": "Added Star Alliance partner lounges (Air Canada Maple Leaf at LAX, LGA, SFO and EWR; Star Alliance Lounge at LAX), open to Star Alliance Gold on any Star flight including domestic United, and to United Club All Access members. All Access now shows 2 guests."
+   },
    {
     "date": "2026-10-25",
     "text": "Delta and American checked against their own sites: Sky Clubs now open to members and Amex cardholders on arrival; Delta Medallion vs. partner SkyTeam status handled separately; oneworld status from non-American airlines works on domestic flights; Sapphire and Emerald status now shows Flagship Lounges on international trips; JFK Flagship removed (it's now the Chelsea Lounge)."
@@ -1422,10 +1464,6 @@
    "operator": "United",
    "sources": [
     {
-     "title": "PointsYeah: United Club access and guest rules",
-     "url": "https://www.pointsyeah.com/insider/airlines/united-club-lounges"
-    },
-    {
      "title": "The Points Guy: Star Alliance Gold guest rule change",
      "url": "https://thepointsguy.com/news/star-alliance-gold-lounge-access-cut"
     },
@@ -1436,6 +1474,10 @@
     {
      "title": "LoungeReview: United Club same-day boarding pass rule (members may use clubs on arrival)",
      "url": "https://loungereview.com/united-club-updates-upcoming-access-restrictions-for-club-members-and-possible-changes-to-copa-partnership"
+    },
+    {
+     "title": "LoyaltyLobby: United Club Individual vs All Access",
+     "url": "https://loyaltylobby.com/2025/03/24/united-club-membership-pricing-entry-rule-changes/"
     }
    ],
    "starGoldInternationalOnly": true,
@@ -1444,7 +1486,8 @@
     "Star Alliance Gold from partner airlines on domestic United flights"
    ],
    "verified": "2026-10-25",
-   "arrivalsForMembers": true
+   "arrivalsForMembers": true,
+   "guestsAllAccess": "Up to 2 adult guests, or 1 adult plus your children under 18 (All Access)."
   },
   "amexpartner": {
    "name": "Amex partner lounge",
@@ -1472,6 +1515,42 @@
     {
      "title": "The Points Party: Amex Global Lounge Collection guide",
      "url": "https://thepointsparty.com/articles/ultimate-guide-to-american-express-lounge-access"
+    }
+   ]
+  },
+  "starpartner": {
+   "name": "Star Alliance partner lounge",
+   "operator": "Star Alliance",
+   "arrivals": false,
+   "guestsStarGold": "1 guest who is on your same flight.",
+   "guestsAllAccess": "Up to 2 adult guests (the partner lounge's own rules apply).",
+   "noAccessHint": "Star Alliance Gold (including from United Premier Gold) gets you in before any Star Alliance flight, domestic too. United Club All Access does as well.",
+   "extraLimits": [
+    "Departing passengers only.",
+    "Can refuse entry when full."
+   ],
+   "notices": [],
+   "verified": "2026-10-25",
+   "unverified": [
+    "All Access partner-lounge access on domestic United itineraries",
+    "Star Alliance Lounge LAX admission on domestic flights"
+   ],
+   "sources": [
+    {
+     "title": "Air Canada: Maple Leaf Lounges",
+     "url": "https://aircanada.com/lounges"
+    },
+    {
+     "title": "One Mile at a Time: Star Alliance lounge access",
+     "url": "https://onemileatatime.com/guides/star-alliance-lounge-access/"
+    },
+    {
+     "title": "Live and Let's Fly: Free LAX lounge access for United Star Golds",
+     "url": "https://liveandletsfly.com/free-lounge-access-lax-united-star-golds/"
+    },
+    {
+     "title": "LoyaltyLobby: United Club Individual vs All Access",
+     "url": "https://loyaltylobby.com/2025/03/24/united-club-membership-pricing-entry-rule-changes/"
     }
    ]
   }

@@ -168,7 +168,7 @@
   },
   {
    "airport": "DFW",
-   "location": "Terminal D",
+   "location": "Terminal D, near Gate D23",
    "network": "flagship"
   },
   {
@@ -254,12 +254,6 @@
    "network": "admirals"
   },
   {
-   "airport": "JFK",
-   "location": "Terminal 8",
-   "network": "flagship",
-   "note": "Now called the Greenwich Lounge"
-  },
-  {
    "airport": "LAS",
    "location": "Concourse D",
    "network": "centurion"
@@ -306,7 +300,7 @@
   },
   {
    "airport": "LAX",
-   "location": "Terminal 4",
+   "location": "Terminal 4, near Gate 41",
    "network": "flagship"
   },
   {
@@ -366,7 +360,7 @@
   },
   {
    "airport": "MIA",
-   "location": "Concourse D",
+   "location": "Concourse D, near Gate D30",
    "network": "flagship"
   },
   {
@@ -391,7 +385,7 @@
   },
   {
    "airport": "ORD",
-   "location": "Terminal 3",
+   "location": "Terminal 3, Concourse H/K",
    "network": "flagship"
   },
   {
@@ -421,7 +415,7 @@
   },
   {
    "airport": "PHL",
-   "location": "Terminal A-West",
+   "location": "Terminal A West, mezzanine between Gates A15 and A16",
    "network": "flagship"
   },
   {
@@ -966,6 +960,10 @@
   "changelog": [
    {
     "date": "2026-10-25",
+    "text": "Delta and American checked against their own sites: Sky Clubs now open to members and Amex cardholders on arrival; Delta Medallion vs. partner SkyTeam status handled separately; oneworld status from non-American airlines works on domestic flights; Sapphire and Emerald status now shows Flagship Lounges on international trips; JFK Flagship removed (it's now the Chelsea Lounge)."
+   },
+   {
+    "date": "2026-10-25",
     "text": "United Clubs now show as open to members and United Club cardholders when you're arriving, not just departing."
    },
    {
@@ -990,20 +988,22 @@
  },
  "networks": {
   "admirals": {
-   "dayPass": "Day passes ($79) can be bought in the American app, space permitting.",
+   "dayPass": "Day passes ($79 or 7,900 miles) are sold in the American app when space allows.",
    "extraLimits": [
     "No time limit before departure.",
-    "Arriving passengers allowed when the arriving flight qualifies.",
-    "Citi card holders must show the physical card.",
-    "Status from a non-American, non-Alaska oneworld program works on any oneworld flight, not just international."
+    "Arriving passengers are welcome with a same-day American or oneworld boarding pass."
    ],
-   "guestsCitiExec": "Up to 2 guests, or your immediate family.",
-   "guestsMembership": "Your immediate family or up to 2 guests.",
-   "guestsStatus": "1 guest flying oneworld with you.",
+   "guestsCitiExec": "Up to 2 guests or your immediate family.",
+   "guestsMembership": "Up to 2 guests or your immediate family.",
+   "guestsStatus": "1 guest.",
    "name": "Admirals Club",
    "notices": [],
    "operator": "American Airlines",
    "sources": [
+    {
+     "title": "American Airlines: Admirals Club access",
+     "url": "https://www.aa.com/i18n/travel-info/clubs/admirals-club-access.html"
+    },
     {
      "title": "American Airlines: Admirals Club access",
      "url": "https://www.aa.com/web/i18n/travel-info/clubs/admirals-club-access.html"
@@ -1162,33 +1162,31 @@
    "verified": "2026-10-25"
   },
   "flagship": {
-   "arrivals": false,
-   "emeraldAccess": true,
+   "arrivals": true,
    "extraLimits": [
-    "Departing and connecting travelers only.",
-    "At New York JFK the Flagship Lounge is now called the Greenwich Lounge (Terminal 8)."
+    "Status holders can use Flagship Lounges when departing, connecting or arriving."
    ],
    "guestsEmerald": "1 guest flying oneworld with you.",
-   "guestsPremium": "First class: 1 guest. Business class: no guests.",
+   "guestsPremium": "No guests.",
    "name": "Flagship Lounge",
    "notices": [],
    "operator": "American Airlines",
    "sources": [
     {
-     "title": "One Mile at a Time: Flagship Lounge guide",
-     "url": "https://onemileatatime.com/guides/american-flagship-lounges/"
-    },
-    {
-     "title": "One Mile at a Time: New JFK Terminal 8 lounges",
-     "url": "https://onemileatatime.com/news/jfk-terminal-8-new-lounges/"
-    },
-    {
-     "title": "American Airlines: Flagship lounge terms",
-     "url": "https://www.aa.com/i18n/travel-info/clubs/flagship-lounge-terms-and-conditions.html"
+     "title": "American Airlines: Flagship lounge",
+     "url": "https://www.aa.com/i18n/travel-info/clubs/flagship-lounge.html"
     }
    ],
    "unverified": [],
-   "verified": "2026-10-25"
+   "verified": "2026-10-25",
+   "statusTiers": [
+    "sapphire",
+    "emerald"
+   ],
+   "partnerStatusAnyFlight": true,
+   "statusArrivals": true,
+   "guestsStatus": "1 guest.",
+   "guestsIntlFirst": "1 guest."
   },
   "polaris": {
    "arrivals": true,
@@ -1371,16 +1369,16 @@
    "verified": "2026-10-25"
   },
   "skyclub": {
-   "arrivals": false,
+   "arrivals": true,
    "basicEconomyExcluded": true,
    "entryHoursBefore": 3,
    "extraLimits": [
     "No 3-hour limit while you're on a layover.",
     "One visit covers every club you enter within 24 hours."
    ],
-   "guests": "$50 per guest.",
-   "guestsEliteplus": "1 guest flying SkyTeam with you.",
-   "guestsReserve": "$50 per guest; the card includes 4 guest passes a year (up to 2 per visit).",
+   "guests": "Up to 2 guests or your immediate family, $50 each.",
+   "guestsEliteplus": "1 guest free on a SkyTeam flight.",
+   "guestsReserve": "Up to 2 guests or immediate family at $50 each; the card includes 4 free guest passes a year.",
    "name": "Delta Sky Club",
    "notices": [],
    "operator": "Delta",
@@ -1390,15 +1388,23 @@
      "url": "https://www.delta.com/us/en/delta-sky-club/access"
     },
     {
+     "title": "Upgraded Points: Sky Clubs on arrival with Amex Platinum",
+     "url": "https://upgradedpoints.com/news/delta-sky-clubs-on-arrival-amex-platinum/"
+    },
+    {
      "title": "The Points Guy: Sky Club restrictions in effect",
      "url": "https://thepointsguy.com/news/delta-air-lines-sky-club-restrictions-in-effect"
     }
    ],
    "unlimitedAfterSpend": "$75k",
-   "unverified": [],
+   "unverified": [
+    "Whether arrival access covers international arrivals"
+   ],
    "verified": "2026-10-25",
    "visitsPlatinum": 10,
-   "visitsReserve": 15
+   "visitsReserve": 15,
+   "arrivalNote": "Arriving: open after a Delta flight with a membership or Amex card. With an Amex card it uses one of your yearly visits.",
+   "guestsMedallion": "1 guest free if they're also in Premium Select or Delta One."
   },
   "united_club": {
    "arrivalsPremiumInternational": true,

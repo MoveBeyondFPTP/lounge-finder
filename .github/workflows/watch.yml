@@ -6,6 +6,12 @@ on:
   schedule:
     - cron: "17 12 * * *"   # every day at 12:17 UTC (6:17 AM Denver in winter)
   workflow_dispatch: {}      # lets you run it by hand from the Actions tab
+  push:                      # and runs right away when its own settings change
+    branches: [main]
+    paths:
+      - "watcher/sources.json"
+      - "watcher/watch.py"
+      - ".github/workflows/watch.yml"
 
 permissions:
   contents: write

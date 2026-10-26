@@ -2,7 +2,7 @@
  "aa-admirals-access": {
   "baseline": "2026-10-26T03:15Z",
   "hash": "309409cfe1a76528",
-  "lastChecked": "2026-10-26T03:15Z",
+  "lastChecked": "2026-10-26T03:16Z",
   "lines": 86,
   "networks": [
    "admirals"
@@ -13,7 +13,7 @@
  "aa-flagship": {
   "baseline": "2026-10-26T03:15Z",
   "hash": "3beb32a01f3549b5",
-  "lastChecked": "2026-10-26T03:15Z",
+  "lastChecked": "2026-10-26T03:16Z",
   "lines": 69,
   "networks": [
    "flagship"
@@ -24,7 +24,7 @@
  "admirals-guide": {
   "baseline": "2026-10-26T03:15Z",
   "hash": "190b6333f6aa1476",
-  "lastChecked": "2026-10-26T03:15Z",
+  "lastChecked": "2026-10-26T03:16Z",
   "lines": 132,
   "networks": [
    "admirals",
@@ -36,7 +36,7 @@
  "aircanada-lounges": {
   "baseline": "2026-10-26T03:15Z",
   "hash": "aaf6501f3abeab84",
-  "lastChecked": "2026-10-26T03:15Z",
+  "lastChecked": "2026-10-26T03:16Z",
   "lines": 136,
   "networks": [
    "starpartner"
@@ -47,7 +47,7 @@
  "airport-directory": {
   "baseline": "2026-10-26T03:15Z",
   "hash": "a656b3f86d49236c",
-  "lastChecked": "2026-10-26T03:15Z",
+  "lastChecked": "2026-10-26T03:16Z",
   "lines": 372,
   "networks": [
    "prioritypass",
@@ -59,7 +59,7 @@
  "alaska-lounge": {
   "baseline": "2026-10-26T03:15Z",
   "hash": "0df5ae69cd187e7f",
-  "lastChecked": "2026-10-26T03:15Z",
+  "lastChecked": "2026-10-26T03:16Z",
   "lines": 57,
   "networks": [
    "alaska"
@@ -70,7 +70,7 @@
  "capone-lounges": {
   "baseline": "2026-10-26T03:15Z",
   "hash": "d41bef578cf0275b",
-  "lastChecked": "2026-10-26T03:15Z",
+  "lastChecked": "2026-10-26T03:16Z",
   "lines": 102,
   "networks": [
    "capone",
@@ -81,8 +81,9 @@
  },
  "centurion-access": {
   "baseline": "2026-10-26T03:15Z",
-  "hash": "fdfbbd32308922e8",
-  "lastChecked": "2026-10-26T03:15Z",
+  "hash": "1bb8f60db7821b1a",
+  "lastChanged": "2026-10-26T03:16Z",
+  "lastChecked": "2026-10-26T03:16Z",
   "lines": 38,
   "networks": [
    "centurion",
@@ -94,7 +95,7 @@
  "delta-skyclub-access": {
   "baseline": "2026-10-26T03:15Z",
   "hash": "17c12e622bca351b",
-  "lastChecked": "2026-10-26T03:15Z",
+  "lastChecked": "2026-10-26T03:16Z",
   "lines": 167,
   "networks": [
    "skyclub",
@@ -105,9 +106,10 @@
  },
  "guest-policies": {
   "baseline": "2026-10-26T03:15Z",
-  "hash": "a3554e82b20af3b2",
-  "lastChecked": "2026-10-26T03:15Z",
-  "lines": 150,
+  "hash": "54f93c18865c77f1",
+  "lastChanged": "2026-10-26T03:16Z",
+  "lastChecked": "2026-10-26T03:16Z",
+  "lines": 132,
   "networks": [
    "*guests"
   ],
@@ -116,8 +118,12 @@
  },
  "pp-us-venues": {
   "baseline": "2026-10-26T03:15Z",
+  "countDiffs": [
+   "IAD: 3 listed in the app, 2 on the source",
+   "ORD: 3 listed in the app, 1 on the source"
+  ],
   "hash": "3824c735dfa721fe",
-  "lastChecked": "2026-10-26T03:15Z",
+  "lastChecked": "2026-10-26T03:16Z",
   "lines": 267,
   "networks": [
    "prioritypass"
@@ -128,7 +134,7 @@
  "sapphire-lounges": {
   "baseline": "2026-10-26T03:15Z",
   "hash": "7f78da5c89071dd2",
-  "lastChecked": "2026-10-26T03:15Z",
+  "lastChecked": "2026-10-26T03:16Z",
   "lines": 58,
   "networks": [
    "sapphire"
@@ -137,7 +143,7 @@
   "url": "https://thepointsparty.com/articles/chase-sapphire-lounges-locations-hours-access"
  },
  "united-club-access": {
-  "lastChecked": "2026-10-26T03:15Z",
+  "lastChecked": "2026-10-26T03:16Z",
   "networks": [
    "united_club",
    "polaris"
@@ -149,7 +155,7 @@
  "united-club-guide": {
   "baseline": "2026-10-26T03:15Z",
   "hash": "1cc5c0340ab5007f",
-  "lastChecked": "2026-10-26T03:15Z",
+  "lastChecked": "2026-10-26T03:16Z",
   "lines": 117,
   "networks": [
    "united_club",

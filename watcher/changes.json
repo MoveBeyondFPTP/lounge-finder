@@ -11,6 +11,24 @@
     "Location counts differ from the app: IAD: 3 listed in the app, 2 on the source; ORD: 3 listed in the app, 1 on the source"
    ],
    "removed": []
+  },
+  {
+   "source": "airport-websites",
+   "networks": [
+    "amexpartner",
+    "skyclub"
+   ],
+   "url": "",
+   "detected": "2026-10-26T03:30Z",
+   "added": [
+    "DJT Delta Sky Club: \"All gates, Escape Lounge - The Centurion\u00ae Studio Partner, Delta Sky Club\u00ae, private nursing suites, Lost and Found, putting green, restaurants and shops, Art Gallery at DJT.\" (https://flydjt.org/guide/terminal-map/)",
+    "DJT Escape Lounge: \"All gates, Escape Lounge - The Centurion\u00ae Studio Partner, Delta Sky Club\u00ae, private nursing suites, Lost and Found, putting green, restaurants and shops, Art Gallery at DJT.\" (https://flydjt.org/guide/terminal-map/)",
+    "JAX Delta Sky Club: \"Delta Sky Club\" (https://www.flyjacksonville.com/content.aspx?id=11)",
+    "MEM Delta Sky Club: \"Delta Sky Club\" (https://flymemphis.com/)",
+    "MKE Delta Sky Club: \"- Delta Sky Club\" (https://www.mitchellairport.com/airport-guide/interactive-terminal-guide)"
+   ],
+   "removed": [],
+   "note": "New lounges found on airport websites and added automatically. Check each is real and current, fill in the location, or remove it."
   }
  ]
 }

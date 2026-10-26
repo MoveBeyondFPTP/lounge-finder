@@ -53,7 +53,11 @@
   "TPA": "Tampa",
   "ANC": "Anchorage",
   "RNO": "Reno-Tahoe",
-  "SAT": "San Antonio"
+  "SAT": "San Antonio",
+  "DJT": "President Donald J. Trump International Airport",
+  "JAX": "Jacksonville International Airport",
+  "MEM": "Frederick W. Smith International Airport",
+  "MKE": "General Mitchell International Airport"
  },
  "lounges": [
   {
@@ -992,10 +996,64 @@
    "location": "Terminal A (check the Air Canada app)",
    "status": "open",
    "note": "May require clearing security again if your United flight leaves from Terminal C."
+  },
+  {
+   "airport": "DJT",
+   "network": "skyclub",
+   "name": "Delta Sky Club",
+   "location": "gates",
+   "status": "open",
+   "source": "airport-site",
+   "sourceUrl": "https://flydjt.org/guide/terminal-map/",
+   "note": "Found on the airport's website; confirm the details there."
+  },
+  {
+   "airport": "DJT",
+   "network": "amexpartner",
+   "name": "Escape Lounge",
+   "location": "gates",
+   "status": "open",
+   "source": "airport-site",
+   "sourceUrl": "https://flydjt.org/guide/terminal-map/",
+   "note": "Found on the airport's website; confirm the details there."
+  },
+  {
+   "airport": "JAX",
+   "network": "skyclub",
+   "name": "Delta Sky Club",
+   "location": "See the airport's website for the location",
+   "status": "open",
+   "source": "airport-site",
+   "sourceUrl": "https://www.flyjacksonville.com/content.aspx?id=11",
+   "note": "Found on the airport's website; confirm the details there."
+  },
+  {
+   "airport": "MEM",
+   "network": "skyclub",
+   "name": "Delta Sky Club",
+   "location": "See the airport's website for the location",
+   "status": "open",
+   "source": "airport-site",
+   "sourceUrl": "https://flymemphis.com/",
+   "note": "Found on the airport's website; confirm the details there."
+  },
+  {
+   "airport": "MKE",
+   "network": "skyclub",
+   "name": "Delta Sky Club",
+   "location": "See the airport's website for the location",
+   "status": "open",
+   "source": "airport-site",
+   "sourceUrl": "https://www.mitchellairport.com/airport-guide/interactive-terminal-guide",
+   "note": "Found on the airport's website; confirm the details there."
   }
  ],
  "meta": {
   "changelog": [
+   {
+    "date": "2026-10-26",
+    "text": "Added from airport websites: DJT: Delta Sky Club; DJT: Escape Lounge; JAX: Delta Sky Club; MEM: Delta Sky Club; MKE: Delta Sky Club."
+   },
    {
     "date": "2026-10-25",
     "text": "Airports with no lounges now say so plainly. The app knows all 645 US airports with scheduled flights and which ones have Priority Pass lounges."

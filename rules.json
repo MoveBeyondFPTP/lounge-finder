@@ -1001,7 +1001,7 @@
    "airport": "DJT",
    "network": "skyclub",
    "name": "Delta Sky Club",
-   "location": "gates",
+   "location": "See the airport's website for the location",
    "status": "open",
    "source": "airport-site",
    "sourceUrl": "https://flydjt.org/guide/terminal-map/",
@@ -1011,7 +1011,7 @@
    "airport": "DJT",
    "network": "amexpartner",
    "name": "Escape Lounge",
-   "location": "gates",
+   "location": "See the airport's website for the location",
    "status": "open",
    "source": "airport-site",
    "sourceUrl": "https://flydjt.org/guide/terminal-map/",
@@ -3033,5 +3033,9 @@
   "DTR": "Decatur Shores Airport",
   "KKI": "Akiachak Airport",
   "KBC": "Birch Creek Airport"
+ },
+ "airportAliases": {
+  "PBI": "DJT",
+  "DJT": "PBI"
  }
 }

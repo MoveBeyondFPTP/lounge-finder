@@ -30,7 +30,7 @@ BRANDS = [
     ("amexpartner", "Plaza Premium Lounge",         re.compile(r"\bPlaza Premium\b", re.I)),
     ("starpartner", "Air Canada Maple Leaf Lounge", re.compile(r"\bMaple Leaf Lounge\b", re.I)),
 ]
-WHERE = re.compile(r"\b(?:Terminal|Concourse|Gate|Pier|Level|Mezzanine)\s*[A-Z0-9][\w-]*", re.I)
+WHERE = re.compile(r"\b(?:[Tt]erminal|[Cc]oncourse|[Gg]ate|[Pp]ier|[Ll]evel)\s+(?:[A-Z]{1,2}-?\d{0,3}|\d{1,3}[A-Z]?)\b")
 LINK_HINT = re.compile(r"lounge|amenit|shop|dine|dining|services|facilit|terminal|concession|traveler|passenger|at-the-airport|airport-guide|map", re.I)
 HREF = re.compile(r'<a\b[^>]*href=["\']([^"\'#]+)["\'][^>]*>(.*?)</a>', re.I | re.S)
 TAGS = re.compile(r"<[^>]+>")
@@ -52,6 +52,18 @@ def wikidata_sites(codes):
             print("Wikidata lookup failed:", e)
         time.sleep(2)
     return found
+
+import ssl
+_LOOSE = ssl.create_default_context(); _LOOSE.check_hostname = False; _LOOSE.verify_mode = ssl.CERT_NONE
+def fetch(url, _strict=fetch):
+    """Like watch.fetch, but retries without certificate checks for sites with broken HTTPS setups (read-only, public pages)."""
+    try:
+        return _strict(url)
+    except Exception as e:
+        if "CERTIFICATE" not in str(e).upper() and "SSL" not in str(e).upper(): raise
+        req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "text/html,application/xhtml+xml", "Accept-Language": "en-US,en;q=0.9"})
+        with urllib.request.urlopen(req, timeout=40, context=_LOOSE) as r:
+            return r.status, r.read().decode(r.headers.get_content_charset() or "utf-8", "replace")
 
 def scan_airport(code, site):
     pages, texts = [site], []

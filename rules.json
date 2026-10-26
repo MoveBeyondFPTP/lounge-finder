@@ -1001,55 +1001,55 @@
    "airport": "DJT",
    "network": "skyclub",
    "name": "Delta Sky Club",
-   "location": "See the airport's website for the location",
+   "location": "Concourse C, opposite Gate C4",
    "status": "open",
-   "source": "airport-site",
-   "sourceUrl": "https://flydjt.org/guide/terminal-map/",
-   "note": "Found on the airport's website; confirm the details there."
+   "source": "airport-site-verified",
+   "sourceUrl": "https://flydjt.org/guide/terminal-map/"
   },
   {
    "airport": "DJT",
    "network": "amexpartner",
    "name": "Escape Lounge",
-   "location": "See the airport's website for the location",
+   "location": "Concourse B",
    "status": "open",
-   "source": "airport-site",
-   "sourceUrl": "https://flydjt.org/guide/terminal-map/",
-   "note": "Found on the airport's website; confirm the details there."
+   "source": "airport-site-verified",
+   "sourceUrl": "https://flydjt.org/guide/terminal-map/"
   },
   {
    "airport": "JAX",
    "network": "skyclub",
    "name": "Delta Sky Club",
-   "location": "See the airport's website for the location",
+   "location": "Concourse A, next to Chili's",
    "status": "open",
-   "source": "airport-site",
+   "source": "airport-site-verified",
    "sourceUrl": "https://www.flyjacksonville.com/content.aspx?id=11",
-   "note": "Found on the airport's website; confirm the details there."
+   "note": "Moving to the new Concourse B when it opens (expected after December 2026)."
   },
   {
    "airport": "MEM",
    "network": "skyclub",
    "name": "Delta Sky Club",
-   "location": "See the airport's website for the location",
+   "location": "Concourse B",
    "status": "open",
-   "source": "airport-site",
-   "sourceUrl": "https://flymemphis.com/",
-   "note": "Found on the airport's website; confirm the details there."
+   "source": "airport-site-verified",
+   "sourceUrl": "https://flymemphis.com/"
   },
   {
    "airport": "MKE",
    "network": "skyclub",
    "name": "Delta Sky Club",
-   "location": "See the airport's website for the location",
+   "location": "Concourse D, across from Usinger's and Johnny Rockets",
    "status": "open",
-   "source": "airport-site",
-   "sourceUrl": "https://www.mitchellairport.com/airport-guide/interactive-terminal-guide",
-   "note": "Found on the airport's website; confirm the details there."
+   "source": "airport-site-verified",
+   "sourceUrl": "https://www.mitchellairport.com/airport-guide/interactive-terminal-guide"
   }
  ],
  "meta": {
   "changelog": [
+   {
+    "date": "2026-10-26",
+    "text": "Confirmed Delta Sky Clubs at Jacksonville (Concourse A), Memphis (Concourse B) and Milwaukee (Concourse D), plus a Sky Club (Concourse C) and Escape Lounge (Concourse B) at Palm Beach. All were found by the nightly airport-website scan."
+   },
    {
     "date": "2026-10-26",
     "text": "Added from airport websites: DJT: Delta Sky Club; DJT: Escape Lounge; JAX: Delta Sky Club; MEM: Delta Sky Club; MKE: Delta Sky Club."
@@ -1090,9 +1090,9 @@
   "needsAppUpdate": [
    "Delta One: from Jan 19, 2027, Delta One Basic fares lose lounge access; the app has no field to exclude a fare type for this network."
   ],
-  "nextCheck": "Every Monday morning",
-  "updatedAt": "2026-10-25",
-  "updatedBy": "Automatic refresh"
+  "nextCheck": "Every Monday (full check on the first Monday of the month)",
+  "updatedAt": "2026-10-26",
+  "updatedBy": "Weekly research"
  },
  "networks": {
   "admirals": {

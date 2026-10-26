@@ -1,3 +1,54 @@
 {
- "pending": []
+ "pending": [
+  {
+   "source": "capone-lounges",
+   "networks": [
+    "capone",
+    "capone_landing"
+   ],
+   "url": "https://onemileatatime.com/guides/capital-one-lounges",
+   "detected": "2026-10-26T18:40Z",
+   "added": [
+    "Thoughts About SAS EuroBonus Status MatchAsk the Community \u00b7 1 reply \u00b7 asked 1 day agoFlight cancellation on award ticket - remediation suggestions?Ask the Community \u00b7 1 reply \u00b7 asked 4 days agoBest Korean Air Lounge in ICNAsk the Community \u00b7 1 reply \u00b7 asked 2 weeks ago",
+    "Capital One Venture X Personal Vs. Business: Which Is Better?",
+    "How Long Do Capital One Mileage Transfers Take?",
+    "Capital One Venture X Cuts Priority Pass Restaurants"
+   ],
+   "removed": [
+    "Thoughts About SAS EuroBonus Status MatchAsk the Community \u00b7 no replies yet \u00b7 asked 6 hours agoFlight cancellation on award ticket - remediation suggestions?Ask the Community \u00b7 no replies yet \u00b7 asked 3 days agoBest Korean Air Lounge in ICNAsk the Community \u00b7 1 reply \u00b7 asked 2 weeks ago",
+    "Capital One Spark Cash Select Review: No Annual Fee, $750 Bonus, 1.5% Cash Back"
+   ]
+  },
+  {
+   "source": "guest-policies",
+   "networks": [
+    "*guests"
+   ],
+   "url": "https://thepointsguy.com/guide/credit-card-guest-policies-for-airport-lounges/",
+   "detected": "2026-10-26T18:40Z",
+   "added": [
+    "Airport lounge guest policies differ significantly based on lounge type and how access is obtained, such as through loyalty status, memberships or select travel cards.",
+    "Most lounges allow complimentary entry for children under 2, but fees for additional guests can be substantial and vary by lounge network.",
+    "Some programs offer complimentary or discounted guest access if you meet high annual spending thresholds, while others charge per guest regardless of spend.",
+    "Understanding each lounge's guest policy is crucial to avoid unexpected costs, especially when traveling with family or groups.",
+    "Guest limits, age restrictions and per-visit fees for additional guests can change frequently and may depend on your access method.",
+    "Certain lounges require all guests to be traveling on the same flight, and some restrict guest access during periods of high crowding.",
+    "Premium lounges, such as those for international first or business class, often have stricter guest policies or exclude guests entirely.",
+    "A detailed comparison of guest policies across major U.S. airport lounge networks, including specific rules for families and frequent travelers.",
+    "Terms apply.Rates & fees",
+    "Learn more Citi\u00ae / AAdvantage\u00ae Platinum Select\u00ae World Elite Mastercard\u00ae",
+    "Citi\u00ae / AAdvantage\u00ae Platinum Select\u00ae World Elite Mastercard\u00ae",
+    "Earn 80,000 American Airlines AAdvantage\u00ae bonus miles",
+    "Earn more than $1,000 in Travel Bonuses",
+    "Learn more Capital One Venture X Business",
+    "Best for businesses with high spending",
+    "Earn up to $4,300 in travel value when you spend $120,000 in your first 4 months as a cardholder",
+    "How to choose a credit card for airport lounge access",
+    "How to access American Airlines Admirals Club lounges",
+    "7 credit cards that offer lounge access to authorized users",
+    "5 ways to ensure you have lounge access before your next flight"
+   ],
+   "removed": []
+  }
+ ]
 }

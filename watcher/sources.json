@@ -1,0 +1,16 @@
+[
+ {"id":"centurion-access","networks":["centurion","amexpartner"],"url":"https://www.thecenturionlounge.com/info/access/"},
+ {"id":"delta-skyclub-access","networks":["skyclub","deltaone"],"url":"https://www.delta.com/us/en/delta-sky-club/access"},
+ {"id":"aa-admirals-access","networks":["admirals"],"url":"https://www.aa.com/i18n/travel-info/clubs/admirals-club-access.html"},
+ {"id":"aa-flagship","networks":["flagship"],"url":"https://www.aa.com/i18n/travel-info/clubs/flagship-lounge.html"},
+ {"id":"united-club-access","networks":["united_club","polaris"],"url":"https://www.united.com/UnitedClubAccess"},
+ {"id":"aircanada-lounges","networks":["starpartner"],"url":"https://aircanada.com/lounges"},
+ {"id":"pp-us-venues","networks":["prioritypass"],"url":"https://thepointsparty.com/loyalty-programs/lounges/priority-pass","keepAll":true},
+ {"id":"airport-directory","networks":["prioritypass","amexpartner"],"url":"https://thepointsparty.com/loyalty-programs/lounges/airports","keepAll":true},
+ {"id":"sapphire-lounges","networks":["sapphire"],"url":"https://thepointsparty.com/articles/chase-sapphire-lounges-locations-hours-access"},
+ {"id":"united-club-guide","networks":["united_club","polaris"],"url":"https://thepointsparty.com/articles/united-club-access-guide"},
+ {"id":"admirals-guide","networks":["admirals","flagship"],"url":"https://thepointsparty.com/articles/admirals-club-access-guide"},
+ {"id":"alaska-lounge","networks":["alaska"],"url":"https://thepointsparty.com/loyalty-programs/lounges/alaska-lounge"},
+ {"id":"capone-lounges","networks":["capone","capone_landing"],"url":"https://onemileatatime.com/guides/capital-one-lounges"},
+ {"id":"guest-policies","networks":["*guests"],"url":"https://thepointsguy.com/guide/credit-card-guest-policies-for-airport-lounges/"}
+]

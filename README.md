@@ -17,3 +17,11 @@ A monthly scheduled Claude task researches current lounge access rules from offi
 ## Editing rules by hand
 
 Edit `rules.json` on GitHub and commit. The app picks up the change the next time it opens, after up to about 5 minutes of GitHub caching.
+
+## Daily watcher (free)
+
+`.github/workflows/watch.yml` runs `watcher/watch.py` every day on GitHub Actions, which is free for public repos. It downloads each page in `watcher/sources.json` and keeps only the lines about lounge access, then compares them with yesterday's copy in `watcher/snapshots/`. Any difference is written to `watcher/changes.json`. Pages it can't read are marked in `watcher/state.json`.
+
+A weekly Claude check reads `changes.json`. If nothing changed, it stops right away. Otherwise it researches only the networks whose pages changed, updates `rules.json`, and clears the notes. Once a month it also does a full check, which covers any page the watcher couldn't read.
+
+To run the watcher by hand, open the repo's **Actions** tab, choose **Watch lounge rule sources**, then **Run workflow**.

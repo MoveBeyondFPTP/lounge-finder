@@ -59,6 +59,55 @@ def load(path, default):
         with open(path) as f: return json.load(f)
     except Exception: return default
 
+
+# ---------- Automatic update: which US airports have Priority Pass lounges ----------
+NUMWORDS = {"two":2,"three":3,"four":4,"five":5,"six":6,"seven":7,"eight":8,"nine":9,"ten":10}
+def parse_pp_us(lines):
+    """Return {CODE: number_of_locations} for the 'United States N Airports' section, or None if the page looks different."""
+    try:
+        start = next(i for i,l in enumerate(lines) if re.fullmatch(r"United States (\d+) Airports?", l))
+    except StopIteration:
+        return None
+    expected = int(re.fullmatch(r"United States (\d+) Airports?", lines[start]).group(1))
+    found = {}
+    for l in lines[start+1:]:
+        if re.fullmatch(r"[A-Z][A-Za-z ]+ \d+ Airports?", l): break      # next region header
+        m = re.match(r"([A-Z]{3}) (.+)", l)
+        if not m: continue
+        n = re.search(r"\b(\d+|two|three|four|five|six|seven|eight|nine|ten) locations\b", l, re.I)
+        found[m.group(1)] = (int(n.group(1)) if n.group(1).isdigit() else NUMWORDS[n.group(1).lower()]) if n else 1
+    if len(found) != expected or expected < 20:
+        return None
+    return found
+
+def apply_pp_update(found, today):
+    """Add/remove Priority Pass airports in rules.json. Returns a list of plain-English notes, or [] if nothing changed."""
+    path = os.path.join(HERE, "..", "rules.json")
+    rules = load(path, None)
+    if not rules or "lounges" not in rules: return []
+    have = {}
+    for l in rules["lounges"]:
+        if l.get("network") == "prioritypass": have[l["airport"]] = have.get(l["airport"], 0) + 1
+    notes, changed = [], False
+    for code in sorted(set(have) - set(found)):
+        rules["lounges"] = [l for l in rules["lounges"] if not (l.get("network") == "prioritypass" and l["airport"] == code)]
+        notes.append(f"{code}: Priority Pass lounge no longer listed, removed"); changed = True
+    for code in sorted(set(found) - set(have)):
+        for i in range(found[code]):
+            rules["lounges"].append({"airport": code, "network": "prioritypass", "location": "See the Priority Pass app for the location", "status": "open", "note": "Newly added by the daily check; details coming in the next weekly update."})
+        notes.append(f"{code}: new Priority Pass lounge{'s' if found[code] > 1 else ''} added"); changed = True
+    count_diffs = [f"{c}: {have[c]} listed in the app, {found[c]} on the source" for c in sorted(set(have) & set(found)) if have[c] != found[c]]
+    pp = rules.get("networks", {}).get("prioritypass", {})
+    scanned = set(pp.get("scannedAirports", [])) | set(found)
+    if pp.get("venuesChecked") != today or set(pp.get("scannedAirports", [])) != scanned:
+        pp["scannedAirports"] = sorted(scanned); pp["venuesChecked"] = today; changed = True
+    if notes:
+        rules.setdefault("meta", {}).setdefault("changelog", []).insert(0, {"date": today, "text": "Priority Pass lounges updated by the daily check: " + "; ".join(notes) + "."})
+        rules["meta"]["changelog"] = rules["meta"]["changelog"][:30]
+    if changed:
+        with open(path, "w") as f: json.dump(rules, f, ensure_ascii=False, indent=1)
+    return notes, count_diffs
+
 def main():
     os.makedirs(SNAP, exist_ok=True)
     sources = load(os.path.join(HERE, "sources.json"), [])
@@ -97,6 +146,18 @@ def main():
                 report.append(f"- {sid}: CHANGED (+{len(added)} / -{len(removed)} lines)")
         else:
             report.append(f"- {sid}: no change")
+        if sid == "pp-us-venues":
+            found = parse_pp_us(lines)
+            if found is None:
+                report.append("  (Priority Pass list layout not recognized; left for the weekly check)")
+            else:
+                notes, count_diffs = apply_pp_update(found, now[:10])
+                for n in notes: report.append("  auto-updated: " + n)
+                if count_diffs:
+                    report.append("  location counts differ: " + "; ".join(count_diffs))
+                    if st.get("countDiffs") != count_diffs:
+                        changes["pending"].append({"source": sid, "networks": ["prioritypass"], "url": url, "detected": now, "added": ["Location counts differ from the app: " + "; ".join(count_diffs)], "removed": []})
+                st["countDiffs"] = count_diffs
         st["hash"] = digest
         with open(snap_path, "w") as f: f.write(text)
         state[sid] = st

@@ -323,6 +323,7 @@ function evaluate(f){
   const out=[];
   R.lounges.filter(l=>l.airport===f.airport&&RULES[l.network]).forEach(l=>{
     const n=NET(l.network); const res=RULES[l.network](f,l);
+    if(l.source==="airport-site"&&res.status!=="no"){ res.limits=["Found on the airport's own website. Confirm the details there before you go."].concat(res.limits||[]); res.siteUrl=safeUrl(l.sourceUrl)||null; if(res.status==="yes") res.status="warn"; }
     out.push(Object.assign({key:l.network,network:n.operator||"",name:l.name||n.name||l.network,loc:l.location||"",loungeStatus:l.status||"open",loungeNote:l.note||""},res));
   });
   const pp=priorityPass(f); if(pp) out.push(pp);
@@ -577,6 +578,7 @@ function card(o){
     if(o.limits&&o.limits.length){ body.appendChild(h("div",{class:"lbl"},"Limits")); body.appendChild(h("ul",{class:"limits"},o.limits.map(l=>h("li",null,l)))); }
     if(o.guests&&!gv){ body.appendChild(h("div",{class:"guests"},h("b",null,"Guests: "),o.guests)); }
     if(o.link) body.appendChild(h("a",{href:o.link,target:"_blank",rel:"noopener"},"Find Priority Pass venues ↗"));
+    if(o.siteUrl) body.appendChild(h("a",{href:o.siteUrl,target:"_blank",rel:"noopener"},"See it on the airport's website ↗"));
   }
   if(n){
     const src=(Array.isArray(n.sources)?n.sources:[]).filter(s=>s&&safeUrl(s.url));
@@ -604,7 +606,7 @@ function runSearch(){
     box.appendChild(h("h2",{class:"verdict"},"Sorry, no lounges at "+code,
       h("small",null,"There are no Priority Pass, Amex, Capital One, Chase or airline lounges listed at "+(apName(code)||code)+".")));
     box.appendChild(h("div",{class:"empty"},h("b",null,"Nothing to show here"),
-      "We check Priority Pass, Amex, Capital One and Chase lounges at every US airport, and airline lounges at "+Object.keys(R.airports).length+" major airports. Smaller airports like this one rarely have lounges."));
+      "We check Priority Pass, Amex, Capital One and Chase lounges at every US airport, airline lounges at major airports, and each airport's own website every night. Smaller airports like this one rarely have lounges."));
     return;
   }
   box.appendChild(h("h2",{class:"verdict"}, yes.length ? "You can use "+yes.length+" lounge"+(yes.length>1?"s":"")+" at "+code : warn.length ? "You may get in at "+code : (anyLoungeHere?"None of the lounges at "+code+" are open to you on this trip":"No lounges for this trip"),

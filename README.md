@@ -25,3 +25,7 @@ Edit `rules.json` on GitHub and commit. The app picks up the change the next tim
 A weekly Claude check reads `changes.json`. If nothing changed, it stops right away. Otherwise it researches only the networks whose pages changed, updates `rules.json`, and clears the notes. Once a month it also does a full check, which covers any page the watcher couldn't read.
 
 To run the watcher by hand, open the repo's **Actions** tab, choose **Watch lounge rule sources**, then **Run workflow**.
+
+## Nightly airport-website scan (free)
+
+`.github/workflows/airports.yml` runs `watcher/airports.py` every night. It covers US airports outside the main directory, finding each airport's website in `watcher/airport_sites.json` (from OurAirports, with gaps filled from Wikidata). It visits the home page and a few likely pages (amenities, shop & dine, lounges) and looks for known lounge names: Delta Sky Club, United Club, Admirals Club, Alaska Lounge, Centurion, Escape, Plaza Premium and Maple Leaf. Finds are added to `rules.json` labeled as found on the airport's website, and flagged for the weekly Claude review. A lounge that stops appearing for 3 scans in a row is removed. Results are in `watcher/airport_scan.json`.

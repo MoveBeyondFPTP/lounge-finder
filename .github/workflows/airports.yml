@@ -1,0 +1,45 @@
+name: Scan airport websites for lounges
+
+# Free nightly scan of US airport websites (outside the main lounge directory)
+# for well-known lounge names. Finds are added to rules.json and flagged for
+# the weekly Claude review.
+on:
+  schedule:
+    - cron: "43 9 * * *"    # every night at 9:43 UTC (2:43 AM Denver in winter)
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+    paths:
+      - "watcher/airports.py"
+      - ".github/workflows/airports.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: watcher
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Scan airport websites
+        run: python watcher/airports.py
+      - name: Save results
+        run: |
+          git config user.name "lounge-finder-watcher"
+          git config user.email "lounge-finder-watcher@users.noreply.github.com"
+          git add watcher rules.json
+          if git diff --cached --quiet; then
+            echo "Nothing new to save."
+          else
+            git commit -m "Airport scan $(date -u +%Y-%m-%d)"
+            git pull --rebase origin main
+            git push
+          fi

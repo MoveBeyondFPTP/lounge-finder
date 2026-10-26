@@ -1,21 +1,6 @@
 {
  "pending": [
   {
-   "source": "centurion-access",
-   "networks": [
-    "centurion",
-    "amexpartner"
-   ],
-   "url": "https://www.thecenturionlounge.com/info/access/",
-   "detected": "2026-10-26T03:16Z",
-   "added": [
-    "Access to The Centurion\u00ae Network"
-   ],
-   "removed": [
-    "Access to The Centurion\u00ae Network"
-   ]
-  },
-  {
    "source": "pp-us-venues",
    "networks": [
     "prioritypass"
@@ -26,46 +11,6 @@
     "Location counts differ from the app: IAD: 3 listed in the app, 2 on the source; ORD: 3 listed in the app, 1 on the source"
    ],
    "removed": []
-  },
-  {
-   "source": "guest-policies",
-   "networks": [
-    "*guests"
-   ],
-   "url": "https://thepointsguy.com/guide/credit-card-guest-policies-for-airport-lounges/",
-   "detected": "2026-10-26T03:16Z",
-   "added": [
-    "Go to Home Page",
-    "The cards we feature here are from partners who compensate us when you are approved through our site, and this may impact how or where these products appear. We don\u2019t cover all available credit cards, but our analysis, reviews, and opinions are entirely from our editorial team. Terms apply to the offers listed on this page. Please view our advertising policy and product review methodology for more information.",
-    "It's worth noting that these access policies do not apply to United's premium Polaris lounges. These are accessible only to passengers flying in United Polaris long-haul business class or in long-haul business or first class with a Star Alliance partner airline.",
-    "Featured image by ZACH GRIFF/THE POINTS GUY",
-    "The Points Guy believes that credit cards can transform lives, helping you leverage everyday spending for cash back or travel experiences that might otherwise be out of reach. We publish editorial content and card reviews to help you find a great card to turn your goals into reality."
-   ],
-   "removed": [
-    "Check your inbox for your first email and get ready for the latest in award travel from our team of experts",
-    "The Points Guy believes that credit cards can transform lives, helping you leverage everyday spending for cash back or travel experiences that might otherwise be out of reach. That's why we publish a variety of editorial content and card comparisons: to help you find a great card to turn your goals into reality.",
-    "Featured image by ZACH GRIFF/THE POINTS GUY",
-    "The cards we feature here are from partners who compensate us when you are approved through our site, and this may impact how or where these products appear. We don't cover all available credit cards, but our analysis, reviews, and opinions are entirely from our editorial team. Terms apply to the offers listed on this page. Please view our advertising policy and product review methodology for more information.",
-    "The Points Guy believes that credit cards can transform lives, helping you leverage everyday spending for cash back or travel experiences that might otherwise be out of reach. We publish editorial content and card reviews to help you find a great card to turn your goals into reality.",
-    "Airport lounge guest policies differ significantly based on lounge type and how access is obtained, such as through loyalty status, memberships or select travel cards.",
-    "Most lounges allow complimentary entry for children under 2, but fees for additional guests can be substantial and vary by lounge network.",
-    "Some programs offer complimentary or discounted guest access if you meet high annual spending thresholds, while others charge per guest regardless of spend.",
-    "Understanding each lounge's guest policy is crucial to avoid unexpected costs, especially when traveling with family or groups.",
-    "Guest limits, age restrictions and per-visit fees for additional guests can change frequently and may depend on your access method.",
-    "Certain lounges require all guests to be traveling on the same flight, and some restrict guest access during periods of high crowding.",
-    "Premium lounges, such as those for international first or business class, often have stricter guest policies or exclude guests entirely.",
-    "A detailed comparison of guest policies across major U.S. airport lounge networks, including specific rules for families and frequent travelers.",
-    "It\u2019s worth noting that these access policies do not apply to United\u2019s premium Polaris lounges. These are accessible only to passengers flying in United Polaris long-haul business class or in long-haul business or first class with a Star Alliance partner airline.",
-    "Terms apply.Rates & fees",
-    "Learn more Citi\u00ae / AAdvantage\u00ae Platinum Select\u00ae World Elite Mastercard\u00ae",
-    "Citi\u00ae / AAdvantage\u00ae Platinum Select\u00ae World Elite Mastercard\u00ae",
-    "Earn 80,000 American Airlines AAdvantage\u00ae bonus miles",
-    "Earn more than $1,000 in Travel Bonuses",
-    "How to choose a credit card for airport lounge access",
-    "How to access American Airlines Admirals Club lounges",
-    "7 credit cards that offer lounge access to authorized users",
-    "Best airport lounge access credit cards: 4 picks for frequent flyers"
-   ]
   }
  ]
 }

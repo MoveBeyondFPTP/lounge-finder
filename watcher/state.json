@@ -1,8 +1,9 @@
 {
  "aa-admirals-access": {
   "baseline": "2026-10-26T03:15Z",
-  "hash": "309409cfe1a76528",
-  "lastChecked": "2026-10-26T03:16Z",
+  "hash": "ef1f9492b720173a",
+  "lastChanged": "2026-10-26T03:17Z",
+  "lastChecked": "2026-10-26T03:17Z",
   "lines": 86,
   "networks": [
    "admirals"
@@ -12,8 +13,9 @@
  },
  "aa-flagship": {
   "baseline": "2026-10-26T03:15Z",
-  "hash": "3beb32a01f3549b5",
-  "lastChecked": "2026-10-26T03:16Z",
+  "hash": "d2bef4cacd1fdc36",
+  "lastChanged": "2026-10-26T03:17Z",
+  "lastChecked": "2026-10-26T03:17Z",
   "lines": 69,
   "networks": [
    "flagship"
@@ -23,9 +25,10 @@
  },
  "admirals-guide": {
   "baseline": "2026-10-26T03:15Z",
-  "hash": "190b6333f6aa1476",
-  "lastChecked": "2026-10-26T03:16Z",
-  "lines": 132,
+  "hash": "43ecf9c761419c74",
+  "lastChanged": "2026-10-26T03:17Z",
+  "lastChecked": "2026-10-26T03:17Z",
+  "lines": 131,
   "networks": [
    "admirals",
    "flagship"
@@ -35,8 +38,9 @@
  },
  "aircanada-lounges": {
   "baseline": "2026-10-26T03:15Z",
-  "hash": "aaf6501f3abeab84",
-  "lastChecked": "2026-10-26T03:16Z",
+  "hash": "ff1868a63287a4ed",
+  "lastChanged": "2026-10-26T03:17Z",
+  "lastChecked": "2026-10-26T03:17Z",
   "lines": 136,
   "networks": [
    "starpartner"
@@ -46,9 +50,10 @@
  },
  "airport-directory": {
   "baseline": "2026-10-26T03:15Z",
-  "hash": "a656b3f86d49236c",
-  "lastChecked": "2026-10-26T03:16Z",
-  "lines": 372,
+  "hash": "283eb0bf53d60a2f",
+  "lastChanged": "2026-10-26T03:17Z",
+  "lastChecked": "2026-10-26T03:17Z",
+  "lines": 368,
   "networks": [
    "prioritypass",
    "amexpartner"
@@ -58,9 +63,10 @@
  },
  "alaska-lounge": {
   "baseline": "2026-10-26T03:15Z",
-  "hash": "0df5ae69cd187e7f",
-  "lastChecked": "2026-10-26T03:16Z",
-  "lines": 57,
+  "hash": "3c555e13dca756b5",
+  "lastChanged": "2026-10-26T03:17Z",
+  "lastChecked": "2026-10-26T03:17Z",
+  "lines": 56,
   "networks": [
    "alaska"
   ],
@@ -69,9 +75,10 @@
  },
  "capone-lounges": {
   "baseline": "2026-10-26T03:15Z",
-  "hash": "d41bef578cf0275b",
-  "lastChecked": "2026-10-26T03:16Z",
-  "lines": 102,
+  "hash": "f19e997bada8064d",
+  "lastChanged": "2026-10-26T03:17Z",
+  "lastChecked": "2026-10-26T03:17Z",
+  "lines": 100,
   "networks": [
    "capone",
    "capone_landing"
@@ -81,9 +88,9 @@
  },
  "centurion-access": {
   "baseline": "2026-10-26T03:15Z",
-  "hash": "1bb8f60db7821b1a",
-  "lastChanged": "2026-10-26T03:16Z",
-  "lastChecked": "2026-10-26T03:16Z",
+  "hash": "6b662f80ca7be99d",
+  "lastChanged": "2026-10-26T03:17Z",
+  "lastChecked": "2026-10-26T03:17Z",
   "lines": 38,
   "networks": [
    "centurion",
@@ -94,8 +101,9 @@
  },
  "delta-skyclub-access": {
   "baseline": "2026-10-26T03:15Z",
-  "hash": "17c12e622bca351b",
-  "lastChecked": "2026-10-26T03:16Z",
+  "hash": "fe3c1670cabb6170",
+  "lastChanged": "2026-10-26T03:17Z",
+  "lastChecked": "2026-10-26T03:17Z",
   "lines": 167,
   "networks": [
    "skyclub",
@@ -106,10 +114,10 @@
  },
  "guest-policies": {
   "baseline": "2026-10-26T03:15Z",
-  "hash": "54f93c18865c77f1",
-  "lastChanged": "2026-10-26T03:16Z",
-  "lastChecked": "2026-10-26T03:16Z",
-  "lines": 132,
+  "hash": "c5f6540ea5d0759c",
+  "lastChanged": "2026-10-26T03:17Z",
+  "lastChecked": "2026-10-26T03:17Z",
+  "lines": 128,
   "networks": [
    "*guests"
   ],
@@ -122,9 +130,10 @@
    "IAD: 3 listed in the app, 2 on the source",
    "ORD: 3 listed in the app, 1 on the source"
   ],
-  "hash": "3824c735dfa721fe",
-  "lastChecked": "2026-10-26T03:16Z",
-  "lines": 267,
+  "hash": "2fa6f2e6a52c879f",
+  "lastChanged": "2026-10-26T03:17Z",
+  "lastChecked": "2026-10-26T03:17Z",
+  "lines": 263,
   "networks": [
    "prioritypass"
   ],
@@ -133,9 +142,10 @@
  },
  "sapphire-lounges": {
   "baseline": "2026-10-26T03:15Z",
-  "hash": "7f78da5c89071dd2",
-  "lastChecked": "2026-10-26T03:16Z",
-  "lines": 58,
+  "hash": "d4d82d2c7b141a22",
+  "lastChanged": "2026-10-26T03:17Z",
+  "lastChecked": "2026-10-26T03:17Z",
+  "lines": 57,
   "networks": [
    "sapphire"
   ],
@@ -143,7 +153,7 @@
   "url": "https://thepointsparty.com/articles/chase-sapphire-lounges-locations-hours-access"
  },
  "united-club-access": {
-  "lastChecked": "2026-10-26T03:16Z",
+  "lastChecked": "2026-10-26T03:17Z",
   "networks": [
    "united_club",
    "polaris"
@@ -154,9 +164,10 @@
  },
  "united-club-guide": {
   "baseline": "2026-10-26T03:15Z",
-  "hash": "1cc5c0340ab5007f",
-  "lastChecked": "2026-10-26T03:16Z",
-  "lines": 117,
+  "hash": "64439146172e4bf3",
+  "lastChanged": "2026-10-26T03:17Z",
+  "lastChecked": "2026-10-26T03:17Z",
+  "lines": 116,
   "networks": [
    "united_club",
    "polaris"

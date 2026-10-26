@@ -10,7 +10,7 @@ Accessibility
 Status of Air Canada flights by route or by flight number. Information on scheduled and estimated departure and arrival times, delays and cancellations.
 Maple Leaf Lounges
 Our award-winning Maple Leaf Lounges are located in 18 airports across Canada, the United States and Europe.
-introducing new menu options and adding more power outlets within our lounges. We’ve also implemented policies to
+introducing new menu options and adding more power outlets within our lounges. We've also implemented policies to
 make sure our lounges are more consistently available for all eligible travellers.
 terminal near Gate C50. This exclusive space is perfect for travellers on the move with grab-and-go snacks and a bar
 serving barista-made specialty coffees.
@@ -25,7 +25,7 @@ Aeroplan Super Elite, Aeroplan 75K and Aeroplan 50K Members
 Start enjoying access to our Maple Leaf Lounge! Just provide your Aeroplan number and valid same-day ticket or boarding pass*.
 Your partner, one guest and up to 5 dependent children** can join you, free of charge. Additional guests are welcome for a fee of 59.00 CAD, USD, EUR or GBP***.
 Arriving on an Air Canada, Air Canada Rouge or Air Canada Express flight? You can also access domestic Maple Leaf Lounges in Canada and the U.S.
-If you’re departing on an Emirates flight in Business or First Class, you have access to international Maple Leaf Lounges at Toronto Pearson (YYZ) and Montréal-Trudeau (YUL) airports.
+If you're departing on an Emirates flight in Business or First Class, you have access to international Maple Leaf Lounges at Toronto Pearson (YYZ) and Montréal-Trudeau (YUL) airports.
 **Children under the age of 25 must be part of the family unit and financially dependent on the Aeroplan Super Elite 100K/Aeroplan 75K/Aeroplan 50K Member. Air Canada reserve the right to request proof of age for dependent children at any time.
 *** Fee currency is based on lounge location and is subject to local taxes.
 Star Alliance Gold Members
@@ -42,7 +42,7 @@ TD® Aeroplan® Visa Business Card
 CIBC Aeroplan® Visa* Business Card
 For more complete terms and more information on Air Canada benefits, visit our TD credit card, CIBC credit card or AMEX credit card pages.
 Holders of an Aeroplan premium credit card
-Enjoy access to our Maple Leaf Lounge! If you’re a primary or secondary Aeroplan credit cardholder, you can access any Air Canada Maple Leaf Lounge in Canada (domestic, transborder & international) or the United States.
+Enjoy access to our Maple Leaf Lounge! If you're a primary or secondary Aeroplan credit cardholder, you can access any Air Canada Maple Leaf Lounge in Canada (domestic, transborder & international) or the United States.
 Just link the Aeroplan credit card to your Aeroplan account, add your Aeroplan number to your booking, then present your valid same-day ticket or boarding pass*.
 Additional guests are welcome for a fee of 59.00 CAD, USD, EUR or GBP**.
 For a limited time, eligible cardholders can invite one guest traveling on the same flight at no extra charge. Eligible cards include:
@@ -86,14 +86,14 @@ Domestic departures – Air Canada Maple Leaf Lounge
 U.S. departures – Air Canada Maple Leaf Lounge
 Winnipeg (YWG) – Air Canada Maple Leaf Lounge
 Please note: At this time, Chase Sapphire Reserve cardmembers and their guests are not eligible for access to our Montréal (YUL) Maple Leaf Lounges.
-Fees are subject to change based on Air Canada’s guest fees and policy terms. Other taxes, fees, and charges may apply.
+Fees are subject to change based on Air Canada's guest fees and policy terms. Other taxes, fees, and charges may apply.
 Access is dependent on available capacity in the lounge. This benefit may be modified or canceled at any time without notice.
 Air Canada Maple Leaf Club Members
 Please note that the purchases of Maple Leaf Club memberships are currently suspended.
 Complimentary light snacks and beverages
 Enjoy a selection refreshing beverages, such as juice, soda, tea, coffee and specialty coffees - including espresso, cappuccino and latte. Also enjoy a selection of beer, wine, spirits and delicious snacks.
-Our lounges are fully stocked with popular reading materials catering to a wide range of interests. Don’t feel like reading? Sit back, relax, and watch your favourite TV shows.
-The Wi-Fi coverage allows you to access our high-speed services from any point within the Lounge using your personal wireless device or one of our business centres’ desktop PCs.
+Our lounges are fully stocked with popular reading materials catering to a wide range of interests. Don't feel like reading? Sit back, relax, and watch your favourite TV shows.
+The Wi-Fi coverage allows you to access our high-speed services from any point within the Lounge using your personal wireless device or one of our business centres' desktop PCs.
 Feeling jet-lagged after that long trip? Chase away the cobwebs with an invigorating shower before you go on your way. Fresh towels, as well as complimentary soap, shampoo and other amenities are at your disposal.
 Business Centres
 Our business centres are equipped with desktop PCs and colour printers for you to stay connected and work efficiently.
@@ -102,7 +102,7 @@ The opening hours of our Maple Leaf Lounges vary by location and according to th
 Please select a lounge from the drop-down at the top right of this page to see its hours of operation.
 While our lounges are not subject to a formal dress code, we respectfully request that all guests wear proper attire.
 All our Maple Leaf Lounges offer a smoke-free environment; smoking is strictly prohibited.
-We ask that all customers refrain from using their mobile device in the lounges’ cell-free zones.
+We ask that all customers refrain from using their mobile device in the lounges' cell-free zones.
 Food and beverages are provided for enjoyment in the lounge and may not be removed.
 Maple Leaf Lounges are subject to varying hours of operation and amenity services.
 For the safety of our younger guests, Maple Leaf Lounges strictly adhere to local laws and regulations regarding the serving of alcoholic beverages. A minor accessing a Maple Leaf Lounge must be accompanied by an adult who is a member.

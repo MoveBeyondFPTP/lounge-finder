@@ -1,0 +1,161 @@
+{
+ "aa-admirals-access": {
+  "baseline": "2026-10-26T03:15Z",
+  "hash": "309409cfe1a76528",
+  "lastChecked": "2026-10-26T03:15Z",
+  "lines": 86,
+  "networks": [
+   "admirals"
+  ],
+  "status": "ok",
+  "url": "https://www.aa.com/i18n/travel-info/clubs/admirals-club-access.html"
+ },
+ "aa-flagship": {
+  "baseline": "2026-10-26T03:15Z",
+  "hash": "3beb32a01f3549b5",
+  "lastChecked": "2026-10-26T03:15Z",
+  "lines": 69,
+  "networks": [
+   "flagship"
+  ],
+  "status": "ok",
+  "url": "https://www.aa.com/i18n/travel-info/clubs/flagship-lounge.html"
+ },
+ "admirals-guide": {
+  "baseline": "2026-10-26T03:15Z",
+  "hash": "190b6333f6aa1476",
+  "lastChecked": "2026-10-26T03:15Z",
+  "lines": 132,
+  "networks": [
+   "admirals",
+   "flagship"
+  ],
+  "status": "ok",
+  "url": "https://thepointsparty.com/articles/admirals-club-access-guide"
+ },
+ "aircanada-lounges": {
+  "baseline": "2026-10-26T03:15Z",
+  "hash": "aaf6501f3abeab84",
+  "lastChecked": "2026-10-26T03:15Z",
+  "lines": 136,
+  "networks": [
+   "starpartner"
+  ],
+  "status": "ok",
+  "url": "https://aircanada.com/lounges"
+ },
+ "airport-directory": {
+  "baseline": "2026-10-26T03:15Z",
+  "hash": "a656b3f86d49236c",
+  "lastChecked": "2026-10-26T03:15Z",
+  "lines": 372,
+  "networks": [
+   "prioritypass",
+   "amexpartner"
+  ],
+  "status": "ok",
+  "url": "https://thepointsparty.com/loyalty-programs/lounges/airports"
+ },
+ "alaska-lounge": {
+  "baseline": "2026-10-26T03:15Z",
+  "hash": "0df5ae69cd187e7f",
+  "lastChecked": "2026-10-26T03:15Z",
+  "lines": 57,
+  "networks": [
+   "alaska"
+  ],
+  "status": "ok",
+  "url": "https://thepointsparty.com/loyalty-programs/lounges/alaska-lounge"
+ },
+ "capone-lounges": {
+  "baseline": "2026-10-26T03:15Z",
+  "hash": "d41bef578cf0275b",
+  "lastChecked": "2026-10-26T03:15Z",
+  "lines": 102,
+  "networks": [
+   "capone",
+   "capone_landing"
+  ],
+  "status": "ok",
+  "url": "https://onemileatatime.com/guides/capital-one-lounges"
+ },
+ "centurion-access": {
+  "baseline": "2026-10-26T03:15Z",
+  "hash": "fdfbbd32308922e8",
+  "lastChecked": "2026-10-26T03:15Z",
+  "lines": 38,
+  "networks": [
+   "centurion",
+   "amexpartner"
+  ],
+  "status": "ok",
+  "url": "https://www.thecenturionlounge.com/info/access/"
+ },
+ "delta-skyclub-access": {
+  "baseline": "2026-10-26T03:15Z",
+  "hash": "17c12e622bca351b",
+  "lastChecked": "2026-10-26T03:15Z",
+  "lines": 167,
+  "networks": [
+   "skyclub",
+   "deltaone"
+  ],
+  "status": "ok",
+  "url": "https://www.delta.com/us/en/delta-sky-club/access"
+ },
+ "guest-policies": {
+  "baseline": "2026-10-26T03:15Z",
+  "hash": "a3554e82b20af3b2",
+  "lastChecked": "2026-10-26T03:15Z",
+  "lines": 150,
+  "networks": [
+   "*guests"
+  ],
+  "status": "ok",
+  "url": "https://thepointsguy.com/guide/credit-card-guest-policies-for-airport-lounges/"
+ },
+ "pp-us-venues": {
+  "baseline": "2026-10-26T03:15Z",
+  "hash": "3824c735dfa721fe",
+  "lastChecked": "2026-10-26T03:15Z",
+  "lines": 267,
+  "networks": [
+   "prioritypass"
+  ],
+  "status": "ok",
+  "url": "https://thepointsparty.com/loyalty-programs/lounges/priority-pass"
+ },
+ "sapphire-lounges": {
+  "baseline": "2026-10-26T03:15Z",
+  "hash": "7f78da5c89071dd2",
+  "lastChecked": "2026-10-26T03:15Z",
+  "lines": 58,
+  "networks": [
+   "sapphire"
+  ],
+  "status": "ok",
+  "url": "https://thepointsparty.com/articles/chase-sapphire-lounges-locations-hours-access"
+ },
+ "united-club-access": {
+  "lastChecked": "2026-10-26T03:15Z",
+  "networks": [
+   "united_club",
+   "polaris"
+  ],
+  "note": "Page loaded but had almost no readable text (it may need a full browser). Claude checks it instead.",
+  "status": "unreadable",
+  "url": "https://www.united.com/UnitedClubAccess"
+ },
+ "united-club-guide": {
+  "baseline": "2026-10-26T03:15Z",
+  "hash": "1cc5c0340ab5007f",
+  "lastChecked": "2026-10-26T03:15Z",
+  "lines": 117,
+  "networks": [
+   "united_club",
+   "polaris"
+  ],
+  "status": "ok",
+  "url": "https://thepointsparty.com/articles/united-club-access-guide"
+ }
+}

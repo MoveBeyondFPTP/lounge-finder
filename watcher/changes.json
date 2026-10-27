@@ -49,6 +49,20 @@
     "5 ways to ensure you have lounge access before your next flight"
    ],
    "removed": []
+  },
+  {
+   "source": "guest-policies",
+   "networks": [
+    "*guests"
+   ],
+   "url": "https://thepointsguy.com/guide/credit-card-guest-policies-for-airport-lounges/",
+   "detected": "2026-10-27T17:58Z",
+   "added": [
+    "Best airport lounge access credit cards: 4 picks for frequent flyers"
+   ],
+   "removed": [
+    "5 ways to ensure you have lounge access before your next flight"
+   ]
   }
  ]
 }

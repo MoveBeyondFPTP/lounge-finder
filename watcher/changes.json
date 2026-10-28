@@ -63,6 +63,20 @@
    "removed": [
     "5 ways to ensure you have lounge access before your next flight"
    ]
+  },
+  {
+   "source": "guest-policies",
+   "networks": [
+    "*guests"
+   ],
+   "url": "https://thepointsguy.com/guide/credit-card-guest-policies-for-airport-lounges/",
+   "detected": "2026-10-28T18:20Z",
+   "added": [],
+   "removed": [
+    "Learn more Citi\u00ae / AAdvantage\u00ae Platinum Select\u00ae World Elite Mastercard\u00ae",
+    "Citi\u00ae / AAdvantage\u00ae Platinum Select\u00ae World Elite Mastercard\u00ae",
+    "Earn 80,000 American Airlines AAdvantage\u00ae bonus miles"
+   ]
   }
  ]
 }

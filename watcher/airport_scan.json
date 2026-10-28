@@ -1,672 +1,672 @@
 {
  "airports": {
   "ABE": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://flyabe.com",
    "status": "ok"
   },
   "ABI": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://iflyabi.com",
    "status": "ok"
   },
   "ABQ": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.abqsunport.com/",
    "status": "ok"
   },
   "ABR": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://aberdeenregionalairport.us/",
    "status": "ok"
   },
   "ACK": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://www.nantucket-ma.gov/2445/Memorial-Airport",
    "status": "ok"
   },
   "ACT": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.waco-texas.com/airport/",
    "status": "ok"
   },
   "ACV": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://flyacv.com",
    "status": "ok"
   },
   "ACY": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "error": "HTTP Error 403: Forbidden",
    "misses": {},
    "site": "https://acairport.com",
    "status": "blocked"
   },
   "AEX": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://www.alexandria-louisiana.com/alexandria-international-airport.htm",
    "status": "ok"
   },
   "AGS": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.augustaregionalairport.com/",
    "status": "ok"
   },
   "AIA": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.flyalliancene.com/",
    "status": "ok"
   },
   "AKB": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://www.airnav.com/airport/PAAK",
    "status": "ok"
   },
   "ALB": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.albanyairport.com/",
    "status": "ok"
   },
   "ALO": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.flyalo.com/",
    "status": "ok"
   },
   "ALS": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "error": "HTTP Error 404: Not Found",
    "misses": {},
    "site": "https://www.sanluisvalleyairport.org/",
    "status": "blocked"
   },
   "AMA": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://airport.amarillo.gov/",
    "status": "ok"
   },
   "AOO": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.altoonablaircountyairport.com",
    "status": "ok"
   },
   "APN": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.alpenaairport.com/",
    "status": "ok"
   },
   "ART": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "error": "HTTP Error 403: Forbidden",
    "misses": {},
    "site": "http://watertownairport.com/",
    "status": "blocked"
   },
   "ASE": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://aspenairport.com/",
    "status": "ok"
   },
   "ATK": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://www.airnav.com/airport/PATQ",
    "status": "ok"
   },
   "ATT": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://www.airnav.com/airport/4A2",
    "status": "ok"
   },
   "ATW": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://atwairport.com/",
    "status": "ok"
   },
   "AUG": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "error": "HTTP Error 404: Not Found",
    "misses": {},
    "site": "https://www.augustamaine.gov/airport",
    "status": "blocked"
   },
   "AVL": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://flyavl.com",
    "status": "ok"
   },
   "AVP": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.flyavp.com/",
    "status": "ok"
   },
   "AZA": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://www.gatewayairport.com/",
    "status": "ok"
   },
   "AZO": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://flyazo.com",
    "status": "ok"
   },
   "BED": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "error": "HTTP Error 404: Not Found",
    "misses": {},
    "site": "http://www.massport.com/hansc/",
    "status": "blocked"
   },
   "BFD": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.bradfordairport.net",
    "status": "ok"
   },
   "BFF": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.flyscottsbluff.com/",
    "status": "ok"
   },
   "BFI": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://kingcounty.gov/airport",
    "status": "ok"
   },
   "BFL": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://www.meadowsfield.com/",
    "status": "ok"
   },
   "BGM": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://binghamtonairport.com/",
    "status": "ok"
   },
   "BGR": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://flybangor.com",
    "status": "ok"
   },
   "BHB": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.bhbairport.com/",
    "status": "ok"
   },
   "BHM": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.flybirmingham.com/",
    "status": "ok"
   },
   "BID": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.blockislandri.net/blockislandairport.htm",
    "status": "ok"
   },
   "BIH": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.inyocounty.us/Airport/index.html",
    "status": "ok"
   },
   "BIL": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.flybillings.com/",
    "status": "ok"
   },
   "BIS": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://bismarckairport.com/",
    "status": "ok"
   },
   "BJC": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://www.jeffco.us/airport",
    "status": "ok"
   },
   "BKG": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "error": "timed out",
    "misses": {},
    "site": "http://flybranson.com/",
    "status": "blocked"
   },
   "BKW": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.flybeckley.com/",
    "status": "ok"
   },
   "BLD": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://flybouldercity.com",
    "status": "ok"
   },
   "BLI": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://www.portofbellingham.com/888/Airport",
    "status": "ok"
   },
   "BLV": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.scott.af.mil/",
    "status": "ok"
   },
   "BMI": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.cira.com/",
    "status": "ok"
   },
   "BOI": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.cityofboise.org/departments/airport/",
    "status": "ok"
   },
   "BPT": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://flysetx.com/",
    "status": "ok"
   },
   "BQK": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://flygcairports.com/",
    "status": "ok"
   },
   "BQN": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://aeropuerto-aguadilla.com/",
    "status": "ok"
   },
   "BRD": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://brainerdairport.com/",
    "status": "ok"
   },
   "BRL": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://flybrl.com/",
    "status": "ok"
   },
   "BRO": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://flybrownsville.com",
    "status": "ok"
   },
   "BTM": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.butteairport.com/",
    "status": "ok"
   },
   "BTR": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.flybtr.com/",
    "status": "ok"
   },
   "BTV": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "misses": {},
    "pages": 1,
    "site": "http://www.vermontairports.com/btv.html",
    "status": "unreadable"
   },
   "BUF": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://www.buffaloairport.com/",
    "status": "ok"
   },
   "BUR": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://www.hollywoodburbankairport.com/",
    "status": "ok"
   },
   "BWI": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://www.bwiairport.com/",
    "status": "ok"
   },
   "BZN": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://bozemanairport.com",
    "status": "ok"
   },
   "CAE": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://flycae.com",
    "status": "ok"
   },
   "CAK": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.akroncantonairport.com/",
    "status": "ok"
   },
   "CCR": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "error": "HTTP Error 403: Forbidden",
    "misses": {},
    "site": "https://www.contracosta.ca.gov/3801/Buchanan-Field-CCR",
    "status": "blocked"
   },
   "CDC": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.cedarcity.org/index.aspx?nid=76",
    "status": "ok"
   },
   "CDR": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.chadron-nebraska.com/301/Municipal-Airport",
    "status": "ok"
   },
   "CEZ": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "error": "HTTP Error 404: Not Found",
    "misses": {},
    "site": "http://www.cityofcortez.com/index.aspx?NID=113",
    "status": "blocked"
   },
   "CGI": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.capeairport.com/",
    "status": "ok"
   },
   "CHA": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://www.flycha.com/",
    "status": "ok"
   },
   "CHO": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.gocho.com",
    "status": "ok"
   },
   "CHS": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://www.iflychs.com/",
    "status": "ok"
   },
   "CID": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.eiairport.org",
    "status": "ok"
   },
   "CIU": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.airciu.com",
    "status": "ok"
   },
   "CKB": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://flyckb.com/",
    "status": "ok"
   },
   "CLD": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://www.sandiegocounty.gov/dpw/airports/palomar.html",
    "status": "ok"
   },
   "CLL": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://flyeasterwood.com/",
    "status": "ok"
   },
   "CMX": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.houghtoncounty.org/",
    "status": "ok"
   },
   "CNY": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://www.grandcountyutah.net/263/Airport",
    "status": "ok"
   },
   "COD": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.flyyra.com/",
    "status": "ok"
   },
   "COS": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "error": "HTTP Error 421: Misdirected Request",
    "misses": {},
    "site": "https://flycos.coloradosprings.gov/",
    "status": "blocked"
   },
   "COU": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "error": "<urlopen error [Errno -2] Name or service not known>",
    "misses": {},
    "site": "http://www.flymidmo.com",
    "status": "blocked"
   },
   "CPR": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://iflycasper.com/",
    "status": "ok"
   },
   "CRP": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://corpuschristiairport.com/",
    "status": "ok"
   },
   "CRW": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.yeagerairport.com/",
    "status": "ok"
   },
   "CSG": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://flycolumbusga.com",
    "status": "ok"
   },
   "CWA": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "error": "HTTP Error 429: Too Many Requests",
    "misses": {},
    "site": "http://www.fly-cwa.org/",
    "status": "blocked"
   },
   "CYS": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.cheyenneairport.com/",
    "status": "ok"
   },
   "DAB": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://www.flydaytonafirst.com/",
    "status": "ok"
   },
   "DAL": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.dallas-lovefield.com/",
    "status": "ok"
   },
   "DAY": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://flydayton.com",
    "status": "ok"
   },
   "DBQ": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.flydbq.com",
    "status": "ok"
   },
   "DDC": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.dodgecity.org/index.aspx?nid=60",
    "status": "ok"
   },
   "DEC": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "error": "HTTP Error 404: Not Found",
    "misses": {},
    "site": "https://www.decatur-parks.org/airport/",
    "status": "blocked"
   },
   "DHN": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.flydothan.com/",
    "status": "ok"
   },
   "DIK": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://dickinsonairport.com/",
@@ -695,518 +695,518 @@
    "status": "ok"
   },
   "DLH": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.duluthairport.com/",
    "status": "ok"
   },
   "DOV": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://catatdover.com",
    "status": "ok"
   },
   "DRO": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "error": "HTTP Error 404: Not Found",
    "misses": {},
    "site": "http://www.durangogov.org/airport/index.cfm",
    "status": "blocked"
   },
   "DSI": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.flydts.com/",
    "status": "ok"
   },
   "DSM": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "error": "HTTP Error 405: Not Allowed",
    "misses": {},
    "site": "http://www.dsmairport.com/",
    "status": "blocked"
   },
   "DUJ": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.duboisairport.com",
    "status": "ok"
   },
   "DVL": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.devilslakeairport.com/",
    "status": "ok"
   },
   "EAR": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "error": "<urlopen error [Errno -2] Name or service not known>",
    "misses": {},
    "site": "http://www.flykearney.org/",
    "status": "blocked"
   },
   "EAT": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.pangbornairport.com/",
    "status": "ok"
   },
   "EAU": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.chippewavalleyairport.com/",
    "status": "ok"
   },
   "ECP": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://iflybeaches.com",
    "status": "ok"
   },
   "EGE": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "error": "HTTP Error 525: <none>",
    "misses": {},
    "site": "http://www.eaglecounty.us/airport/",
    "status": "blocked"
   },
   "EKO": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.flyelkonevada.com/",
    "status": "ok"
   },
   "ELD": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.flyeld.com/",
    "status": "ok"
   },
   "ELM": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.ecairport.com/",
    "status": "ok"
   },
   "ELP": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://elpasointernationalairport.com/",
    "status": "ok"
   },
   "ENA": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.kenaiairport.com/",
    "status": "ok"
   },
   "ERI": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.erieairport.org/",
    "status": "ok"
   },
   "ESD": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.portoforcas.com/",
    "status": "ok"
   },
   "EUG": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "error": "HTTP Error 403: Forbidden",
    "misses": {},
    "site": "https://flyeug.com",
    "status": "blocked"
   },
   "EVV": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://flyevv.com/",
    "status": "ok"
   },
   "EWB": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://flyewb.com/",
    "status": "ok"
   },
   "EWN": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://www.flyewn.com/",
    "status": "ok"
   },
   "EYW": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "error": "HTTP Error 403: Forbidden",
    "misses": {},
    "site": "http://EYW.com",
    "status": "blocked"
   },
   "FAI": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://dot.alaska.gov/faiiap/",
    "status": "ok"
   },
   "FAR": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.fargoairport.com/",
    "status": "ok"
   },
   "FAT": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://flyfresno.com/",
    "status": "ok"
   },
   "FAY": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.flyfay.com/",
    "status": "ok"
   },
   "FCA": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.iflyglacier.com/",
    "status": "ok"
   },
   "FLG": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "error": "HTTP Error 404: Not Found",
    "misses": {},
    "site": "http://www.flagstaff.az.gov/index.aspx?nid=1541",
    "status": "blocked"
   },
   "FLO": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "error": "HTTP Error 403: Forbidden",
    "misses": {},
    "site": "http://www.florencescairport.com/",
    "status": "blocked"
   },
   "FNT": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://bishopairport.org",
    "status": "ok"
   },
   "FOD": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "error": "HTTP Error 403: Forbidden",
    "misses": {},
    "site": "https://www.fortdodgeiowa.org/department/?fDD=5-0",
    "status": "blocked"
   },
   "FRD": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.portfridayharbor.org/?page_id=49",
    "status": "ok"
   },
   "FSD": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.sfairport.com/",
    "status": "ok"
   },
   "FSM": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://flyfsm.com/",
    "status": "ok"
   },
   "FTW": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://meacham.com/",
    "status": "ok"
   },
   "FWA": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://fwairport.com/",
    "status": "ok"
   },
   "GCC": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.iflygillette.com/",
    "status": "ok"
   },
   "GCK": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.fly2gck.com",
    "status": "ok"
   },
   "GCN": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "error": "HTTP Error 403: Forbidden",
    "misses": {},
    "site": "http://www.azdot.gov/aviation/airports/airports_list.asp?FAA=GCN",
    "status": "blocked"
   },
   "GDV": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "misses": {},
    "pages": 1,
    "site": "http://www.glendiveairport.com/",
    "status": "unreadable"
   },
   "GEG": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://spokaneairports.net/",
    "status": "ok"
   },
   "GFK": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.gfkairport.com/",
    "status": "ok"
   },
   "GGG": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.flyggg.com/",
    "status": "ok"
   },
   "GGW": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "error": "<urlopen error [Errno -2] Name or service not known>",
    "misses": {},
    "site": "http://www.glasgowmtairport.com/",
    "status": "blocked"
   },
   "GJT": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.gjairport.com/",
    "status": "ok"
   },
   "GNV": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://www.flygainesville.com/",
    "status": "ok"
   },
   "GRB": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://www.flygrb.com/",
    "status": "ok"
   },
   "GRI": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.flygrandisland.com",
    "status": "ok"
   },
   "GRK": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://flygrk.com/",
    "status": "ok"
   },
   "GRR": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "error": "<urlopen error [Errno -2] Name or service not known>",
    "misses": {},
    "site": "http://www.flygrandrapids.org/",
    "status": "blocked"
   },
   "GSO": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://flyfrompti.com",
    "status": "ok"
   },
   "GTF": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "misses": {},
    "pages": 1,
    "site": "http://www.gtfairport.com",
    "status": "unreadable"
   },
   "GTR": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.gtra.com/",
    "status": "ok"
   },
   "GUP": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "error": "<urlopen error timed out>",
    "misses": {},
    "site": "http://www.ci.gallup.nm.us/airport/airporthmpg.htm",
    "status": "blocked"
   },
   "GYY": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://www.flygyy.com/",
    "status": "ok"
   },
   "HGR": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://www.washco-md.net/hagerstown-regional-airport/",
    "status": "ok"
   },
   "HHH": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://www.hiltonheadairport.com/",
    "status": "ok"
   },
   "HIB": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.rangeregionalairport.com/",
    "status": "ok"
   },
   "HII": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://www.lhcaz.gov/public-works/airport",
    "status": "ok"
   },
   "HLN": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.helenaairport.com/",
    "status": "ok"
   },
   "HNM": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "error": "HTTP Error 522: <none>",
    "misses": {},
    "site": "http://hawaii.gov/hnm",
    "status": "blocked"
   },
   "HOU": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.fly2houston.com/hobbyHome",
    "status": "ok"
   },
   "HSV": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.flyhuntsville.com",
    "status": "ok"
   },
   "HVN": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://flytweed.com",
    "status": "ok"
   },
   "IAG": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://www.niagarafallsairport.com/",
    "status": "ok"
   },
   "ICT": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://flywichita.com",
    "status": "ok"
   },
   "ILG": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://flyilg.com",
    "status": "ok"
   },
   "ILM": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://flyilm.com",
    "status": "ok"
   },
   "IMT": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.fordairport.org/",
    "status": "ok"
   },
   "IND": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "error": "<urlopen error timed out>",
    "misses": {},
    "site": "http://www.indianapolisairport.com/",
    "status": "blocked"
   },
   "ISP": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://flymacarthur.com",
    "status": "ok"
   },
   "JAC": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://jacksonholeairport.com/",
@@ -1228,140 +1228,140 @@
    "status": "ok"
   },
   "JNU": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://juneau.org/airport",
    "status": "ok"
   },
   "KOA": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://airports.hawaii.gov/koa/",
    "status": "ok"
   },
   "KQA": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "misses": {},
    "pages": 1,
    "site": "https://web.archive.org/web/20100410064944/http://dot.alaska.gov/creg/akutan/assets/Akun_ALP_Sheet-Set-1-9.pdf",
    "status": "unreadable"
   },
   "LAL": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://flylakeland.com",
    "status": "ok"
   },
   "LAN": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://flylansing.com",
    "status": "ok"
   },
   "LBB": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "error": "HTTP Error 403: Forbidden",
    "misses": {},
    "site": "http://www.flylia.com/",
    "status": "blocked"
   },
   "LCK": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://flycolumbus.com/general-aviation/lck/",
    "status": "ok"
   },
   "LEB": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://flyleb.com/",
    "status": "ok"
   },
   "LEX": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.bluegrassairport.com/",
    "status": "ok"
   },
   "LFT": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.lftairport.com/Home",
    "status": "ok"
   },
   "LGB": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.lgb.org/",
    "status": "ok"
   },
   "LIH": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://airports.hawaii.gov/lih",
    "status": "ok"
   },
   "LIT": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://clintonairport.com",
    "status": "ok"
   },
   "LNK": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.lincolnairport.com/",
    "status": "ok"
   },
   "LSE": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.lseairport.com/",
    "status": "ok"
   },
   "MAF": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://flymaf.com",
    "status": "ok"
   },
   "MBS": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.mbsairport.org/",
    "status": "ok"
   },
   "MCW": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://flymcw.com/",
    "status": "ok"
   },
   "MDT": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.flyhia.com/",
    "status": "ok"
   },
   "MDW": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://www.flychicago.com/midway/home/pages/default.aspx",
@@ -1383,28 +1383,28 @@
    "status": "ok"
   },
   "MFR": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://flymfr.com",
    "status": "ok"
   },
   "MGC": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "error": "HTTP Error 404: Not Found",
    "misses": {},
    "site": "http://www.emichigancity.com/cityhall/departments/airport/index.htm",
    "status": "blocked"
   },
   "MGM": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.flymgm.com/",
    "status": "ok"
   },
   "MHT": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://flymanchester.com",
@@ -1426,553 +1426,553 @@
    "status": "ok"
   },
   "MKL": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://mckellarsipes.com/",
    "status": "ok"
   },
   "MLB": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://www.mlbair.com/",
    "status": "ok"
   },
   "MOB": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.mobairport.com/",
    "status": "ok"
   },
   "MQT": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.sawyerairport.com/",
    "status": "ok"
   },
   "MRY": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://montereyairport.com",
    "status": "ok"
   },
   "MSO": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://flymissoula.com",
    "status": "ok"
   },
   "MSS": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "error": "<urlopen error [Errno -2] Name or service not known>",
    "misses": {},
    "site": "http://www.massenaworks.com/town/airport.asp",
    "status": "blocked"
   },
   "MTJ": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://montroseairport.com/",
    "status": "ok"
   },
   "MTP": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "error": "<urlopen error [Errno -3] Temporary failure in name resolution>",
    "misses": {},
    "site": "http://www.themontaukairport.com/",
    "status": "blocked"
   },
   "MWL": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.mineralwellsairport.com/",
    "status": "ok"
   },
   "MYL": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "error": "HTTP Error 404: Not Found",
    "misses": {},
    "site": "http://www.mccall.id.us/services/airport.html",
    "status": "blocked"
   },
   "MYR": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://www.flymyrtlebeach.com",
    "status": "ok"
   },
   "OAJ": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://flyoaj.com/",
    "status": "ok"
   },
   "OCE": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://oceancitymd.gov/oc/departments/public-works/airport/",
    "status": "ok"
   },
   "OGD": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://flyogden.com/",
    "status": "ok"
   },
   "OGG": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://airports.hawaii.gov/ogg/",
    "status": "ok"
   },
   "OGS": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "error": "<urlopen error [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1010)>",
    "misses": {},
    "site": "https://ogsair.com/",
    "status": "blocked"
   },
   "OKC": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://flyokc.com/",
    "status": "ok"
   },
   "OMA": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://www.flyoma.com",
    "status": "ok"
   },
   "ONT": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "error": "HTTP Error 403: Forbidden",
    "misses": {},
    "site": "https://www.flyontario.com/",
    "status": "blocked"
   },
   "OPF": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "misses": {},
    "pages": 1,
    "site": "http://www.miami-airport.com/html/opalocka.html",
    "status": "unreadable"
   },
   "ORF": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://www.norfolkairport.com/",
    "status": "ok"
   },
   "OTS": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://www.portofanacortes.com/airport",
    "status": "ok"
   },
   "PAE": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://painefield.com",
    "status": "ok"
   },
   "PBG": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.plattsburghinternationalairport.com/",
    "status": "ok"
   },
   "PDK": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://dekalbcountyga.gov/departments/airport",
    "status": "ok"
   },
   "PGD": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.flypgd.com/",
    "status": "ok"
   },
   "PNS": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.flypensacola.com/",
    "status": "ok"
   },
   "PQI": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "error": "HTTP Error 403: Forbidden",
    "misses": {},
    "site": "https://flypresqueisle.com",
    "status": "blocked"
   },
   "PSM": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://flypsmairport.com",
    "status": "ok"
   },
   "PSP": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "error": "HTTP Error 404: Not Found",
    "misses": {},
    "site": "http://www.palmspringsca.gov/index.aspx?page=270",
    "status": "blocked"
   },
   "PUW": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "error": "HTTP Error 404: Not Found",
    "misses": {},
    "site": "http://www.pullman-wa.gov/airport/",
    "status": "blocked"
   },
   "PVU": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "error": "HTTP Error 403: Forbidden",
    "misses": {},
    "site": "https://airport.provo.gov/",
    "status": "blocked"
   },
   "PWM": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://portlandjetport.org/",
    "status": "ok"
   },
   "RCE": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.wsdot.wa.gov/aviation/AllStateAirports/RocheHarbor_RocheHarbor.htm",
    "status": "ok"
   },
   "RIC": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://flyrichmond.com/",
    "status": "ok"
   },
   "RIW": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://centralwyomingairport.com/",
    "status": "ok"
   },
   "ROA": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.flyroa.com",
    "status": "ok"
   },
   "ROC": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://rocairport.com/",
    "status": "ok"
   },
   "RSW": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "error": "HTTP Error 403: Forbidden",
    "misses": {},
    "site": "http://www.flylcpa.com/",
    "status": "blocked"
   },
   "SAF": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://flysantafe.com/flights/airlines/",
    "status": "ok"
   },
   "SAV": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://savannahairport.com/",
    "status": "ok"
   },
   "SBD": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://sbdairport.com/",
    "status": "ok"
   },
   "SBN": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://flysbn.com",
    "status": "ok"
   },
   "SBP": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.sloairport.com/",
    "status": "ok"
   },
   "SCE": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://universityparkairport.com/",
    "status": "ok"
   },
   "SCK": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "error": "HTTP Error 404: Not Found",
    "misses": {},
    "site": "http://www.sjgov.org/airport/",
    "status": "blocked"
   },
   "SDF": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.flylouisville.com",
    "status": "ok"
   },
   "SFB": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://flysfb.com",
    "status": "ok"
   },
   "SGF": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "error": "HTTP Error 403: Forbidden",
    "misses": {},
    "site": "https://flyspringfield.com",
    "status": "blocked"
   },
   "SGU": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://www.flysgu.org",
    "status": "ok"
   },
   "SJC": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://www.flysanjose.com/",
    "status": "ok"
   },
   "SLE": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.flysalem.com/",
    "status": "ok"
   },
   "SMN": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://lemhicountyairport.com/",
    "status": "ok"
   },
   "SOV": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "misses": {},
    "pages": 1,
    "site": "http://www.seldovia.com/transportation-to-and-around-seldovia/by-air/",
    "status": "unreadable"
   },
   "SPS": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.flywichitafalls.net/",
    "status": "ok"
   },
   "SQL": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://publicworks.smcgov.org/san-carlos-airport",
    "status": "ok"
   },
   "SRQ": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "error": "HTTP Error 403: Forbidden",
    "misses": {},
    "site": "https://flysrq.com",
    "status": "blocked"
   },
   "STS": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.sonomacountyairport.org/",
    "status": "ok"
   },
   "STT": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "error": "HTTP Error 429: Too Many Requests",
    "misses": {},
    "site": "http://www.viport.com/airports.html",
    "status": "blocked"
   },
   "STX": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "error": "HTTP Error 429: Too Many Requests",
    "misses": {},
    "site": "https://www.viport.com/herastx",
    "status": "blocked"
   },
   "SUX": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "error": "HTTP Error 404: Not Found",
    "misses": {},
    "site": "https://www.sioux-city.org/government/departments-a-f/airport",
    "status": "blocked"
   },
   "SWF": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://www.swfny.com/",
    "status": "ok"
   },
   "SWO": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://stillwater.org/government/city_facilities/stillwater_regional_airport/",
    "status": "ok"
   },
   "TEB": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "misses": {},
    "pages": 1,
    "site": "http://www.teb.com/",
    "status": "unreadable"
   },
   "TEX": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://tellurideairport.com/",
    "status": "ok"
   },
   "TLH": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://www.talgov.com/airport/airport",
    "status": "ok"
   },
   "TSM": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.taosairport.org/",
    "status": "ok"
   },
   "TUS": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://www.flytucson.com/",
    "status": "ok"
   },
   "TVC": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://tvcairport.com",
    "status": "ok"
   },
   "TYS": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "error": "<urlopen error [Errno -2] Name or service not known>",
    "misses": {},
    "site": "https://flyknowxville.com",
    "status": "blocked"
   },
   "USA": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.concordnc.gov/Departments/Concord-Regional-Airport",
    "status": "ok"
   },
   "UST": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.flynf.com/",
    "status": "ok"
   },
   "VPS": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://www.flyvps.com/",
    "status": "ok"
   },
   "VQS": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://vieques.com/airport-vieques/",
    "status": "ok"
   },
   "VRB": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "http://verobeachairport.org/",
    "status": "ok"
   },
   "WYS": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "found": [],
    "misses": {},
    "site": "https://yellowstoneairport.mdt.mt.gov",
    "status": "ok"
   },
   "XWA": {
-   "checked": "2026-10-27T15:32Z",
+   "checked": "2026-10-28T16:16Z",
    "misses": {},
    "pages": 1,
    "site": "http://www.xwaproject.com/",
    "status": "unreadable"
   }
  },
- "lastRun": "2026-10-27T15:32Z",
+ "lastRun": "2026-10-28T16:16Z",
  "summary": {
   "blocked": 46,
   "ok": 218,

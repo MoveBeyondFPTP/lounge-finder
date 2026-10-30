@@ -138,6 +138,23 @@
     "7 credit cards that offer lounge access to authorized users",
     "Best airport lounge access credit cards: 4 picks for frequent flyers"
    ]
+  },
+  {
+   "source": "capone-lounges",
+   "networks": [
+    "capone",
+    "capone_landing"
+   ],
+   "url": "https://onemileatatime.com/guides/capital-one-lounges",
+   "detected": "2026-10-30T17:59Z",
+   "added": [
+    "United falsely giving card members saves fares for non-card members.Ask the Community \u00b7 1 reply \u00b7 asked 2 days agoBest Korean Air Lounge in ICNAsk the Community \u00b7 1 reply \u00b7 asked 2 weeks agoPlanning for \"Milestone Trip\" Credit Card & Airline RecomendationsAsk the Community \u00b7 1 reply \u00b7 asked 3 weeks ago",
+    "Capital One Venture X Business Review: Huge Perks, Great Value"
+   ],
+   "removed": [
+    "United falsely giving card members saves fares for non-card members.Ask the Community \u00b7 1 reply \u00b7 asked 23 hours agoBest Korean Air Lounge in ICNAsk the Community \u00b7 1 reply \u00b7 asked 2 weeks agoPlanning for \"Milestone Trip\" Credit Card & Airline RecomendationsAsk the Community \u00b7 1 reply \u00b7 asked 3 weeks ago",
+    "Capital One Venture X Review: Why This $395 Fee Premium Card Is A No-Brainer"
+   ]
   }
  ]
 }

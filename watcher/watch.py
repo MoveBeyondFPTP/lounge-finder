@@ -15,7 +15,7 @@ STATE = os.path.join(HERE, "state.json")
 CHANGES = os.path.join(HERE, "changes.json")
 UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 14_5) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Safari/605.1.15"
 KEYWORDS = re.compile(r"lounge|guest|access|card ?member|cardholder|member|status|visit|fee|\$\d|hour|child|infant|under 2|age|terminal|gate|concourse|boarding|departure|arriv|connect|spend|complimentary|priority pass|club|eligible|basic economy|premium|business|first", re.I)
-NOISE = re.compile(r"^(share|tweet|advertis|sign up|subscribe|related|read more|comments?|cookie|©|copyright|go to home page|featured image|check your inbox)\b|^\d+\s+(min|minutes|hours?|days?)\s+ago$|compensate us|credit cards can transform|advertising policy|editorial content|not been reviewed, approved|newsletter", re.I)
+NOISE = re.compile(r"^(share|tweet|advertis|sign up|subscribe|related|read more|comments?|cookie|©|copyright|go to home page|featured image|check your inbox)\b|^\d+\s+(min|minutes|hours?|days?)\s+ago$|compensate us|credit cards can transform|advertising policy|editorial content|not been reviewed, approved|newsletter|ask the community|terms apply|rates & fees|^learn more|^earn \d|bonus miles|\breview:|which is better|how long do", re.I)
 BLOCK_TAGS = {"p","div","li","tr","td","th","h1","h2","h3","h4","h5","h6","br","section","article","dt","dd","table","ul","ol","header","footer"}
 SKIP_TAGS = {"script","style","noscript","svg","iframe","template","nav"}
 
@@ -138,10 +138,11 @@ def main():
             st["baseline"] = now; report.append(f"- {sid}: first copy saved ({len(lines)} lines)")
         elif st.get("hash") != digest:
             # Compare as sets of lines, so lines that only moved around don't count as a change.
-            old_set = set(old.splitlines())
+            old_lines = [l for l in old.splitlines() if not NOISE.search(l)]   # apply today's noise filter to the old copy too
+            old_set = set(old_lines)
             added = [l for l in lines if l not in old_set][:40]
             new_set = set(lines)
-            removed = [l for l in old.splitlines() if l not in new_set][:40]
+            removed = [l for l in old_lines if l not in new_set][:40]
             if added or removed:
                 changes["pending"].append({"source": sid, "networks": s["networks"], "url": url, "detected": now, "added": added, "removed": removed})
                 st["lastChanged"] = now

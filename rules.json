@@ -405,7 +405,9 @@
   {
    "airport": "PHL",
    "location": "Terminal A-West",
-   "network": "centurion"
+   "network": "centurion",
+   "status": "closed",
+   "note": "Closed for renovation since October 16, 2026; expected to reopen, twice the size, by the end of 2027. The Amex app lists other lounges in your terminal."
   },
   {
    "airport": "PHL",
@@ -1042,10 +1044,42 @@
    "status": "open",
    "source": "airport-site-verified",
    "sourceUrl": "https://www.mitchellairport.com/airport-guide/interactive-terminal-guide"
+  },
+  {
+   "airport": "EWR",
+   "network": "centurion",
+   "location": "Terminal A",
+   "status": "opening",
+   "note": "Opening in 2027 (Amex announced it in October 2026)."
+  },
+  {
+   "airport": "SEA",
+   "network": "sapphire",
+   "location": "Concourse A, next to the Delta lounges",
+   "status": "opening",
+   "note": "Approved by the Port of Seattle on October 27, 2026; no opening date yet."
+  },
+  {
+   "airport": "LAX",
+   "network": "sapphire",
+   "location": "Tom Bradley International Terminal, concourse level",
+   "status": "opening",
+   "note": "Not open yet. It was expected around September 2026; no new date announced."
+  },
+  {
+   "airport": "CLT",
+   "network": "capone",
+   "location": "Concourse A expansion, mezzanine level",
+   "status": "opening",
+   "note": "Announced January 2026; no opening date yet."
   }
  ],
  "meta": {
   "changelog": [
+   {
+    "date": "2026-11-02",
+    "text": "Philadelphia's Centurion Lounge is closed for renovation until late 2027. Coming soon: a Centurion Lounge at Newark (2027), Sapphire Lounges at Seattle and LAX, and a Capital One Lounge at Charlotte. Rules for every network re-checked; no other changes."
+   },
    {
     "date": "2026-10-26",
     "text": "Confirmed Delta Sky Clubs at Jacksonville (Concourse A), Memphis (Concourse B) and Milwaukee (Concourse D), plus a Sky Club (Concourse C) and Escape Lounge (Concourse B) at Palm Beach. All were found by the nightly airport-website scan."
@@ -1091,7 +1125,7 @@
    "Delta One: from Jan 19, 2027, Delta One Basic fares lose lounge access; the app has no field to exclude a fare type for this network."
   ],
   "nextCheck": "Every Monday (full check on the first Monday of the month)",
-  "updatedAt": "2026-10-26",
+  "updatedAt": "2026-11-02",
   "updatedBy": "Weekly research"
  },
  "networks": {
@@ -1119,7 +1153,7 @@
    ],
    "statusInternationalOnly": true,
    "unverified": [],
-   "verified": "2026-10-25",
+   "verified": "2026-11-02",
    "guestPolicies": {
     "membership": {
      "free": 2,
@@ -1216,7 +1250,7 @@
     }
    ],
    "unverified": [],
-   "verified": "2026-10-25",
+   "verified": "2026-11-02",
    "guestPolicies": {
     "membership": {
      "free": 2,
@@ -1293,7 +1327,7 @@
     }
    ],
    "unverified": [],
-   "verified": "2026-10-25",
+   "verified": "2026-11-02",
    "guestPolicies": {
     "card": {
      "free": 0,
@@ -1347,7 +1381,7 @@
     }
    ],
    "unverified": [],
-   "verified": "2026-10-25",
+   "verified": "2026-11-02",
    "guestPolicies": {
     "card": {
      "free": 0,
@@ -1394,6 +1428,10 @@
    "operator": "American Express",
    "sources": [
     {
+     "title": "The Points Party: Amex Centurion expansion (Newark, Philadelphia, Houston, Heathrow)",
+     "url": "https://thepointsparty.com/articles/amex-centurion-lounge-newark-philadelphia-houston-heathrow-expansion"
+    },
+    {
      "title": "American Express: Centurion Lounge access policy",
      "url": "https://www.thecenturionlounge.com/info/access/"
     },
@@ -1407,7 +1445,7 @@
     }
    ],
    "unverified": [],
-   "verified": "2026-10-25",
+   "verified": "2026-11-02",
    "guestPolicies": {
     "plat": {
      "free": 0,
@@ -1493,7 +1531,7 @@
     }
    ],
    "unverified": [],
-   "verified": "2026-10-25",
+   "verified": "2026-11-02",
    "guestPolicies": {
     "ticket": {
      "free": 0,
@@ -1529,7 +1567,7 @@
     }
    ],
    "unverified": [],
-   "verified": "2026-10-25",
+   "verified": "2026-11-02",
    "statusTiers": [
     "sapphire",
     "emerald"
@@ -1622,7 +1660,7 @@
    "unverified": [
     "Arrivals access for United Polaris passengers"
    ],
-   "verified": "2026-10-25",
+   "verified": "2026-11-02",
    "guestPolicies": {
     "ticket": {
      "free": 0,
@@ -1708,7 +1746,7 @@
     "Amex Priority Pass guest allowance",
     "Venue names at some airports"
    ],
-   "verified": "2026-10-25",
+   "verified": "2026-11-02",
    "scannedAirports": [
     "ANC",
     "ATL",
@@ -1932,6 +1970,10 @@
    "otherPriorityPassNote": "Since August 15, 2026, Priority Pass from other cards or bought directly no longer gets in.",
    "sources": [
     {
+     "title": "The Points Party: Seattle Sapphire Lounge approved",
+     "url": "https://thepointsparty.com/articles/chase-sapphire-lounge-seattle-approved-october-2026"
+    },
+    {
      "title": "Chase: Sapphire Lounge network",
      "url": "https://www.chase.com/sapphire-cards/lounges"
     },
@@ -1941,7 +1983,7 @@
     }
    ],
    "unverified": [],
-   "verified": "2026-10-25",
+   "verified": "2026-11-02",
    "guestPolicies": {
     "card": {
      "free": 2,
@@ -1995,7 +2037,7 @@
    "unverified": [
     "Whether arrival access covers international arrivals"
    ],
-   "verified": "2026-10-25",
+   "verified": "2026-11-02",
    "visitsPlatinum": 10,
    "visitsReserve": 15,
    "arrivalNote": "Arriving: open after a Delta flight with a membership or Amex card. With an Amex card it uses one of your yearly visits.",
@@ -2141,7 +2183,7 @@
     "Arrival access for members and cardholders (based on United's 2016 clarification)",
     "Star Alliance Gold from partner airlines on domestic United flights"
    ],
-   "verified": "2026-10-25",
+   "verified": "2026-11-02",
    "arrivalsForMembers": true,
    "guestsAllAccess": "Up to 2 adult guests, or 1 adult plus your children under 18 (All Access).",
    "guestPolicies": {
@@ -2243,7 +2285,7 @@
     "Can refuse entry when full."
    ],
    "notices": [],
-   "verified": "2026-09-30",
+   "verified": "2026-11-02",
    "unverified": [
     "Guest rules",
     "Time limits"
@@ -2285,7 +2327,7 @@
     "Can refuse entry when full."
    ],
    "notices": [],
-   "verified": "2026-10-25",
+   "verified": "2026-11-02",
    "unverified": [
     "All Access partner-lounge access on domestic United itineraries",
     "Star Alliance Lounge LAX admission on domestic flights"

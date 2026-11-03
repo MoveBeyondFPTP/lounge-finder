@@ -18,6 +18,22 @@
    ],
    "removed": [],
    "note": "New lounges found on airport websites and added automatically. Check each is real and current, fill in the location, or remove it."
+  },
+  {
+   "source": "capone-lounges",
+   "networks": [
+    "capone",
+    "capone_landing"
+   ],
+   "url": "https://onemileatatime.com/guides/capital-one-lounges",
+   "detected": "2026-11-03T19:28Z",
+   "added": [
+    "Highest-Ever Chase Sapphire Reserve Business Bonus: Earn 200K Points",
+    "Good News: $95 Capital One Venture Business Card Replaces Spark Miles"
+   ],
+   "removed": [
+    "Capital One Venture Card Bonus: 75K Miles + $300 Credit (Limited Time)"
+   ]
   }
  ]
 }

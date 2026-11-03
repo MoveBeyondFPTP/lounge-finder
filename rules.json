@@ -57,7 +57,8 @@
   "DJT": "President Donald J. Trump International Airport",
   "JAX": "Jacksonville International Airport",
   "MEM": "Frederick W. Smith International Airport",
-  "MKE": "General Mitchell International Airport"
+  "MKE": "General Mitchell International Airport",
+  "KVL": "Kivalina Airport"
  },
  "lounges": [
   {
@@ -1072,10 +1073,54 @@
    "location": "Concourse A expansion, mezzanine level",
    "status": "opening",
    "note": "Announced January 2026; no opening date yet."
+  },
+  {
+   "airport": "KVL",
+   "network": "admirals",
+   "name": "Admirals Club",
+   "location": "See the airport's website for the location",
+   "status": "open",
+   "source": "airport-site",
+   "sourceUrl": "http://www.dfwairport.com/explore/lounges/",
+   "note": "Found on the airport's website; confirm the details there."
+  },
+  {
+   "airport": "KVL",
+   "network": "amexpartner",
+   "name": "Plaza Premium Lounge",
+   "location": "See the airport's website for the location",
+   "status": "open",
+   "source": "airport-site",
+   "sourceUrl": "http://www.dfwairport.com/explore/lounges/",
+   "note": "Found on the airport's website; confirm the details there."
+  },
+  {
+   "airport": "KVL",
+   "network": "skyclub",
+   "name": "Delta Sky Club",
+   "location": "See the airport's website for the location",
+   "status": "open",
+   "source": "airport-site",
+   "sourceUrl": "http://www.dfwairport.com/explore/lounges/",
+   "note": "Found on the airport's website; confirm the details there."
+  },
+  {
+   "airport": "KVL",
+   "network": "united_club",
+   "name": "United Club",
+   "location": "See the airport's website for the location",
+   "status": "open",
+   "source": "airport-site",
+   "sourceUrl": "http://www.dfwairport.com/explore/lounges/",
+   "note": "Found on the airport's website; confirm the details there."
   }
  ],
  "meta": {
   "changelog": [
+   {
+    "date": "2026-11-03",
+    "text": "Added from airport websites: KVL: Admirals Club; KVL: Plaza Premium Lounge; KVL: Delta Sky Club; KVL: United Club."
+   },
    {
     "date": "2026-11-02",
     "text": "Philadelphia's Centurion Lounge is closed for renovation until late 2027. Coming soon: a Centurion Lounge at Newark (2027), Sapphire Lounges at Seattle and LAX, and a Capital One Lounge at Charlotte. Rules for every network re-checked; no other changes."

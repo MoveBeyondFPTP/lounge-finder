@@ -1,3 +1,23 @@
 {
- "pending": []
+ "pending": [
+  {
+   "source": "airport-websites",
+   "networks": [
+    "admirals",
+    "amexpartner",
+    "skyclub",
+    "united_club"
+   ],
+   "url": "",
+   "detected": "2026-11-03T17:19Z",
+   "added": [
+    "KVL Admirals Club: \"As DFW's largest airline partner, American Airlines offers its largest collection of premium spaces. Eligible travelers can enjoy five Admirals Club\u00ae lounges one in every terminal, the Flagship\u00ae Lounge and the exclusive Flagship\u00ae First Dini\" (http://www.dfwairport.com/explore/lounges/)",
+    "KVL Plaza Premium Lounge: \"Plaza Premium Lounges\" (http://www.dfwairport.com/explore/lounges/)",
+    "KVL Delta Sky Club: \"Delta Sky Club\u00ae\" (http://www.dfwairport.com/explore/lounges/)",
+    "KVL United Club: \"United Club\" (http://www.dfwairport.com/explore/lounges/)"
+   ],
+   "removed": [],
+   "note": "New lounges found on airport websites and added automatically. Check each is real and current, fill in the location, or remove it."
+  }
+ ]
 }

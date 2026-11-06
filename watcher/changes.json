@@ -48,6 +48,22 @@
    "removed": [
     "Chase Sapphire Trip Cancellation and Interruption Coverage: What It Pays and How to Claim"
    ]
+  },
+  {
+   "source": "capone-lounges",
+   "networks": [
+    "capone",
+    "capone_landing"
+   ],
+   "url": "https://onemileatatime.com/guides/capital-one-lounges",
+   "detected": "2026-11-06T19:22Z",
+   "added": [
+    "Capital One Lounge New York JFK: Epic 24/7 \"Flagship\" Location Opens",
+    "Capital One Venture X Rental Car Coverage Details"
+   ],
+   "removed": [
+    "Good News: $95 Capital One Venture Business Card Replaces Spark Miles"
+   ]
   }
  ]
 }

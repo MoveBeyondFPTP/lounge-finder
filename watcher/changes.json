@@ -64,6 +64,22 @@
    "removed": [
     "Good News: $95 Capital One Venture Business Card Replaces Spark Miles"
    ]
+  },
+  {
+   "source": "capone-lounges",
+   "networks": [
+    "capone",
+    "capone_landing"
+   ],
+   "url": "https://onemileatatime.com/guides/capital-one-lounges",
+   "detected": "2026-11-09T22:18Z",
+   "added": [
+    "Capital One Venture X Plaza Premium Lounge Access Changes"
+   ],
+   "removed": [
+    "Capital One Lounge New York JFK: Epic 24/7 \"Flagship\" Location Opens",
+    "Capital One Venture X Rental Car Coverage Details"
+   ]
   }
  ]
 }

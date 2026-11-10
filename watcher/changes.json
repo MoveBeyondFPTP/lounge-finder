@@ -80,6 +80,63 @@
     "Capital One Lounge New York JFK: Epic 24/7 \"Flagship\" Location Opens",
     "Capital One Venture X Rental Car Coverage Details"
    ]
+  },
+  {
+   "source": "delta-skyclub-access",
+   "networks": [
+    "skyclub",
+    "deltaone"
+   ],
+   "url": "https://www.delta.com/us/en/delta-sky-club/access",
+   "detected": "2026-11-10T19:41Z",
+   "added": [
+    "Delta SkyMiles Reserve and Reserve Business Basic and Reserve Additional Card Members (\"Reserve Card Members\") receive 15 Visits each Medallion Year (February 1 through January 31) to Delta Sky Club when traveling on a same-day Delta-marketed or Delta-operated flight. Unlimited Delta Sky Club Access can be unlocked after spending $75,000 in eligible purchases in a calendar year. Unlimited Delta Sky Club Access will be available for the remainder of the current Medallion Year and the following Medallion Year.",
+    "Reserve Card Members may bring either two guests or immediate family (spouse/domestic partner and children under 21 years of age) at a per-Visit rate of $50 per person. For Grab and Go, the per-Visit rate is $25 per person and does not entitle the Reserve Card Member and guests to Delta Sky Club Access. Reserve Card Basic Members have an allotment of four One-Time Guest Passes per Medallion Year. The Card Member must use the Delta SkyMiles Reserve or Reserve Business Card as the method of entry to Delta Sky Club to redeem the One-Time Guest Passes for their guest.",
+    "For an expedited check-in experience, you may log in and save your Card to the Payment Methods section on delta.com or the Fly Delta app (Go to \"My Wallet,\" then \"Saved Payment Methods\"). The Card Member name must match the name on the SkyMiles account to utilize this benefit. Please ensure your profile is kept up-to-date with an unexpired Card for this feature to remain active on the account.",
+    "For an expedited check-in experience as a SkyMiles Member, you may log in and save your Card to the Payment Methods section on delta.com or the Fly Delta app (My Wallet > Saved Payment Methods). The Card Member name must match the name on the SkyMiles account. Please ensure your profile is kept up-to-date with an unexpired Card for this feature to remain active on the account.",
+    "Card Members with U.S. issued Platinum and Business Platinum Cards from American Express (\"Platinum Card Members\") receive 10 Visits each Medallion Year (February 1 through January 31) to the Delta Sky Club when traveling on a same-day ticket on a Delta-operated (Delta or Delta Connection) or Delta-marketed flight operated by WestJet (006 ticket number). Unlimited Delta Sky Club Access can be unlocked after spending $75,000 in eligible purchases in a calendar year. Unlimited Delta Sky Club Access will be available for the remainder of the current Medallion Year and the following Medallion Year.",
+    "Once all 10 Visits have been used, Platinum Card Members may purchase additional Delta Sky Club Visits at a per-Visit rate of $50 per person. For Grab and Go, the per-Visit rate is $25 per person and does not entitle the Reserve Card Member to Delta Sky Club Access.",
+    "Reserve Card Members receive 4 One-Time Guest Passes each Medallion Year (which begins February 1st of each year) but can only redeem up to 2 per Visit to the Delta Sky Club. The Card Member must use the Delta SkyMiles Reserve or Reserve Business Card as the method of entry to Delta Sky Club to redeem the One-Time Guest Passes for their guests.",
+    "This benefit is available to U.S. Centurion Members and Additional Platinum Card Members on Consumer Centurion and Business Centurion Accounts (each, an \"Eligible Card Member\") for access to Delta Sky Club or use of the Delta Sky Club Grab and Go feature (\"Grab and Go\"). Companion Centurion Cards on Consumer Accounts and Additional Gold and Additional Business Expense Cards on Business Centurion Accounts are not eligible for access to this benefit. Eligible Card Members must present their valid American Express Card, government-issued I.D., and boarding pass to the Delta Sky Club ambassador. Boarding pass must show a reservation for a same-day Delta-operated flight (Delta or Delta connection) or Delta-marketed flight operated by WestJet (ticket number starting with 006) departing from or arriving at the airport in which the Delta Sky Club or Grab and Go is located. Eligible Card Members traveling with Delta Main Basic (Basic Economy) fare tickets do not have access to this benefit. Name on boarding pass must match name on the Card. Delta reserves the right to limit access for non-revenue flyers at any Delta Sky Club. Individuals must be at least 18 years of age to access Delta Sky Club, and 21 years of age to access locations with a self-service bar, unless accompanied by a responsible, supervising adult who has access to Delta Sky Club. Benefit valid only at Delta Sky Club or Grab and Go. Delta partner Lounges are not included. Note that amenities may vary among Delta Sky Club locations. Participating airport clubs and locations subject to change without notice. Eligible Card Members may bring guests into Delta Sky Club subject to the most current Delta Sky Club access and pricing policies and must use their valid Card as the payment method for guest access. Guests also must be flying on a same-day Delta-operated flight or Delta-marketed flight operated by WestJet (ticket number starting with 006) and be accompanied by the Eligible Card Member. Guest access and fees subject to terms and conditions of participating airport clubs. Access is subject to Delta Sky Club House rules and space availability. Hours may vary by location and are subject to change. To review the rules, please visit delta.com/skyclub. Benefit and rules subject to change without notice. Additional restrictions may apply."
+   ],
+   "removed": [
+    "Effective February 1, 2025, Delta SkyMiles Reserve and Reserve Business Basic and Reserve Additional Card Members (\"Reserve Card Members\") receive 15 Visits each Medallion Year (February 1 through January 31) to Delta Sky Club when traveling on a same-day Delta-marketed or Delta-operated flight. Unlimited Delta Sky Club Access can be unlocked after spending $75,000 in eligible purchases in a calendar year. Unlimited Delta Sky Club Access will be available for the remainder of the current Medallion Year and the following Medallion Year.",
+    "Reserve Card Members may bring either two guests or immediate family (spouse/domestic partner and children under 21 years of age) at a per-Visit rate of $50 per person. For Grab and Go, the per-Visit rate is $25 per person and does not entitle the Reserve Card Member and guests to Delta Sky Club Access.",
+    "Effective February 1, 2025, Card Members with U.S. issued Platinum and Business Platinum Cards from American Express (\"Platinum Card Members\") receive 10 Visits each Medallion Year (February 1 through January 31) to the Delta Sky Club when traveling on a same-day ticket on a Delta-operated (Delta or Delta Connection) or Delta-marketed flight operated by WestJet (006 ticket number). Unlimited Delta Sky Club Access can be unlocked after spending $75,000 in eligible purchases in a calendar year. Unlimited Delta Sky Club Access will be available for the remainder of the current Medallion Year and the following Medallion Year.",
+    "Once all 10 Visits have been used, Eligible Platinum Card Members may purchase additional Delta Sky Club Visits at a per-Visit rate of $50 per person or may purchase a Grab and Go Visit at a per-Visit rate of $25 per person. Visits cannot be used for guest entry.",
+    "Reserve Card Members receive 4 One-Time Guest Passes each Medallion Year (which begins February 1st of each year) but can only redeem up to 2 per Visit to the Delta Sky Club. The Card Member must use the Reserve Card as the method of entry to Delta Sky Club to redeem the One-Time Guest Passes for their guests.",
+    "This benefit is available to U.S. Centurion Members and Additional Platinum Card Members on Consumer Centurion and Business Centurion Accounts (each, an \"Eligible Card Member\") for access to Delta Sky Club or to the Delta Sky Club Grab and Go feature (\"Grab and Go\"). Companion Centurion Cards on Consumer Accounts and Additional Gold and Additional Business Expense Cards on Business Centurion Accounts are not eligible for access to this benefit. Eligible Card Members must present their valid American Express Card, government-issued I.D., and boarding pass to the Delta Sky Club ambassador. Boarding pass must show a reservation for a same-day Delta-operated flight (Delta or Delta connection) or Delta-marketed flight operated by WestJet (ticket number starting with 006) departing from or arriving at the airport in which the Delta Sky Club or Grab and Go is located. Eligible Card Members traveling with Delta Main Basic (Basic Economy) fare tickets do not have access to this benefit. Name on boarding pass must match name on the Card. Delta reserves the right to limit access for non-revenue flyers at any Delta Sky Club. Individuals must be at least 18 years of age to access Delta Sky Club, and 21 years of age to access locations with a self-service bar, unless accompanied by a responsible, supervising adult who has access to Delta Sky Club. Benefit valid only at Delta Sky Club or Grab and Go. Delta partner Lounges are not included. Note that amenities may vary among Delta Sky Club locations. Participating airport clubs and locations subject to change without notice. Eligible Card Members may bring guests into Delta Sky Club subject to the most current Delta Sky Club access and pricing policies and must use their valid Card as the payment method for guest access. Guests also must be flying on a same-day Delta-operated flight or Delta-marketed flight operated by WestJet (ticket number starting with 006) and be accompanied by the Eligible Card Member. Guest access and fees subject to terms and conditions of participating airport clubs. Access is subject to Delta Sky Club rules. To review the rules, please visit delta.com/skyclub. Benefit and rules subject to change without notice. Additional restrictions may apply.\u200b"
+   ]
+  },
+  {
+   "source": "sapphire-lounges",
+   "networks": [
+    "sapphire"
+   ],
+   "url": "https://thepointsparty.com/articles/chase-sapphire-lounges-locations-hours-access",
+   "detected": "2026-11-10T19:41Z",
+   "added": [
+    "Where the Sapphire Reserve $300 Dining Credit Works: Exclusive Tables Restaurants on OpenTable"
+   ],
+   "removed": [
+    "Port of Seattle Approves a 16,000-Square-Foot Chase Sapphire Lounge at SEA"
+   ]
+  },
+  {
+   "source": "capone-lounges",
+   "networks": [
+    "capone",
+    "capone_landing"
+   ],
+   "url": "https://onemileatatime.com/guides/capital-one-lounges",
+   "detected": "2026-11-10T19:41Z",
+   "added": [
+    "New Capital One Lounge Las Vegas Airport, With \"Daily Rituals\"",
+    "Capital One Venture X Cuts Priority Pass Restaurants"
+   ],
+   "removed": [
+    "Capital One Venture X Plaza Premium Lounge Access Changes"
+   ]
   }
  ]
 }

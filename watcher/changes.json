@@ -137,6 +137,28 @@
    "removed": [
     "Capital One Venture X Plaza Premium Lounge Access Changes"
    ]
+  },
+  {
+   "source": "centurion-access",
+   "networks": [
+    "centurion",
+    "amexpartner"
+   ],
+   "url": "https://www.thecenturionlounge.com/info/access/",
+   "detected": "2026-11-12T19:52Z",
+   "added": [
+    "Access | The Centurion\u00ae Lounge | American Express | Amex US",
+    "Lounges",
+    "The Centurion\u00ae Lounge NetworkFind a City or Airport"
+   ],
+   "removed": [
+    "Access to The Centurion\u00ae Network",
+    "Access Policy",
+    "Business Credit Cards",
+    "Membership Rewards",
+    "SpendSmart\u00ae",
+    "Servicemember Benefits"
+   ]
   }
  ]
 }

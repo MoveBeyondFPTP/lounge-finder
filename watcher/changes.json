@@ -159,6 +159,25 @@
     "SpendSmart\u00ae",
     "Servicemember Benefits"
    ]
+  },
+  {
+   "source": "capone-lounges",
+   "networks": [
+    "capone",
+    "capone_landing"
+   ],
+   "url": "https://onemileatatime.com/guides/capital-one-lounges",
+   "detected": "2026-11-13T19:39Z",
+   "added": [
+    "Chase Sapphire Reserve Business Bonus: 200K Points Welcome Offer",
+    "Capital One Venture X Priority Pass Membership: How It Works",
+    "My Experience Visiting A Capital One Cafe"
+   ],
+   "removed": [
+    "Highest-Ever Chase Sapphire Reserve Business Bonus: Earn 200K Points",
+    "New Capital One Lounge Las Vegas Airport, With \"Daily Rituals\"",
+    "Capital One Venture X Cuts Priority Pass Restaurants"
+   ]
   }
  ]
 }

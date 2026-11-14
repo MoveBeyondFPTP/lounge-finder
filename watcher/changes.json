@@ -178,6 +178,22 @@
     "New Capital One Lounge Las Vegas Airport, With \"Daily Rituals\"",
     "Capital One Venture X Cuts Priority Pass Restaurants"
    ]
+  },
+  {
+   "source": "capone-lounges",
+   "networks": [
+    "capone",
+    "capone_landing"
+   ],
+   "url": "https://onemileatatime.com/guides/capital-one-lounges",
+   "detected": "2026-11-14T17:58Z",
+   "added": [
+    "Capital One Spark Cash Plus $2,000 Bonus Offer"
+   ],
+   "removed": [
+    "Capital One Venture X Priority Pass Membership: How It Works",
+    "My Experience Visiting A Capital One Cafe"
+   ]
   }
  ]
 }

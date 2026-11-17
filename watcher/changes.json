@@ -194,6 +194,21 @@
     "Capital One Venture X Priority Pass Membership: How It Works",
     "My Experience Visiting A Capital One Cafe"
    ]
+  },
+  {
+   "source": "capone-lounges",
+   "networks": [
+    "capone",
+    "capone_landing"
+   ],
+   "url": "https://onemileatatime.com/guides/capital-one-lounges",
+   "detected": "2026-11-17T20:51Z",
+   "added": [
+    "Great News: 14K Square Foot Capital One Lounge Coming To Charlotte Airport"
+   ],
+   "removed": [
+    "Capital One Spark Cash Plus $2,000 Bonus Offer"
+   ]
   }
  ]
 }

@@ -225,6 +225,33 @@
    "removed": [
     "Great News: 14K Square Foot Capital One Lounge Coming To Charlotte Airport"
    ]
+  },
+  {
+   "source": "sapphire-lounges",
+   "networks": [
+    "sapphire"
+   ],
+   "url": "https://thepointsparty.com/articles/chase-sapphire-lounges-locations-hours-access",
+   "detected": "2026-11-19T20:31Z",
+   "added": [
+    "Priority Pass Raises Standard Plus and Prestige Prices and Caps Prestige at 20 Visits From January 6, 2027"
+   ],
+   "removed": []
+  },
+  {
+   "source": "capone-lounges",
+   "networks": [
+    "capone",
+    "capone_landing"
+   ],
+   "url": "https://onemileatatime.com/guides/capital-one-lounges",
+   "detected": "2026-11-19T20:31Z",
+   "added": [
+    "Capital One Venture X Vs. Venture X Business: Which Card Is Better?"
+   ],
+   "removed": [
+    "Capital One Venture X Business Cuts Priority Pass Restaurants, Sort Of"
+   ]
   }
  ]
 }

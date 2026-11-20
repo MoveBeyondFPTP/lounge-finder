@@ -252,6 +252,36 @@
    "removed": [
     "Capital One Venture X Business Cuts Priority Pass Restaurants, Sort Of"
    ]
+  },
+  {
+   "source": "sapphire-lounges",
+   "networks": [
+    "sapphire"
+   ],
+   "url": "https://thepointsparty.com/articles/chase-sapphire-lounges-locations-hours-access",
+   "detected": "2026-11-20T20:11Z",
+   "added": [
+    "Emirates Opens a Temporary First Class Lounge in Dubai as Its $109 Million Lounge Overhaul Begins"
+   ],
+   "removed": [
+    "United Polaris: What You Get, the Six Polaris Lounges and the Three Fare Tiers"
+   ]
+  },
+  {
+   "source": "capone-lounges",
+   "networks": [
+    "capone",
+    "capone_landing"
+   ],
+   "url": "https://onemileatatime.com/guides/capital-one-lounges",
+   "detected": "2026-11-20T20:11Z",
+   "added": [
+    "How Capital One Venture X Plaza Premium Lounge Access Works"
+   ],
+   "removed": [
+    "Capital One Venture X Vs. Venture X Business: Which Card Is Better?",
+    "Capital One Adds Choice Privileges As Mileage Transfer Partner"
+   ]
   }
  ]
 }

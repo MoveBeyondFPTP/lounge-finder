@@ -282,6 +282,36 @@
     "Capital One Venture X Vs. Venture X Business: Which Card Is Better?",
     "Capital One Adds Choice Privileges As Mileage Transfer Partner"
    ]
+  },
+  {
+   "source": "sapphire-lounges",
+   "networks": [
+    "sapphire"
+   ],
+   "url": "https://thepointsparty.com/articles/chase-sapphire-lounges-locations-hours-access",
+   "detected": "2026-11-23T23:50Z",
+   "added": [
+    "Chase Sapphire Reserve Offer: Spend $250 at SimpliSafe, Get $250 Back"
+   ],
+   "removed": [
+    "Where the Sapphire Reserve $300 Dining Credit Works: Exclusive Tables Restaurants on OpenTable"
+   ]
+  },
+  {
+   "source": "capone-lounges",
+   "networks": [
+    "capone",
+    "capone_landing"
+   ],
+   "url": "https://onemileatatime.com/guides/capital-one-lounges",
+   "detected": "2026-11-23T23:50Z",
+   "added": [
+    "Capital One Venture X Business Cuts Priority Pass Restaurants, Sort Of",
+    "Capital One Adds Choice Privileges As Mileage Transfer Partner"
+   ],
+   "removed": [
+    "How Capital One Venture X Plaza Premium Lounge Access Works"
+   ]
   }
  ]
 }
